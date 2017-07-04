@@ -1,0 +1,4 @@
+/home/marko/software/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/marko/workspace/install/reldeb-gcc -G "CodeBlocks - Unix Makefiles" /home/marko/CLionProjects/llumc
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/marko/CLionProjects/llumc/cmake-build-debug
