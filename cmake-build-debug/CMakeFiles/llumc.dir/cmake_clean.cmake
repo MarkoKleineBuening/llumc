@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/llumc.dir/main.cpp.o"
   "CMakeFiles/llumc.dir/Encoder.cpp.o"
+  "CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o"
+  "CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o"
   "llumc.pdb"
   "llumc"
 )

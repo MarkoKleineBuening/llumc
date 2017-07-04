@@ -24,19 +24,24 @@ int main(int argc, char *argv[]) {
     llvm::LLVMContext context;
     llvm::Module *module = getModule(context, fileName);
 
+    //Encoder enc(*module);
     Encoder *enc = new Encoder(*module);
+    //enc->createMap();
 
     int numFunc = module->getFunctionList().size();
     std::cout << "Num Functions: " << numFunc << "\n";
 
-    std::map<int, llvm::Instruction *> idMap;
-    for (auto& func: module->getFunctionList()) {
-        if (func.size() > 1) {
+    for (auto &func: module->getFunctionList()) {
+        if (func.size() < 1) { continue; }
+        std::cout << "Function started." << "\n";
+        enc->createMap(func.getName());
+        std::cout << std::endl << "-------------------------------" << std::endl;
+        std::cout << "Encoding started." << "\n";
+        enc->encodeFormula(func.getName());
 
-            idMap = enc->createMap(func);
-        }
     }
 
+    return 0;
 
 
 
@@ -76,7 +81,6 @@ int main(int argc, char *argv[]) {
                 llvm::StringRef x = itbb.operator*().getValueName()->first();
 
                 std::cout << "Instructions: " << itbb.operator*().getOpcodeName() << ": ";
-
 
 
                 if (llvm::PHINode *P = llvm::dyn_cast<llvm::PHINode>(&itbb.operator*())) {
@@ -168,29 +172,29 @@ void encodeFunction(llvm::Function &function, llvm::Module *module) {
 }
 
 void encodeBasicBlock(llvm::BasicBlock &block, llvm::Module *pModule) {
-        std::string nameBB = block.getName();
-        std::cout << "\nBasic Block" << ++number << ":" << nameBB << "\n";
+    std::string nameBB = block.getName();
+    std::cout << "\nBasic Block" << ++number << ":" << nameBB << "\n";
     llvm::TerminatorInst *termInst = block.getTerminator();
-        std::cout << "Terminator Opcodename: " << termInst->getOpcodeName() << "\n";
+    std::cout << "Terminator Opcodename: " << termInst->getOpcodeName() << "\n";
     std::string firstOperandName = termInst->getOperand(0)->getName();
-        std::cout << "First Operand: " << firstOperandName << "\n";
-        std::cout << "Number of Uses: " << termInst->getOperand(0)->getNumUses() << "\n";
+    std::cout << "First Operand: " << firstOperandName << "\n";
+    std::cout << "Number of Uses: " << termInst->getOperand(0)->getNumUses() << "\n";
 
     llvm::Value *value = termInst->getOperand(0);
     std::cout << "termInst operand valueID:" << value->getValueID() << "\n";
 
-    llvm::BasicBlock& BB = block;
-    for (llvm::Instruction &I : BB){
-        std::map<int,llvm::Instruction*> idMap;
+    llvm::BasicBlock &BB = block;
+    for (llvm::Instruction &I : BB) {
+        std::map<int, llvm::Instruction *> idMap;
         idMap[I.getValueID()] = &I;
 
-        std::cout << "valueID:" <<I.getValueID() << "\n";
-        if(I.getValueID()==value->getValueID()){
+        std::cout << "valueID:" << I.getValueID() << "\n";
+        if (I.getValueID() == value->getValueID()) {
             //eval I
             if (llvm::ICmpInst *ICmp = llvm::dyn_cast<llvm::ICmpInst>(&I)) {
                 unsigned int numArgs = I.getNumOperands();
-                for (unsigned int i = 0; i < numArgs; ++i) {
-                    std::cout << "    icmp operand("<<i<<"):" << ICmp->getOperand(i)->getValueID();
+                for (unsigned int i = 0; i < numArgs; i++) {
+                    std::cout << "    icmp operand(" << i << "):" << ICmp->getOperand(i)->getValueID();
                 }
                 std::cout << "\n";
             }
@@ -198,16 +202,18 @@ void encodeBasicBlock(llvm::BasicBlock &block, llvm::Module *pModule) {
         }
     }
 
+    /*
     for (llvm::Value::use_iterator it = termInst->getOperand(0)->uses().begin(), end = termInst->getOperand(
             0)->uses().end(); it != end; ++it) {
 
         std::string name = it->get()->getName();
         std::cout << "Use Name: " << name << "\n";
 
-        llvm::User *user =  it->getUser();
+        llvm::User *user = it->getUser();
         llvm::Instruction *inst = (llvm::Instruction *) user;
         std::cout << "User Name: " << inst->getOpcodeName() << "\n";
     }
+     */
 
 
 }

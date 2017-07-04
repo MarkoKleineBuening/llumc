@@ -105,16 +105,68 @@ CMakeFiles/llumc.dir/Encoder.cpp.o.provides: CMakeFiles/llumc.dir/Encoder.cpp.o.
 CMakeFiles/llumc.dir/Encoder.cpp.o.provides.build: CMakeFiles/llumc.dir/Encoder.cpp.o
 
 
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o: CMakeFiles/llumc.dir/flags.make
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o: ../LLUMCVisitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o -c /home/marko/CLionProjects/llumc/LLUMCVisitor.cpp
+
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/LLUMCVisitor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/LLUMCVisitor.cpp > CMakeFiles/llumc.dir/LLUMCVisitor.cpp.i
+
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/LLUMCVisitor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/LLUMCVisitor.cpp -o CMakeFiles/llumc.dir/LLUMCVisitor.cpp.s
+
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.requires:
+
+.PHONY : CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.requires
+
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.provides: CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.provides.build
+.PHONY : CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.provides
+
+CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.provides.build: CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o
+
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o: CMakeFiles/llumc.dir/flags.make
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o: ../InstructionEncoderLLUMC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o -c /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp > CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.i
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp -o CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.s
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.requires:
+
+.PHONY : CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.requires
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.provides: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.requires
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.provides.build
+.PHONY : CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.provides
+
+CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.provides.build: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o
+
+
 # Object files for target llumc
 llumc_OBJECTS = \
 "CMakeFiles/llumc.dir/main.cpp.o" \
-"CMakeFiles/llumc.dir/Encoder.cpp.o"
+"CMakeFiles/llumc.dir/Encoder.cpp.o" \
+"CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o" \
+"CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o"
 
 # External object files for target llumc
 llumc_EXTERNAL_OBJECTS =
 
 llumc: CMakeFiles/llumc.dir/main.cpp.o
 llumc: CMakeFiles/llumc.dir/Encoder.cpp.o
+llumc: CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o
+llumc: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o
 llumc: CMakeFiles/llumc.dir/build.make
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMObject.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMObjCARCOpts.a
@@ -140,7 +192,7 @@ llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a
 llumc: CMakeFiles/llumc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable llumc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable llumc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/llumc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -150,6 +202,8 @@ CMakeFiles/llumc.dir/build: llumc
 
 CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/main.cpp.o.requires
 CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/Encoder.cpp.o.requires
+CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o.requires
+CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.requires
 
 .PHONY : CMakeFiles/llumc.dir/requires
 

@@ -150,6 +150,60 @@ Encoder.cpp.s:
 	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Encoder.cpp.s
 .PHONY : Encoder.cpp.s
 
+InstructionEncoderLLUMC.o: InstructionEncoderLLUMC.cpp.o
+
+.PHONY : InstructionEncoderLLUMC.o
+
+# target to build an object file
+InstructionEncoderLLUMC.cpp.o:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o
+.PHONY : InstructionEncoderLLUMC.cpp.o
+
+InstructionEncoderLLUMC.i: InstructionEncoderLLUMC.cpp.i
+
+.PHONY : InstructionEncoderLLUMC.i
+
+# target to preprocess a source file
+InstructionEncoderLLUMC.cpp.i:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.i
+.PHONY : InstructionEncoderLLUMC.cpp.i
+
+InstructionEncoderLLUMC.s: InstructionEncoderLLUMC.cpp.s
+
+.PHONY : InstructionEncoderLLUMC.s
+
+# target to generate assembly for a file
+InstructionEncoderLLUMC.cpp.s:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.s
+.PHONY : InstructionEncoderLLUMC.cpp.s
+
+LLUMCVisitor.o: LLUMCVisitor.cpp.o
+
+.PHONY : LLUMCVisitor.o
+
+# target to build an object file
+LLUMCVisitor.cpp.o:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o
+.PHONY : LLUMCVisitor.cpp.o
+
+LLUMCVisitor.i: LLUMCVisitor.cpp.i
+
+.PHONY : LLUMCVisitor.i
+
+# target to preprocess a source file
+LLUMCVisitor.cpp.i:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/LLUMCVisitor.cpp.i
+.PHONY : LLUMCVisitor.cpp.i
+
+LLUMCVisitor.s: LLUMCVisitor.cpp.s
+
+.PHONY : LLUMCVisitor.s
+
+# target to generate assembly for a file
+LLUMCVisitor.cpp.s:
+	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/LLUMCVisitor.cpp.s
+.PHONY : LLUMCVisitor.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -189,6 +243,12 @@ help:
 	@echo "... Encoder.o"
 	@echo "... Encoder.i"
 	@echo "... Encoder.s"
+	@echo "... InstructionEncoderLLUMC.o"
+	@echo "... InstructionEncoderLLUMC.i"
+	@echo "... InstructionEncoderLLUMC.s"
+	@echo "... LLUMCVisitor.o"
+	@echo "... LLUMCVisitor.i"
+	@echo "... LLUMCVisitor.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -92,6 +92,18 @@
 		<Unit filename="/home/marko/CLionProjects/llumc/Encoder.h">
 			<Option target="llumc"/>
 		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.h">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/LLUMCVisitor.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/LLUMCVisitor.h">
+			<Option target="llumc"/>
+		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/main.cpp">
 			<Option target="llumc"/>
 		</Unit>

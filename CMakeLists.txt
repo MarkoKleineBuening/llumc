@@ -33,7 +33,7 @@ find_package(LLVM
 add_definitions("${LLVM_CXXFLAGS} -DLLVM_MAJOR=${LLVM_VERSION_MAJOR} -DLLVM_MINOR=${LLVM_VERSION_MINOR} -fexceptions")
 include_directories("${LLVM_INCLUDE_DIR}")
 set(SOURCE_FILES main.cpp
-        Encoder.cpp Encoder.h)
+        Encoder.cpp Encoder.h LLUMCVisitor.cpp LLUMCVisitor.h InstructionEncoderLLUMC.cpp InstructionEncoderLLUMC.h)
 
 add_executable(llumc ${SOURCE_FILES})
 target_link_libraries(llumc  ${LLVM_LIBRARIES} pthread dl)

@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/marko/CLionProjects/llumc/Encoder.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/Encoder.cpp.o"
+  "/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o"
+  "/home/marko/CLionProjects/llumc/LLUMCVisitor.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/LLUMCVisitor.cpp.o"
   "/home/marko/CLionProjects/llumc/main.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
