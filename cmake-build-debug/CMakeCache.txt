@@ -192,6 +192,57 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a library.
+LLBMC_ANALYSIS_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCAnalysis.a
+
+//Path to a library.
+LLBMC_CALLGRAPH_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCCallGraph.a
+
+//Path to a library.
+LLBMC_COMMANDLINE_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCCommandLine.a
+
+//Enable LLBMC's STP support
+LLBMC_ENABLE_STP:BOOL=ON
+
+//Path to a library.
+LLBMC_ENCODER_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCEncoder.a
+
+//Path to a library.
+LLBMC_ILR_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCILR.a
+
+//Path to LLBMC's include directory
+LLBMC_INCLUDE_DIR:PATH=/home/marko/workspace/install/reldeb-gcc/include
+
+//List of all requested llbmc libraries
+LLBMC_LIBRARIES:STRING=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCCommandLine.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCTools.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCOutput.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCCallGraph.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCPasses.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCEncoder.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCAnalysis.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCTransformer.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSolver.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCILR.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSMT.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSolver.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCResource.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCUtil.a
+
+//Path to a library.
+LLBMC_OUTPUT_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCOutput.a
+
+//Path to a library.
+LLBMC_PASSES_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCPasses.a
+
+//Path to a library.
+LLBMC_RESOURCE_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCResource.a
+
+//Link in Minisat separately (instead of as part of STP)
+LLBMC_SEPARATE_MINISAT:BOOL=OFF
+
+//Path to a library.
+LLBMC_SMT_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSMT.a
+
+//Path to a library.
+LLBMC_SOLVER_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSolver.a
+
+//Path to a library.
+LLBMC_TOOLS_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCTools.a
+
+//Path to a library.
+LLBMC_TRANSFORMER_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCTransformer.a
+
+//Path to a library.
+LLBMC_UTIL_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLBMCUtil.a
+
+//Path to a library.
 LLVM_ANALYSIS_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAnalysis.a
 
 //Path to a library.
@@ -293,11 +344,20 @@ LLVM_VERSION_MINOR:STRING=7
 //LLVM'S patch level
 LLVM_VERSION_PATCHLEVEL:STRING=1
 
+//Path to Minisat's include directory
+MINISAT_INCLUDE_DIR:PATH=/home/marko/workspace/install/reldeb-gcc/include
+
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
+
+//Path to STP's include directory
+STP_INCLUDE_DIR:PATH=/home/marko/workspace/install/reldeb-gcc/include
+
+//Path to STP's library
+STP_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libstp.so
 
 //Value Computed by CMake
 llumc_BINARY_DIR:STATIC=/home/marko/CLionProjects/llumc/cmake-build-debug
@@ -445,8 +505,14 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding LLBMC
+FIND_PACKAGE_MESSAGE_DETAILS_LLBMC:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/include][v()]
 //Details about finding LLVM
 FIND_PACKAGE_MESSAGE_DETAILS_LLVM:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/include][3.7][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObject.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObjCARCOpts.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMCParser.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMC.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstrumentation.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCodeGen.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipo.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMVectorize.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstCombine.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMScalarOpts.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTransformUtils.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipa.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAnalysis.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTarget.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMLinker.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMIRReader.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAsmParser.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitReader.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitWriter.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a][-I/home/marko/workspace/install/reldeb-gcc/include  -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wnon-virtual-dtor -Wno-comment -std=c++11 -ffunction-sections -fdata-sections -O3 -DNDEBUG -fno-exceptions  -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS][/home/marko/workspace/install/reldeb-gcc/bin/llvm-as][/home/marko/workspace/install/reldeb-gcc/bin/llvm-dis][/home/marko/workspace/install/reldeb-gcc/bin/llvm-link][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObject.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObjCARCOpts.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMCParser.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMC.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstrumentation.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCodeGen.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipo.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMVectorize.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstCombine.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMScalarOpts.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTransformUtils.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipa.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAnalysis.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTarget.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMLinker.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMIRReader.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAsmParser.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitReader.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitWriter.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a][v()]
+//Details about finding STP
+FIND_PACKAGE_MESSAGE_DETAILS_STP:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/lib/libstp.so][/home/marko/workspace/install/reldeb-gcc/include][v()]
+//ADVANCED property for variable: LLBMC_INCLUDE_DIR
+LLBMC_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LLVM_ANALYSIS_LIBRARY
 LLVM_ANALYSIS_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LLVM_ASMPARSER_LIBRARY
@@ -513,8 +579,14 @@ LLVM_VERSION_MAJOR-ADVANCED:INTERNAL=1
 LLVM_VERSION_MINOR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LLVM_VERSION_PATCHLEVEL
 LLVM_VERSION_PATCHLEVEL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MINISAT_INCLUDE_DIR
+MINISAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
 ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: STP_INCLUDE_DIR
+STP_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: STP_LIBRARY
+STP_LIBRARY-ADVANCED:INTERNAL=1
 

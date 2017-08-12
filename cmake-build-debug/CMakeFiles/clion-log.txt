@@ -13,8 +13,11 @@
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
+-- Found LLBMC: /home/marko/workspace/install/reldeb-gcc/include  
 -- LLVM version: 3.7
 -- Found LLVM: /home/marko/workspace/install/reldeb-gcc/include  
+-- Found STP: /home/marko/workspace/install/reldeb-gcc/lib/libstp.so  
+STP_FOUND: TRUE
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/marko/CLionProjects/llumc/cmake-build-debug

@@ -86,10 +86,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/marko/CLionProjects/llumc/ASubject.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/ASubject.h">
+			<Option target="llumc"/>
+		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/Encoder.cpp">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/Encoder.h">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/Formula.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/Formula.h">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/IObserver.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/IObserver.h">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp">
@@ -98,10 +116,16 @@
 		<Unit filename="/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.h">
 			<Option target="llumc"/>
 		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/LLUMCVisitor.cpp">
+		<Unit filename="/home/marko/CLionProjects/llumc/SMTTranslator.cpp">
 			<Option target="llumc"/>
 		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/LLUMCVisitor.h">
+		<Unit filename="/home/marko/CLionProjects/llumc/SMTTranslator.h">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/Solver.cpp">
+			<Option target="llumc"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/Solver.h">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/main.cpp">
@@ -110,10 +134,22 @@
 		<Unit filename="/home/marko/CLionProjects/llumc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindLLBMC.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindComponents.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindLLVM.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindComponents.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindSTP.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/marko/CLionProjects/llumc/cmake/FindMinisat.cmake">
 			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
