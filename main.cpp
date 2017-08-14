@@ -13,6 +13,7 @@
 #include <llbmc/SMT/STP.h>
 #include <llvm/Support/FormattedStream.h>
 #include <llvm/Support/FileSystem.h>
+#include <fstream>
 
 int number = 0;
 
@@ -27,6 +28,10 @@ llvm::Module *getModule(llvm::LLVMContext &llvmContext, std::string &fileName);
 llvm::raw_ostream *ostream2();
 
 void removeOldFiles();
+
+void summarizeOutputFiles();
+
+void readFile(std::string file, std::string type);
 
 int main(int argc, char *argv[]) {
     removeOldFiles();
@@ -94,7 +99,7 @@ int main(int argc, char *argv[]) {
     llvm::outs() << "\n";
 
     std::cout << "Desc:" << solver->getDescription() << "\n";
-    switch (solver->getResult()) {
+    /*switch (solver->getResult()) {
         case SMT::Solver::Result::Satisfiable: {
             std::cout << "Result:" << "Satisfiable" << "\n";
             break;
@@ -110,9 +115,49 @@ int main(int argc, char *argv[]) {
         default:
             std::cout << "Result:" << "ERROR DEFAULT" << "\n";
 
+    }*/
 
-    }
+    summarizeOutputFiles();
+
     return 0;
+}
+
+/**
+ * summarizes the 4 output files into one
+ */
+void summarizeOutputFiles() {
+    readFile("output_3.cnf", "u cnf");//univ
+    readFile("output_1.cnf", "i cnf");//init
+    readFile("output_2.cnf", "g cnf");//goal
+    readFile("output_0.cnf", "t cnf");//trans
+}
+
+void readFile(std::string file, std::string type) {
+    std::ofstream output("DimSpecFormula.cnf",std::ofstream::app);
+    std::ifstream init(file);
+    std::string line;
+    int counter = 0;
+    while (std::getline(init, line)) {
+        if(counter == 0){
+            counter++;
+            continue;
+        }
+        if(counter == 1){
+            output << type;
+            int pos = line.find("f");
+            std::stringstream f(line.substr(pos + 1, line.size()));
+            std::string s;
+            while (getline(f, s, ' ')) {
+                output << s << " ";
+            }
+            output << "\n";
+            counter++;
+        }else{
+            output<<line<<"\n";
+        }
+    }
+    init.close();
+    output.close();
 }
 
 void removeOldFiles() {
@@ -134,6 +179,9 @@ void removeOldFiles() {
     }
     if( remove( "output_3.cnf" ) == 0 ){
         llvm::outs()<< "output_3.cnf";
+    }
+    if( remove( "DimSpecFormula.cnf" ) == 0 ){
+        llvm::outs()<< "DimSpecFormula.cnf";
     }
     llvm::outs() << ".\n";
 

@@ -3,6 +3,10 @@ project(llumc)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
+add_definitions(-fsanitize=address)
+#add_definitions(-lasan)
+set(CMAKE_CXX_LINK_FLAGS ${CMAKE_CXX_LINK_FLAGS} -fsanitize=address)
+
 find_package(LLBMC
         COMPONENTS
         LLBMCAnalysis
@@ -76,3 +80,4 @@ target_link_libraries(llumc  ${LLBMC_LIBRARIES} pthread dl)
 target_link_libraries(llumc  ${LLVM_LIBRARIES} pthread dl)
 
 target_link_libraries(llumc ${STP_LIBRARY})
+

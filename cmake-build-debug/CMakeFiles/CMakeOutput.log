@@ -3700,3 +3700,2471 @@ make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CM
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+The system is: Linux - 4.8.0-56-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e4ff9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4ff9.dir/build.make CMakeFiles/cmTC_e4ff9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e4ff9.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e4ff9.dir/testCCompiler.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e4ff9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4ff9.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e4ff9.dir/testCCompiler.c.o  -o cmTC_e4ff9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1b547/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b547.dir/build.make CMakeFiles/cmTC_1b547.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_1b547
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b547.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o  -o cmTC_1b547 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b547' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJG6qNM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_1b547 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1b547/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1b547.dir/build.make CMakeFiles/cmTC_1b547.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_1b547]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b547.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o  -o cmTC_1b547 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b547' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJG6qNM.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_1b547 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccJG6qNM.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1b547] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_1b547.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e558a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e558a.dir/build.make CMakeFiles/cmTC_e558a.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e558a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e558a.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e558a
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e558a.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e558a.dir/feature_tests.c.o  -o cmTC_e558a 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5e5c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5e5c4.dir/build.make CMakeFiles/cmTC_5e5c4.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5e5c4.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_5e5c4.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5e5c4
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e5c4.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_5e5c4.dir/feature_tests.c.o  -o cmTC_5e5c4 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_41ea6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_41ea6.dir/build.make CMakeFiles/cmTC_41ea6.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_41ea6.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_41ea6.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_41ea6
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41ea6.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_41ea6.dir/feature_tests.c.o  -o cmTC_41ea6 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ede4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ede4.dir/build.make CMakeFiles/cmTC_3ede4.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3ede4.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_3ede4.dir/testCXXCompiler.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_3ede4
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ede4.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_3ede4.dir/testCXXCompiler.cxx.o  -o cmTC_3ede4 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0d35e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0d35e.dir/build.make CMakeFiles/cmTC_0d35e.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_0d35e
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d35e.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0d35e 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d35e' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu6HIxa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_0d35e /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0d35e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_0d35e.dir/build.make CMakeFiles/cmTC_0d35e.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_0d35e]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d35e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0d35e ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d35e' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccu6HIxa.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_0d35e /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccu6HIxa.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_0d35e] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_0d35e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5c13e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5c13e.dir/build.make CMakeFiles/cmTC_5c13e.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5c13e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_5c13e.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5c13e
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c13e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_5c13e.dir/feature_tests.cxx.o  -o cmTC_5c13e 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5576b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5576b.dir/build.make CMakeFiles/cmTC_5576b.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5576b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_5576b.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5576b
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5576b.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_5576b.dir/feature_tests.cxx.o  -o cmTC_5576b 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c8bc9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c8bc9.dir/build.make CMakeFiles/cmTC_c8bc9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8bc9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c8bc9.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c8bc9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8bc9.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_c8bc9.dir/feature_tests.cxx.o  -o cmTC_c8bc9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1ad3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f1ad3.dir/build.make CMakeFiles/cmTC_f1ad3.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f1ad3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_f1ad3.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f1ad3
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1ad3.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f1ad3.dir/feature_tests.cxx.o  -o cmTC_f1ad3 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+The system is: Linux - 4.8.0-56-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a92fb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a92fb.dir/build.make CMakeFiles/cmTC_a92fb.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a92fb.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a92fb.dir/testCCompiler.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_a92fb
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a92fb.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_a92fb.dir/testCCompiler.c.o  -o cmTC_a92fb 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7cfe1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7cfe1.dir/build.make CMakeFiles/cmTC_7cfe1.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_7cfe1
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cfe1.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o  -o cmTC_7cfe1 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7cfe1' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw1gExm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_7cfe1 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_7cfe1/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_7cfe1.dir/build.make CMakeFiles/cmTC_7cfe1.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_7cfe1]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7cfe1.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o  -o cmTC_7cfe1 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7cfe1' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw1gExm.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_7cfe1 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccw1gExm.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_7cfe1] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_7cfe1.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e55e9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e55e9.dir/build.make CMakeFiles/cmTC_e55e9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e55e9.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e55e9.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e55e9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e55e9.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e55e9.dir/feature_tests.c.o  -o cmTC_e55e9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58557/fast"
+/usr/bin/make -f CMakeFiles/cmTC_58557.dir/build.make CMakeFiles/cmTC_58557.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58557.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_58557.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_58557
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58557.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_58557.dir/feature_tests.c.o  -o cmTC_58557 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29bc9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29bc9.dir/build.make CMakeFiles/cmTC_29bc9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29bc9.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_29bc9.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_29bc9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29bc9.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_29bc9.dir/feature_tests.c.o  -o cmTC_29bc9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79754/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79754.dir/build.make CMakeFiles/cmTC_79754.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79754.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_79754.dir/testCXXCompiler.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_79754
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79754.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_79754.dir/testCXXCompiler.cxx.o  -o cmTC_79754 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7df1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7df1.dir/build.make CMakeFiles/cmTC_b7df1.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_b7df1
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7df1.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b7df1 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b7df1' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbOMGrQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_b7df1 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b7df1/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b7df1.dir/build.make CMakeFiles/cmTC_b7df1.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_b7df1]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7df1.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b7df1 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b7df1' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbOMGrQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_b7df1 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbOMGrQ.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b7df1] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_b7df1.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_875e9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_875e9.dir/build.make CMakeFiles/cmTC_875e9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_875e9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_875e9.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_875e9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_875e9.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_875e9.dir/feature_tests.cxx.o  -o cmTC_875e9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_47882/fast"
+/usr/bin/make -f CMakeFiles/cmTC_47882.dir/build.make CMakeFiles/cmTC_47882.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_47882.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_47882.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_47882
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47882.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_47882.dir/feature_tests.cxx.o  -o cmTC_47882 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_117b9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_117b9.dir/build.make CMakeFiles/cmTC_117b9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_117b9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_117b9.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_117b9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_117b9.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_117b9.dir/feature_tests.cxx.o  -o cmTC_117b9 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_99139/fast"
+/usr/bin/make -f CMakeFiles/cmTC_99139.dir/build.make CMakeFiles/cmTC_99139.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_99139.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_99139.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_99139
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99139.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_99139.dir/feature_tests.cxx.o  -o cmTC_99139 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+The system is: Linux - 4.8.0-56-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6ec9f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6ec9f.dir/build.make CMakeFiles/cmTC_6ec9f.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ec9f.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_6ec9f.dir/testCCompiler.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_6ec9f
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ec9f.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6ec9f.dir/testCCompiler.c.o  -o cmTC_6ec9f 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f3d4d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f3d4d.dir/build.make CMakeFiles/cmTC_f3d4d.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_f3d4d
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3d4d.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o  -o cmTC_f3d4d 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f3d4d' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2VY4Fh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_f3d4d /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f3d4d/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f3d4d.dir/build.make CMakeFiles/cmTC_f3d4d.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_f3d4d]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3d4d.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o  -o cmTC_f3d4d ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f3d4d' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2VY4Fh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_f3d4d /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc2VY4Fh.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f3d4d] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_f3d4d.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d02de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d02de.dir/build.make CMakeFiles/cmTC_d02de.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d02de.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_d02de.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d02de
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d02de.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_d02de.dir/feature_tests.c.o  -o cmTC_d02de 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9c50d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9c50d.dir/build.make CMakeFiles/cmTC_9c50d.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c50d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_9c50d.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9c50d
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c50d.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_9c50d.dir/feature_tests.c.o  -o cmTC_9c50d 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f01c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f01c4.dir/build.make CMakeFiles/cmTC_f01c4.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f01c4.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_f01c4.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f01c4
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f01c4.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_f01c4.dir/feature_tests.c.o  -o cmTC_f01c4 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_07180/fast"
+/usr/bin/make -f CMakeFiles/cmTC_07180.dir/build.make CMakeFiles/cmTC_07180.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_07180.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_07180.dir/testCXXCompiler.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_07180
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07180.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_07180.dir/testCXXCompiler.cxx.o  -o cmTC_07180 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f7dfd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f7dfd.dir/build.make CMakeFiles/cmTC_f7dfd.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_f7dfd
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7dfd.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f7dfd 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f7dfd' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx0nKLE.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_f7dfd /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f7dfd/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f7dfd.dir/build.make CMakeFiles/cmTC_f7dfd.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_f7dfd]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7dfd.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f7dfd ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f7dfd' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccx0nKLE.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_f7dfd /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccx0nKLE.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f7dfd] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_f7dfd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0ff08/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ff08.dir/build.make CMakeFiles/cmTC_0ff08.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0ff08.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_0ff08.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0ff08
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ff08.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_0ff08.dir/feature_tests.cxx.o  -o cmTC_0ff08 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0651d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0651d.dir/build.make CMakeFiles/cmTC_0651d.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0651d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_0651d.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0651d
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0651d.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_0651d.dir/feature_tests.cxx.o  -o cmTC_0651d 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8b6a8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8b6a8.dir/build.make CMakeFiles/cmTC_8b6a8.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8b6a8.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_8b6a8.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8b6a8
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b6a8.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_8b6a8.dir/feature_tests.cxx.o  -o cmTC_8b6a8 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_df823/fast"
+/usr/bin/make -f CMakeFiles/cmTC_df823.dir/build.make CMakeFiles/cmTC_df823.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_df823.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_df823.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_df823
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df823.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_df823.dir/feature_tests.cxx.o  -o cmTC_df823 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+The system is: Linux - 4.8.0-56-generic - i686
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eb119/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb119.dir/build.make CMakeFiles/cmTC_eb119.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eb119.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_eb119.dir/testCCompiler.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_eb119
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb119.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_eb119.dir/testCCompiler.c.o  -o cmTC_eb119 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_687d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_687d9.dir/build.make CMakeFiles/cmTC_687d9.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_687d9
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_687d9.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o  -o cmTC_687d9 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_687d9' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccz8gIsz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_687d9 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_687d9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_687d9.dir/build.make CMakeFiles/cmTC_687d9.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o   -c /home/marko/software/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_687d9]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_687d9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o  -o cmTC_687d9 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_687d9' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccz8gIsz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_687d9 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccz8gIsz.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_687d9] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_687d9.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_786af/fast"
+/usr/bin/make -f CMakeFiles/cmTC_786af.dir/build.make CMakeFiles/cmTC_786af.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_786af.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_786af.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_786af
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_786af.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_786af.dir/feature_tests.c.o  -o cmTC_786af 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dfbb5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dfbb5.dir/build.make CMakeFiles/cmTC_dfbb5.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dfbb5.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_dfbb5.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dfbb5
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfbb5.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_dfbb5.dir/feature_tests.c.o  -o cmTC_dfbb5 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_71343/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71343.dir/build.make CMakeFiles/cmTC_71343.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71343.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_71343.dir/feature_tests.c.o   -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_71343
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71343.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_71343.dir/feature_tests.c.o  -o cmTC_71343 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7920c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7920c.dir/build.make CMakeFiles/cmTC_7920c.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7920c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_7920c.dir/testCXXCompiler.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_7920c
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7920c.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_7920c.dir/testCXXCompiler.cxx.o  -o cmTC_7920c 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ba69/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ba69.dir/build.make CMakeFiles/cmTC_3ba69.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_3ba69
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ba69.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3ba69 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
+COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3ba69' '-shared-libgcc' '-mtune=generic' '-march=i686'
+ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cce1EMcb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_3ba69 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3ba69/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3ba69.dir/build.make CMakeFiles/cmTC_3ba69.dir/build]
+  ignore line: [make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o -c /home/marko/software/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_3ba69]
+  ignore line: [/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ba69.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_3ba69 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: i686-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.4' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/i686-linux-gnu/5/:/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/:/usr/lib/gcc/i686-linux-gnu/5/../../../../lib/:/lib/i386-linux-gnu/:/lib/../lib/:/usr/lib/i386-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/i686-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3ba69' '-shared-libgcc' '-mtune=generic' '-march=i686']
+  link line: [ /usr/lib/gcc/i686-linux-gnu/5/collect2 -plugin /usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cce1EMcb.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_i386 --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux.so.2 -z relro -o cmTC_3ba69 /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o /usr/lib/gcc/i686-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/5 -L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu -L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib -L/lib/i386-linux-gnu -L/lib/../lib -L/usr/lib/i386-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/i686-linux-gnu/5/../../.. CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i686-linux-gnu/5/crtend.o /usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cce1EMcb.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_i386] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3ba69] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5] ==> dir [/usr/lib/gcc/i686-linux-gnu/5]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib]
+    arg [-L/lib/i386-linux-gnu] ==> dir [/lib/i386-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/i386-linux-gnu] ==> dir [/usr/lib/i386-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/i686-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_3ba69.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/i686-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5] ==> [/usr/lib/gcc/i686-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/i386-linux-gnu] ==> [/lib/i386-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/i386-linux-gnu] ==> [/usr/lib/i386-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/i686-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/usr/lib/gcc/i686-linux-gnu/5;/usr/lib/i386-linux-gnu;/usr/lib;/lib/i386-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bd988/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bd988.dir/build.make CMakeFiles/cmTC_bd988.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bd988.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_bd988.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_bd988
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd988.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_bd988.dir/feature_tests.cxx.o  -o cmTC_bd988 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4e9e6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4e9e6.dir/build.make CMakeFiles/cmTC_4e9e6.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4e9e6.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_4e9e6.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4e9e6
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e9e6.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_4e9e6.dir/feature_tests.cxx.o  -o cmTC_4e9e6 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_640fc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_640fc.dir/build.make CMakeFiles/cmTC_640fc.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_640fc.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_640fc.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_640fc
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_640fc.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_640fc.dir/feature_tests.cxx.o  -o cmTC_640fc 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc671/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bc671.dir/build.make CMakeFiles/cmTC_bc671.dir/build
+make[1]: Entering directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bc671.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_bc671.dir/feature_tests.cxx.o -c /home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_bc671
+/home/marko/software/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc671.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_bc671.dir/feature_tests.cxx.o  -o cmTC_bc671 
+make[1]: Leaving directory '/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates

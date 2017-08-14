@@ -165,6 +165,8 @@ llvm/Support/FormattedStream.h
 -
 llvm/Support/FileSystem.h
 -
+fstream
+-
 
 /home/marko/workspace/install/reldeb-gcc/include/llbmc/CallGraph/FunctionMatcher.h
 llbmc/Util/WARN_OFF.h

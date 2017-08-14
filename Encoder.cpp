@@ -29,7 +29,7 @@ SMT::BoolExp *Encoder::encodeFormula(llvm::StringRef string) {
         SMT::BoolExp *exp = encodeBasicBlockOverTerminator(BB, width);
         boolExp = m_smtContext->getSatCore()->mk_and(boolExp, exp);
         if (BB.getName().equals("bb3")) {
-            break;
+            //break;
         }
     }
     llvm::outs() << " ... finished\n";
