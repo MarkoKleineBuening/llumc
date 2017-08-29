@@ -35,6 +35,8 @@ void InstructionEncoderLLUMC::visitSpecification(llvm::CallInst &I) {
 
     if (cmd.startswith("nondef")) {
         // a variable is "created" with nondef just save it as x, does not be repeated here
+        std::cout << "m_formulaSetBV was filled with BV\n";
+        m_formulaSetBV = m_SMTTranslator.createBV(I.getName(), I.getType()->getIntegerBitWidth());
     } else if (cmd.startswith("assume")) {
         llvm::outs() << name.str() << ": ";
         visitAssume(I);
@@ -547,6 +549,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
 
     const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
     if (is_in) {
+        //std::cout << "Is In in Mul: erase: "<< I.getName().str() << "\n";
         std::string name = I.getName();
         SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
         SMT::BoolExp *save = m_SMTTranslator.compare(bvMul, bvExp, llvm::CmpInst::ICMP_EQ);
@@ -724,6 +727,7 @@ llvm::SmallPtrSet<SMT::BoolExp *, 1> InstructionEncoderLLUMC::getFormulaSetSave(
 }
 
 void InstructionEncoderLLUMC::resetNotUsedVar() {
+    //std::cout << "Called resetNotUsedVar\n";
     m_notUsedVar = m_variableSet;
 }
 

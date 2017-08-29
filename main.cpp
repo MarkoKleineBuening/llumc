@@ -23,6 +23,8 @@ enum SMTSolver {
     Boolector
 };
 
+int highestVar;
+
 llvm::Module *getModule(llvm::LLVMContext &llvmContext, std::string &fileName);
 
 llvm::raw_ostream *ostream2();
@@ -33,10 +35,13 @@ void summarizeOutputFiles();
 
 void readFile(std::string file, std::string type);
 
+void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash);
+
 int main(int argc, char *argv[]) {
     removeOldFiles();
     std::string fileName = "/home/marko/workspace/bitcodeModule.bc";
-    //if (argc > 1) { fileName = argv[1]; }
+    if (argc > 1) { fileName = argv[1]; }
+    std::cout << "Filename: " << fileName << "\n";
     llvm::LLVMContext context;
     llvm::Module *module = getModule(context, fileName);
 
@@ -96,6 +101,15 @@ int main(int argc, char *argv[]) {
     solver->assertConstraint(universalExp);
     solver->solve();
 
+    std::map<std::string, std::vector<unsigned int>> dashMap = solver->getDashMap();
+    std::cout << "Size of Vector: " << dashMap.size() << "\n";
+    for (auto &entry : dashMap) {
+        std::cout << entry.first << ": ";
+        for (auto &sec : entry.second) {
+            std::cout << sec << ", ";
+        }
+        std::cout << "\n";
+    }
     llvm::outs() << "\n";
 
     std::cout << "Desc:" << solver->getDescription() << "\n";
@@ -116,44 +130,155 @@ int main(int argc, char *argv[]) {
             std::cout << "Result:" << "ERROR DEFAULT" << "\n";
 
     }*/
-
     summarizeOutputFiles();
 
+    renameVariables(dashMap);
+
     return 0;
+}
+
+void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash) {
+    std::cout << "Highest Number: " << highestVar << "\n";
+    std::ofstream out("DimSpecFormula.cnf", std::ofstream::app);
+    std::ifstream in("DimSpecFormulaPre.cnf");
+    std::string line;
+    while (std::getline(in, line)) {
+        if (!line.empty()) {
+            if (line.find("cnf") != std::string::npos) {
+                int pos = line.find("f");
+                std::stringstream start(line.substr(0, pos + 1));
+                out << start.str() << " ";
+                std::stringstream f(line.substr(pos + 1, line.size()));
+                std::string s;
+                int num = 0;
+                if (line.find("t") != std::string::npos) {
+                    int count = 0;
+                    while (getline(f, s, ' ')) {
+                        if (!s.empty()) {
+                            if (count == 0) {
+                                num = highestVar * 2;
+                                count++;
+                            } else {
+                                num = atoi(s.c_str()) - 1;
+                            }
+                            out << num << " ";
+                        }
+                    }
+                    out << "\n";
+                } else {
+                    int count = 0;
+                    while (getline(f, s, ' ')) {
+                        if (!s.empty()) {
+                            if (count == 0) {
+                                num = highestVar;
+                                count++;
+                            } else {
+                                num = atoi(s.c_str()) - 1;
+                            }
+                            out << num << " ";
+                        }
+                    }
+                    out << "\n";
+                }
+            } else {
+                std::stringstream f(line);
+                std::string s;
+
+                while (getline(f, s, ' ')) {
+                    std::cout << s << ",";
+                    bool found = false;
+                    if (!s.empty()) {
+                        int num = 0;
+                        for (auto &entry: mapDash) {
+                            int pos = 0;
+                            for (auto sec : entry.second) {
+                                if (entry.first.size() > 4 &&
+                                    entry.first.substr(entry.first.size() - 4, entry.first.size()) == "Dash") {
+                                    if (atoi(s.c_str()) == sec) {
+                                        std::cout << "Test, object was found. " << pos << " " << entry.first << " "
+                                                  << atoi(s.c_str()) << "\n";
+                                        num = mapDash[entry.first.substr(0, entry.first.size() - 4)].at(pos) +
+                                              highestVar;
+                                        std::cout << "rename: " << s << " -> " << num << "\n";
+                                        found = true;
+                                    }else if(-atoi(s.c_str())==sec){
+                                        std::cout << "Test, object was found. " << pos << " " << entry.first << " "
+                                                 << atoi(s.c_str()) << "\n";
+                                        num = -(mapDash[entry.first.substr(0, entry.first.size() - 4)].at(pos) +
+                                              highestVar);
+                                        std::cout << "rename: " << s << " -> " << num << "\n";
+                                        found = true;
+                                    }
+                                    pos++;
+                                }
+                            }
+                        }
+                        if (!found) {
+                            num = atoi(s.c_str());
+                        }
+                        out << num << " ";
+                    }
+                }
+                out << "\n";
+            }
+        }
+    }
+    in.close();
+    out.close();
 }
 
 /**
  * summarizes the 4 output files into one
  */
 void summarizeOutputFiles() {
-    readFile("output_3.cnf", "u cnf");//univ
     readFile("output_1.cnf", "i cnf");//init
+    readFile("output_3.cnf", "u cnf");//univ
     readFile("output_2.cnf", "g cnf");//goal
     readFile("output_0.cnf", "t cnf");//trans
 }
 
 void readFile(std::string file, std::string type) {
-    std::ofstream output("DimSpecFormula.cnf",std::ofstream::app);
+    std::ofstream output("DimSpecFormulaPre.cnf", std::ofstream::app);
     std::ifstream init(file);
-    std::string line;
-    int counter = 0;
-    while (std::getline(init, line)) {
-        if(counter == 0){
-            counter++;
-            continue;
-        }
-        if(counter == 1){
-            output << type;
-            int pos = line.find("f");
-            std::stringstream f(line.substr(pos + 1, line.size()));
-            std::string s;
-            while (getline(f, s, ' ')) {
-                output << s << " ";
+    if (init.fail()) {
+        std::cout << "File does not exist\n";
+        output << "\n" << type << " 1 1\n";
+    } else {
+        std::string line;
+        int counter = 0;
+        while (std::getline(init, line)) {
+            if (counter == 0) {
+                counter++;
+                continue;
             }
-            output << "\n";
-            counter++;
-        }else{
-            output<<line<<"\n";
+            if (counter == 1) {
+                output << type;
+                int pos = line.find("f");
+                std::stringstream f(line.substr(pos + 1, line.size()));
+                std::string s;
+                int co = 0;
+                while (getline(f, s, ' ')) {
+                    /* if (co == 0 && i == 1 && !s.empty()) {
+                         highestVar = atoi(s.c_str());
+                         std::cout << "high:" << highestVar << ", " << s << "\n";
+                         co++;
+                     }*/
+                    output << s << " ";
+                }
+                output << "\n";
+                counter++;
+            } else {
+                std::stringstream f(line);
+                std::string s;
+                while (getline(f, s, ' ')) {
+                    output << s << " ";
+                    if (highestVar < atoi(s.c_str())) {
+                        highestVar = atoi(s.c_str());
+                    }
+                }
+                output << "\n";
+                //output << line << "\n";
+            }
         }
     }
     init.close();
@@ -161,27 +286,30 @@ void readFile(std::string file, std::string type) {
 }
 
 void removeOldFiles() {
-    llvm::outs()<<"Following files have been deleted: ";
-    if( remove( "AIGtoCNF.txt" ) == 0 ){
-        llvm::outs()<< "AIGtoCNF.txt, ";
+    llvm::outs() << "Following files have been deleted: ";
+    if (remove("AIGtoCNF.txt") == 0) {
+        llvm::outs() << "AIGtoCNF.txt, ";
     }
-    if( remove( "NameToAIG.txt" ) == 0 ){
-        llvm::outs()<< "NameToAIG.txt, ";
+    if (remove("NameToAIG.txt") == 0) {
+        llvm::outs() << "NameToAIG.txt, ";
     }
-    if( remove( "output_0.cnf" ) == 0 ){
-        llvm::outs()<< "output_0.cnf, ";
+    if (remove("output_0.cnf") == 0) {
+        llvm::outs() << "output_0.cnf, ";
     }
-    if( remove( "output_1.cnf" ) == 0 ){
-        llvm::outs()<< "output_1.cnf, ";
+    if (remove("output_1.cnf") == 0) {
+        llvm::outs() << "output_1.cnf, ";
     }
-    if( remove( "output_2.cnf" ) == 0 ){
-        llvm::outs()<< "output_2.cnf, ";
+    if (remove("output_2.cnf") == 0) {
+        llvm::outs() << "output_2.cnf, ";
     }
-    if( remove( "output_3.cnf" ) == 0 ){
-        llvm::outs()<< "output_3.cnf";
+    if (remove("output_3.cnf") == 0) {
+        llvm::outs() << "output_3.cnf, ";
     }
-    if( remove( "DimSpecFormula.cnf" ) == 0 ){
-        llvm::outs()<< "DimSpecFormula.cnf";
+    if (remove("DimSpecFormula.cnf") == 0) {
+        llvm::outs() << "DimSpecFormula.cnf, ";
+    }
+    if (remove("DimSpecFormulaPre.cnf") == 0) {
+        llvm::outs() << "DimSpecFormulaPre.cnf";
     }
     llvm::outs() << ".\n";
 
@@ -197,7 +325,6 @@ llvm::Module *getModule(llvm::LLVMContext &llvmContext, std::string &fileName) {
     if (buffer == NULL) {
         // no buffer -> no module, return an error
         throw std::invalid_argument("Could not open file.");
-
     }
 
     llvm::Module *module = NULL;

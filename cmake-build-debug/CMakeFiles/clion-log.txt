@@ -1,4 +1,4 @@
-/home/marko/software/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/marko/workspace/install/reldeb-gcc -G "CodeBlocks - Unix Makefiles" /home/marko/CLionProjects/llumc
+/home/marko/software/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/home/marko/workspace/install/reldebSTP-gcc;/home/marko/workspace/install/reldeb-gcc -G "CodeBlocks - Unix Makefiles" /home/marko/CLionProjects/llumc
 STP_FOUND: TRUE
 -- Configuring done
 -- Generating done

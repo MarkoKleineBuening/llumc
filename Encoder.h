@@ -39,7 +39,7 @@ public:
 
     SMT::BoolExp *getUniversalExp();
 
-    SMT::BoolExp *getUniversalExpReverse();
+    SMT::BoolExp *getCompleteTest();
 
     SMT::BoolExp *getBreaker();
 
@@ -72,6 +72,7 @@ private:
     SMT::BoolExp *same();
 
 
+    SMT::BoolExp *encodeSingleBlock(int width, std::string name);
 };
 
 
