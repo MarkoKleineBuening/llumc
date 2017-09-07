@@ -197,6 +197,14 @@ SMT::BVExp *SMTTranslator::ashr(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvashr(pExp,pBVExp);
 }
 
+SMT::BVExp *SMTTranslator::lshr(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvlshr(pExp,pBVExp);
+}
+
+/*SMT::BVExp *SMTTranslator::trunc(SMT::BVExp *pExp, int width) {
+    return bv().bv
+}*/
+
 
 
 

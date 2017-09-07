@@ -41,11 +41,9 @@ public:
 
     SMT::BoolExp *getCompleteTest();
 
-    SMT::BoolExp *getBreaker();
+    SMT::BoolExp *getCompleteTestIni();
 
-    SMT::BoolExp *getBreaker1();
-
-    SMT::BoolExp *getBreaker2();
+    SMT::BoolExp *getCompleteTestGoal();
 
 private:
     llvm::Module &m_module;
@@ -56,6 +54,9 @@ private:
     std::map<llvm::StringRef, int> m_bbmap;
     std::map<llvm::StringRef, int> m_variableMap;
     std::set<llvm::StringRef> m_variableSet;
+    bool m_testing;
+    bool m_testing2;
+    bool m_testing3;
 
     SMT::BoolExp *m_currentFormula;
 
@@ -73,6 +74,8 @@ private:
 
 
     SMT::BoolExp *encodeSingleBlock(int width, std::string name);
+
+    bool isUsedInBasicBlockBefore(llvm::BasicBlock *BB, llvm::Value *user);
 };
 
 

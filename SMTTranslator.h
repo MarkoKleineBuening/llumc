@@ -50,6 +50,8 @@ public:
 
     SMT::BVExp *ashr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
+    SMT::BVExp *lshr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
 private:
     std::map<std::string, SMT::BVExp*> m_bvSet;
 

@@ -17,7 +17,7 @@
 #include <llvm/ADT/SmallPtrSet.h>
 
 
-class InstructionEncoderLLUMC : public llvm::LLBMCVisitor<InstructionEncoderLLUMC>{
+class InstructionEncoderLLUMC : public llvm::LLBMCVisitor<InstructionEncoderLLUMC> {
 public:
 
     InstructionEncoderLLUMC(llbmc::SMTContext *context);
@@ -40,9 +40,13 @@ public:
 
     void visitAShr(llvm::BinaryOperator &I);
 
+    void visitLShr(llvm::BinaryOperator &I);
+
     void visitReturnInst(llvm::ReturnInst &I);
 
     void visitUnreachableInst(llvm::UnreachableInst &I);
+
+    void visitTruncInst(llvm::TruncInst &I);
 
     void visitReturn(llvm::TerminatorInst &I);
 
@@ -62,6 +66,10 @@ public:
 
     llvm::SmallPtrSet<SMT::BoolExp*, 1> getFormulaSetSave();
 
+    SMT::BoolExp* getAssumeBoe();
+
+    SMT::BoolExp* getAssumeBoeDash();
+
     std::set<llvm::StringRef> getNotUsedVar();
 
     void resetFormulaSet();
@@ -71,6 +79,8 @@ public:
 
     void resetFormulaSetSave();
 
+    llvm::SmallPtrSet<SMT::BoolExp *, 1> getNegAssumeCond();
+
 private:
     SMTTranslator m_SMTTranslator;
     llbmc::SMTContext *m_smtContext;
@@ -79,10 +89,15 @@ private:
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaSet;
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaSetICMP;
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaSetSave;
+    llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaNegAssumeCond;
     SMT::BVExp*m_formulaSetBV;
     std::map<llvm::StringRef, int> m_bbmap;
     SMT::BVExp *m_lastExp;
     std::set<llvm::StringRef> m_alreadyVisited;
+    SMT::BoolExp *m_assumeBoe;
+    SMT::BoolExp *m_assumeBoeDash;
+
+    bool isNameBefore(llvm::BasicBlock &bb, llvm::Value *op, llvm::StringRef currentName);
 
 
 };

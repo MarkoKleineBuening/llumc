@@ -37,6 +37,8 @@ void readFile(std::string file, std::string type);
 
 void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash);
 
+void outputMap(std::string fileMap, std::map<std::string, std::vector<unsigned int>> dashMap);
+
 int main(int argc, char *argv[]) {
     removeOldFiles();
     std::string fileName = "/home/marko/workspace/bitcodeModule.bc";
@@ -69,8 +71,16 @@ int main(int argc, char *argv[]) {
     SMT::BoolExp *initialExp;
     SMT::BoolExp *goalExp;
     SMT::BoolExp *universalExp;
+    SMT::BoolExp *testExp;
+    SMT::BoolExp *testGoal;
+    SMT::BoolExp *testIni;
     for (auto &func: module->getFunctionList()) {
         if (func.size() < 1) { continue; }
+        llvm::outs() << "Func name: " << func.getName() << "\n";
+        if(func.getName().find("main")==-1){
+            llvm::outs() << "--Next--\n";
+            continue;
+        }
         llvm::outs() << "Calculate State:";
         enc->calculateState(func.getName());
         llvm::outs() << "-------------------------------" << "\n";
@@ -86,6 +96,11 @@ int main(int argc, char *argv[]) {
         llvm::outs() << "Universal: ";
         universalExp = enc->getUniversalExp();
         llvm::outs() << "...finished " << "\n";
+        /*llvm::outs() << "Test: ";
+        testExp = enc->getCompleteTest();
+        llvm::outs() << "...finished " << "\n";
+        llvm::outs() << "TestIni: ";*/
+
 
     }
     llvm::outs() << "\n";
@@ -101,16 +116,20 @@ int main(int argc, char *argv[]) {
     solver->assertConstraint(universalExp);
     solver->solve();
 
+
+    /*solver->assertConstraint(testExp);
+    solver->solve();*/
+
     std::map<std::string, std::vector<unsigned int>> dashMap = solver->getDashMap();
-    std::cout << "Size of Vector: " << dashMap.size() << "\n";
-    for (auto &entry : dashMap) {
+    //std::cout << "Size of Vector: " << dashMap.size() << "\n";
+    /*for (auto &entry : dashMap) {
         std::cout << entry.first << ": ";
         for (auto &sec : entry.second) {
             std::cout << sec << ", ";
         }
         std::cout << "\n";
     }
-    llvm::outs() << "\n";
+    llvm::outs() << "\n";*/
 
     std::cout << "Desc:" << solver->getDescription() << "\n";
     /*switch (solver->getResult()) {
@@ -130,11 +149,37 @@ int main(int argc, char *argv[]) {
             std::cout << "Result:" << "ERROR DEFAULT" << "\n";
 
     }*/
+
+    //return 0;
     summarizeOutputFiles();
 
     renameVariables(dashMap);
 
+    bool outputMapBool = true;
+    if(outputMapBool){
+        std::string fileMap = "/home/marko/CLionProjects/llumc/cmake-build-debug/map.txt";
+        outputMap(fileMap, dashMap);
+    }
     return 0;
+}
+
+void outputMap(std::string fileMap, std::map<std::string, std::vector<unsigned int>> dashMap){
+    std::cout << "Map is saved into file: " << fileMap << "\n";
+    std::ofstream outfile;
+    outfile.open(fileMap);
+    for (auto & entry: dashMap) {
+        //write s:0,1,2,3
+        outfile << entry.first << ":";
+        for (std::vector<int>::size_type i = 0; i != entry.second.size(); i++) {
+            if (i == entry.second.size() - 1) {
+                outfile << entry.second[i];
+            } else {
+                outfile << entry.second[i] << ",";
+            }
+        }
+        outfile << "\n";
+    }
+    outfile.close();
 }
 
 void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash) {
@@ -185,7 +230,7 @@ void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash) {
                 std::string s;
 
                 while (getline(f, s, ' ')) {
-                    std::cout << s << ",";
+                    //std::cout << s << ",";
                     bool found = false;
                     if (!s.empty()) {
                         int num = 0;
@@ -195,18 +240,18 @@ void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash) {
                                 if (entry.first.size() > 4 &&
                                     entry.first.substr(entry.first.size() - 4, entry.first.size()) == "Dash") {
                                     if (atoi(s.c_str()) == sec) {
-                                        std::cout << "Test, object was found. " << pos << " " << entry.first << " "
-                                                  << atoi(s.c_str()) << "\n";
+                                        //std::cout << "Test, object was found. " << pos << " " << entry.first << " "
+                                                 // << atoi(s.c_str()) << "\n";
                                         num = mapDash[entry.first.substr(0, entry.first.size() - 4)].at(pos) +
                                               highestVar;
-                                        std::cout << "rename: " << s << " -> " << num << "\n";
+                                        //std::cout << "rename: " << s << " -> " << num << "\n";
                                         found = true;
                                     }else if(-atoi(s.c_str())==sec){
-                                        std::cout << "Test, object was found. " << pos << " " << entry.first << " "
-                                                 << atoi(s.c_str()) << "\n";
+                                        //std::cout << "Test, object was found. " << pos << " " << entry.first << " "
+                                                // << atoi(s.c_str()) << "\n";
                                         num = -(mapDash[entry.first.substr(0, entry.first.size() - 4)].at(pos) +
                                               highestVar);
-                                        std::cout << "rename: " << s << " -> " << num << "\n";
+                                        //std::cout << "rename: " << s << " -> " << num << "\n";
                                         found = true;
                                     }
                                     pos++;

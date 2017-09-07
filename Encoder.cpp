@@ -9,15 +9,15 @@
 Encoder::Encoder(llvm::Module &module, llbmc::SMTContext *context)
         : m_module(module), m_bbmap(), m_instructionEncoder(context),
           m_variableSet(), m_currentFormula(), m_SMTTranslator(*context),
-          m_smtContext(context), m_variableMap() {
+          m_smtContext(context), m_variableMap(), m_testing(false), m_testing2(true), m_testing3(false){
 }
 
 SMT::BoolExp *Encoder::encodeFormula(llvm::StringRef string) {
     llvm::Function *Func = m_module.getFunction(string);
     int numBB = Func->size();
-    std::cout << "Func size: "<< numBB << "\n";
+    std::cout << "Func size: " << numBB << "\n";
     int width = ceil(log(numBB + 2) / log(2.0));
-    std::cout << "WIdth: "<< width << "\n";
+    std::cout << "WIdth: " << width << "\n";
     std::cout << "Encoding of BasicBlocks: " << numBB << "\n";
     int counter = 1;
     for (llvm::BasicBlock &BB : *Func) {
@@ -25,18 +25,18 @@ SMT::BoolExp *Encoder::encodeFormula(llvm::StringRef string) {
     }
     m_bbmap["ok"] = counter++;
     m_bbmap["error"] = counter;
-    std::cout << "m_bbmap.size: "<< m_bbmap.size() << "\n";
+    std::cout << "m_bbmap.size: " << m_bbmap.size() << "\n";
     m_instructionEncoder.setBBMap(m_bbmap);
     SMT::BoolExp *boolExp = m_smtContext->getSatCore()->mk_true();
     for (llvm::BasicBlock &BB : *Func) {
         SMT::BoolExp *exp = encodeBasicBlockOverTerminator(BB, width);
         boolExp = m_smtContext->getSatCore()->mk_and(boolExp, exp);
         if (BB.getName().equals("bb")) {
-           // break;
+            // break;
         }
     }
     SMT::BoolExp *error = encodeSingleBlock(width, "error");
-    SMT::BoolExp *ok  = encodeSingleBlock(width, "ok");
+    SMT::BoolExp *ok = encodeSingleBlock(width, "ok");
     boolExp = m_smtContext->getSatCore()->mk_and(boolExp, error);
     boolExp = m_smtContext->getSatCore()->mk_and(boolExp, ok);
     llvm::outs() << " ... finished\n";
@@ -69,7 +69,7 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
         handleInstruction(*inst); //saves result in m_instructionEncoder.getFormulaSet() and others
 
         //TODO llvm reorders the operands
-        if (llvm::BranchInst *B = llvm::dyn_cast<llvm::BranchInst>(termInst)){
+        if (llvm::BranchInst *B = llvm::dyn_cast<llvm::BranchInst>(termInst)) {
             llvm::outs() << " Operands have been switched. ";
             B->swapSuccessors();
         }
@@ -87,7 +87,6 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
         boeDashFirst = satCore->mk_and(boeDashFirst, boePredDash);
 
 
-
         llvm::outs() << "Second Operand:" << termInst->getOperand(2)->getName() << " / ";
         llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetICMP = m_instructionEncoder.getFormulaSetICMP();
         SMT::BoolExp *boeSecond = boeTmp;
@@ -96,8 +95,22 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
             boeSecond = satCore->mk_and(boeSecond, satCore->mk_not(formula)); // s=entry && not(4096 < x0)
         }
 
-        SMT::BoolExp *boeDash = m_SMTTranslator.bvAssignValue(bveDash, m_bbmap.at(termInst->getOperand(2)->getName()));//sDash=bb2
+        SMT::BoolExp *boeDash = m_SMTTranslator.bvAssignValue(bveDash, m_bbmap.at(
+                termInst->getOperand(2)->getName()));//sDash=bb2
         boeDash = satCore->mk_and(boeDash, boePredDash);
+
+        //TODO Marko delete it, just for testing:
+       /* if (name.str() == "entry") {
+            SMT::BVExp *bveTest = m_SMTTranslator.createBV("tmp17Dash", 32);  // tmp13
+            SMT::BoolExp *boeDashTest = m_SMTTranslator.bvAssignValue(bveTest, 5);//tmp13=5
+            boeDashFirst = satCore->mk_and(boeDashFirst, boeDashTest);
+            boeDash = satCore->mk_and(boeDash, boeDashTest);
+
+           *//* SMT::BVExp *bveTest2 = m_SMTTranslator.createBV("tmpDash", 32);  // tmp
+            SMT::BoolExp *boeDashTest2 = m_SMTTranslator.bvAssignValue(bveTest2, 4097);//tmp=5
+            boeDashFirst = satCore->mk_and(boeDashFirst, boeDashTest2);
+            boeDash = satCore->mk_and(boeDash, boeDashTest2);*//*
+        }*/
 
 
         SMT::BoolExp *saveVarAssume = satCore->mk_true();
@@ -108,7 +121,7 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
         for (llvm::BasicBlock::reverse_iterator I = bb.rbegin(); I != bb.rend(); ++I) {
             saveVar = satCore->mk_true();
             if (I->isTerminator()) { continue; }
-            llvm::outs() << "Iterate over Instructions:"<<I->getName()<<"\n";
+            llvm::outs() << "Iterate over Instructions:" << I->getName() << "\n";
             const bool is_in = m_variableMap.find(I->getName()) != m_variableMap.end();
             if (is_in) {
                 handleInstruction(*I);
@@ -125,15 +138,24 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
             if (llvm::CallInst *C = llvm::dyn_cast<llvm::CallInst>(&I.operator*())) { //handle assume
                 if (llbmc::FunctionMatcher::isSpecification(*C)) {
                     handleInstruction(*I);
-                    llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
-                    llvm::outs() << "Formula Size Assume/Call:" << formulaSetSave.size() << "\n";
-                    if (formulaSetSave.size() > 0) {
-                        saveVarAssume = satCore->mk_and(saveVarAssume, *formulaSetSave.begin());
-                        saveVarAssume = satCore->mk_and(saveVarAssume, same());
+                    //llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
+                    llvm::outs() << "Formula Size Assume/Call:" << " NA" << "\n";
+                    if (m_instructionEncoder.getAssumeBoe() != nullptr) {
+                        saveVarAssume = satCore->mk_and(saveVarAssume, m_instructionEncoder.getAssumeBoe());
+                        SMT::BoolExp *saveVarAssumeDash = satCore->mk_and(m_instructionEncoder.getAssumeBoeDash(), same());
+                        saveVarAssume = satCore->mk_implies(saveVarAssume, saveVarAssumeDash);
                     }
                 }
             }
         }
+        SMT::BoolExp *addAssume = m_smtContext->getSatCore()->mk_true();
+        llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaAssumeCond = m_instructionEncoder.getNegAssumeCond();
+        for (SMT::BoolExp *formula : formulaAssumeCond) {
+            addAssume = satCore->mk_and(addAssume, formula);
+        }
+        boeFirst = satCore->mk_and(boeFirst, addAssume);
+        boeSecond = satCore->mk_and(boeSecond, addAssume);
+
         boeDash = satCore->mk_and(boeDash, same());
         boeDashFirst = satCore->mk_and(boeDashFirst, same());
         SMT::BoolExp *firstOperand = satCore->mk_implies(boeFirst, boeDashFirst);
@@ -152,8 +174,10 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
             SMT::BoolExp *save = nullptr;
             if (m_instructionEncoder.getFormulaSetSave().size() > 0) {
                 save = *m_instructionEncoder.getFormulaSetSave().begin();
+            }else{
+                SMT::BoolExp *saveVarAssumeDash = satCore->mk_and(m_instructionEncoder.getAssumeBoeDash(), same());
+                save = satCore->mk_implies(m_instructionEncoder.getAssumeBoe(), saveVarAssumeDash);
             }
-            save = satCore->mk_and(save, same());
             return save;
         } else {
             llvm::outs() << "Only Operand:" << termInst->getOperand(0)->getName() << " / ";
@@ -167,13 +191,15 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
             SMT::BoolExp *saveVarAssume = satCore->mk_true();
             SMT::BoolExp *saveVar = satCore->mk_true();
             for (llvm::BasicBlock::reverse_iterator I = bb.rbegin(); I != bb.rend(); ++I) {
+                SMT::BoolExp *saveVar = satCore->mk_true();
                 llvm::outs() << "Iterate Reverse:" << I->getName() << "\n";
                 if (I->isTerminator()) { continue; }
                 const bool is_in = m_variableMap.find(I->getName()) != m_variableMap.end();
                 if (is_in) {
                     handleInstruction(*I);
                     llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
-                    llvm::outs() << "Formula Size Save Only Operand("<<I->getName()<<"):" << formulaSetSave.size() << "\n";
+                    llvm::outs() << "Formula Size Save Only Operand(" << I->getName() << "):" << formulaSetSave.size()
+                                 << "\n";
                     for (SMT::BoolExp *formula : formulaSetSave) {
                         saveVar = satCore->mk_and(saveVar, formula);
                     }
@@ -185,15 +211,23 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
                     if (llbmc::FunctionMatcher::isSpecification(*C)) {
                         // make sure it is assume and not other call
                         handleInstruction(*I);
-                        llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
-                        llvm::outs() << "Formula Size Assume/Call Only Operand:" << formulaSetSave.size() << "\n";
-                        if (formulaSetSave.size() > 0) {
-                            saveVarAssume = satCore->mk_and(saveVarAssume, *formulaSetSave.begin());
-                            saveVarAssume = satCore->mk_and(saveVarAssume, same());
+                        //llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
+                        llvm::outs() << "Formula Size Assume/Call Only Operand:" << "NA" << "\n";
+                        if (m_instructionEncoder.getAssumeBoe() != nullptr) {
+                            saveVarAssume = satCore->mk_and(saveVarAssume, m_instructionEncoder.getAssumeBoe());
+                            SMT::BoolExp *saveVarAssumeDash = satCore->mk_and(m_instructionEncoder.getAssumeBoeDash(), same());
+                            saveVarAssume = satCore->mk_implies(saveVarAssume, saveVarAssumeDash);
                         }
                     }
                 }
             }
+            //TODO Just testing!!
+            /*if (name.str() == "bb") {
+                std::cout << "bb test info\n";
+                SMT::BVExp *bveTest = m_SMTTranslator.createBV("tmp13Dash", 32);  // tmp13
+                SMT::BoolExp *boeDashTest = m_SMTTranslator.bvAssignValue(bveTest, 10);//tmp13=5
+                boeDash = satCore->mk_and(boeDash, boeDashTest);
+            }*/
             boeDash = satCore->mk_and(boeDash, same());
             SMT::BoolExp *onlyOperand = satCore->mk_implies(boeFirst, boeDash);
             SMT::BoolExp *onlyOperandWithAssume = satCore->mk_and(onlyOperand, saveVarAssume);
@@ -209,11 +243,14 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
             handleInstruction(*I);
             llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaSetSave = m_instructionEncoder.getFormulaSetSave();
             llvm::outs() << "Formula Size Above Unrechable:" << formulaSetSave.size() << "\n";
-            if (formulaSetSave.size() > 0) {
+            if(formulaSetSave.size()<1){
+                aboveUnreachable = satCore->mk_and(m_instructionEncoder.getAssumeBoeDash(), same());
+                aboveUnreachable = satCore->mk_implies(m_instructionEncoder.getAssumeBoe(), aboveUnreachable);
+            }else{
                 aboveUnreachable = satCore->mk_and(aboveUnreachable, *formulaSetSave.begin());
+                llvm::outs() << "Care untested structure\n";
             }
         }
-        aboveUnreachable = satCore->mk_and(aboveUnreachable, same());
         llvm::outs() << "\n-------------------------------\n";
         return aboveUnreachable;
     }
@@ -224,13 +261,32 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
  * returns a formula that states that all other variables stay unchanged
  */
 SMT::BoolExp *Encoder::same() {
-   // std::cout << "Called same\n";
+
+    // std::cout << "Called same\n";
     //s,sDash,pred,predDash and all variables that are contained in firstOperand
     SMT::SatCore *satCore = m_smtContext->getSatCore();
     SMT::BoolExp *boolExp = satCore->mk_true();
     int width = -1;
     std::set<llvm::StringRef> notUsedVar = m_instructionEncoder.getNotUsedVar();
     for (llvm::StringRef str : notUsedVar) {
+      /*  std::cout << "String same: " << str.str() << "\n";
+        if (m_testing2 && str.str() == "tmp17") {
+            m_testing = true;
+            m_testing2 = false;
+            std::cout << "Happend...1";
+            continue;
+        }
+        if (m_testing && str.str() == "tmp17") {
+            std::cout << "Happend...2";
+            m_testing = false;
+            m_testing3=true;
+            continue;
+        }*/
+        /*if (str.str() == "tmp13" && m_testing3) {
+            std::cout << "Happend...";
+            m_testing3=false;
+            //continue;
+        }*/
         //llvm::outs() << "NotUsedVar: "<< str.str()<< "\n";
         width = m_variableMap.at(str);
         SMT::BVExp *bv = m_SMTTranslator.createBV(str, width);
@@ -305,7 +361,7 @@ bool Encoder::isOnlyUsedInBasicBlock(llvm::StringRef string, llvm::BasicBlock *c
 
 bool Encoder::isUsedInBasicBlock(llvm::StringRef string, llvm::BasicBlock *BB, llvm::Value *user) {
     bool isUsed;
-    llvm::Function *func = m_module.getFunction(string);
+    //llvm::Function *func = m_module.getFunction(string);
     llvm::Instruction *User = llvm::dyn_cast<llvm::Instruction>(user);
     if (User->getParent() == BB) {
         //llvm::outs() <<"\nIsUsedInBasicBlock:" << User << ","<< BB->getName() << "\n";
@@ -351,13 +407,13 @@ void Encoder::Update(SMT::BoolExp *expr) {
 }
 
 SMT::BoolExp *Encoder::getInitialExp() {
-    llvm::outs() <<"entry:" << m_bbmap.at("entry") << "\n";
-    llvm::outs() <<"ok:" << m_bbmap.at("ok") << "\n";
-    llvm::outs() <<"error:" << m_bbmap.at("error") << "\n";
+    llvm::outs() << "entry:" << m_bbmap.at("entry") << "\n";
+    llvm::outs() << "ok:" << m_bbmap.at("ok") << "\n";
+    llvm::outs() << "error:" << m_bbmap.at("error") << "\n";
 
 
     //return s = 0 and pred = 0;
-    int numBB = m_bbmap.size()+1;
+    int numBB = m_bbmap.size() + 1;
     int width = ceil(log(numBB) / log(2.0));
     SMT::BVExp *sBv = m_SMTTranslator.createBV("s", width);
     SMT::BoolExp *retS = m_SMTTranslator.bvAssignValue(sBv, m_bbmap.at("entry"));
@@ -367,6 +423,7 @@ SMT::BoolExp *Encoder::getInitialExp() {
     SMT::BoolExp *retPred = m_SMTTranslator.bvAssignValue(predBv, m_bbmap.at("entry"));
     llvm::outs() << "mapAt: " << m_bbmap.at("entry") << "\n";
     SMT::BoolExp *ret = m_smtContext->getSatCore()->mk_and(retS, retPred);
+
     return ret;
 }
 
@@ -375,8 +432,13 @@ SMT::BoolExp *Encoder::getGoalExp() {
     int numBB = m_bbmap.size();
     int width = ceil(log(numBB) / log(2.0));
     SMT::BVExp *sBv = m_SMTTranslator.createBV("s", width);
-    SMT::BoolExp *ret = m_SMTTranslator.bvAssignValue(sBv, m_bbmap.at("bb5"));
-    llvm::outs() << "mapAt: " << m_bbmap.at("bb5") << "\n";
+    SMT::BoolExp *ret = m_SMTTranslator.bvAssignValue(sBv, m_bbmap.at("error"));
+
+    SMT::BVExp *sBvTest = m_SMTTranslator.createBV("pred", width);
+    SMT::BoolExp *retTest = m_SMTTranslator.bvAssignValue(sBvTest, m_bbmap.at("bb4"));
+    SMT::BoolExp *retRet = m_smtContext->getSatCore()->mk_and(ret, retTest);
+
+    //retRet = m_smtContext->getSatCore()->mk_and(retRet, retTest2);
     return ret;
 }
 
@@ -384,11 +446,11 @@ SMT::BoolExp *Encoder::getUniversalExp() {
     int numBB = m_bbmap.size();
     int width = ceil(log(numBB) / log(2.0));
     SMT::BVExp *sBv = m_SMTTranslator.createBV("s", width);
-    SMT::BVExp *th = m_SMTTranslator.createConst(numBB,width);
+    SMT::BVExp *th = m_SMTTranslator.createConst(numBB, width);
     llvm::outs() << "numBB+1: " << numBB << "\n";
-    SMT::BoolExp *retS = m_SMTTranslator.compare(sBv,th, llvm::CmpInst::ICMP_ULE);
+    SMT::BoolExp *retS = m_SMTTranslator.compare(sBv, th, llvm::CmpInst::ICMP_ULE);
     sBv = m_SMTTranslator.createBV("pred", width);
-    th = m_SMTTranslator.createConst(numBB,width);
+    th = m_SMTTranslator.createConst(numBB, width);
     SMT::BoolExp *retPred = m_SMTTranslator.compare(sBv, th, llvm::CmpInst::ICMP_ULE);
     SMT::BoolExp *ret = m_smtContext->getSatCore()->mk_and(retS, retPred);
     return ret;
@@ -396,37 +458,66 @@ SMT::BoolExp *Encoder::getUniversalExp() {
 
 SMT::BoolExp *Encoder::getCompleteTest() {
     SMT::BVExp *sBv = m_SMTTranslator.createBV("test", 2);
-    SMT::BVExp *th = m_SMTTranslator.createConst(0,2);
-    SMT::BoolExp *retS = m_SMTTranslator.compare(sBv,th, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *th = m_SMTTranslator.createConst(0, 2);
+    SMT::BoolExp *retS = m_SMTTranslator.compare(sBv, th, llvm::CmpInst::ICMP_EQ);
+    //SMT::BVExp *sBvVar0 = m_SMTTranslator.createBV("var", 2);
+    // SMT::BVExp *thDashVar0 = m_SMTTranslator.createConst(0, 2);
+    //SMT::BoolExp *retSDashVar0 = m_SMTTranslator.compare(sBvVar0, thDashVar0, llvm::CmpInst::ICMP_EQ);
+    //retS=m_smtContext->getSatCore()->mk_and(retS, retSDashVar0);
+
     SMT::BVExp *sDashBv = m_SMTTranslator.createBV("testDash", 2);
-    SMT::BVExp *thDash = m_SMTTranslator.createConst(3,2);
-    SMT::BoolExp *retSDash = m_SMTTranslator.compare(sDashBv,thDash, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *thDash = m_SMTTranslator.createConst(1, 2);
+    SMT::BoolExp *retSDash = m_SMTTranslator.compare(sDashBv, thDash, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *sDashBvVar = m_SMTTranslator.createBV("var", 2);
+    SMT::BVExp *sDashBvVarDash = m_SMTTranslator.createBV("varDash", 2);
+    SMT::BoolExp *retSDashVar = m_SMTTranslator.compare(sDashBvVar, sDashBvVarDash, llvm::CmpInst::ICMP_EQ);
+    retSDash = m_smtContext->getSatCore()->mk_and(retSDash, retSDashVar);
     SMT::BoolExp *ret = m_smtContext->getSatCore()->mk_implies(retS, retSDash);
 
     SMT::BVExp *sBv1 = m_SMTTranslator.createBV("test", 2);
-    SMT::BVExp *th1 = m_SMTTranslator.createConst(1,2);
-    SMT::BoolExp *retS1 = m_SMTTranslator.compare(sBv1,th1, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *th1 = m_SMTTranslator.createConst(1, 2);
+    SMT::BoolExp *retS1 = m_SMTTranslator.compare(sBv1, th1, llvm::CmpInst::ICMP_EQ);
+    SMT::BoolExp *test = m_SMTTranslator.compare(sDashBvVar, th1, llvm::CmpInst::ICMP_UGT);
+    retS1 = m_smtContext->getSatCore()->mk_and(retS1, test);
     SMT::BVExp *sDashBv1 = m_SMTTranslator.createBV("testDash", 2);
-    SMT::BVExp *thDash1 = m_SMTTranslator.createConst(1,2);
-    SMT::BoolExp *retSDash1 = m_SMTTranslator.compare(sDashBv1,thDash1, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *thDash1 = m_SMTTranslator.createConst(2, 2);
+    SMT::BoolExp *retSDash1 = m_SMTTranslator.compare(sDashBv1, thDash1, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *sDashBvVar2 = m_SMTTranslator.createBV("varDash", 2);
+    SMT::BVExp *thDashVar2 = m_SMTTranslator.createConst(2, 2);
+    SMT::BoolExp *retSDashVar2 = m_SMTTranslator.compare(sDashBvVar2, thDashVar2, llvm::CmpInst::ICMP_EQ);
+    retSDash1 = m_smtContext->getSatCore()->mk_and(retSDash1, retSDashVar2);
     SMT::BoolExp *ret1 = m_smtContext->getSatCore()->mk_implies(retS1, retSDash1);
 
     SMT::BoolExp *firstAnd = m_smtContext->getSatCore()->mk_and(ret, ret1);
 
+    SMT::BVExp *sBv1X = m_SMTTranslator.createBV("test", 2);
+    SMT::BVExp *th1X = m_SMTTranslator.createConst(1, 2);
+    SMT::BoolExp *retS1X = m_SMTTranslator.compare(sBv1X, th1X, llvm::CmpInst::ICMP_EQ);
+    SMT::BoolExp *testXX = m_SMTTranslator.compare(th1,sDashBvVar, llvm::CmpInst::ICMP_UGE);
+    retS1X = m_smtContext->getSatCore()->mk_and(retS1X, testXX);
+    SMT::BoolExp *ret1X = m_smtContext->getSatCore()->mk_implies(retS1X, retSDash1);
+
+    firstAnd = m_smtContext->getSatCore()->mk_and(firstAnd, ret1X);
+
+
     SMT::BVExp *sBv2 = m_SMTTranslator.createBV("test", 2);
-    SMT::BVExp *th2 = m_SMTTranslator.createConst(2,2);
-    SMT::BoolExp *retS2 = m_SMTTranslator.compare(sBv2,th2, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *th2 = m_SMTTranslator.createConst(2, 2);
+    SMT::BoolExp *retS2 = m_SMTTranslator.compare(sBv2, th2, llvm::CmpInst::ICMP_EQ);
     SMT::BVExp *sDashBv2 = m_SMTTranslator.createBV("testDash", 2);
-    SMT::BVExp *thDash2 = m_SMTTranslator.createConst(2,2);
-    SMT::BoolExp *retSDash2 = m_SMTTranslator.compare(sDashBv2,thDash2, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *thDash2 = m_SMTTranslator.createConst(3, 2);
+    SMT::BoolExp *retSDash2 = m_SMTTranslator.compare(sDashBv2, thDash2, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *sDashBvVarTTT = m_SMTTranslator.createBV("varDash", 2);
+    SMT::BVExp *thDashVar2TTT = m_SMTTranslator.createConst(3, 2);
+    SMT::BoolExp *retSDashVar2TTT = m_SMTTranslator.compare(sDashBvVarTTT, thDashVar2TTT, llvm::CmpInst::ICMP_EQ);
+    retSDash2 = m_smtContext->getSatCore()->mk_and(retSDash2, retSDashVar2TTT);
     SMT::BoolExp *ret2 = m_smtContext->getSatCore()->mk_implies(retS2, retSDash2);
 
     SMT::BVExp *sBv3 = m_SMTTranslator.createBV("test", 2);
-    SMT::BVExp *th3 = m_SMTTranslator.createConst(3,2);
-    SMT::BoolExp *retS3 = m_SMTTranslator.compare(sBv3,th3, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *th3 = m_SMTTranslator.createConst(3, 2);
+    SMT::BoolExp *retS3 = m_SMTTranslator.compare(sBv3, th3, llvm::CmpInst::ICMP_EQ);
     SMT::BVExp *sDashBv3 = m_SMTTranslator.createBV("testDash", 2);
-    SMT::BVExp *thDash3 = m_SMTTranslator.createConst(3,2);
-    SMT::BoolExp *retSDash3 = m_SMTTranslator.compare(sDashBv3,thDash3, llvm::CmpInst::ICMP_EQ);
+    SMT::BVExp *thDash3 = m_SMTTranslator.createConst(3, 2);
+    SMT::BoolExp *retSDash3 = m_SMTTranslator.compare(sDashBv3, thDash3, llvm::CmpInst::ICMP_EQ);
     SMT::BoolExp *ret3 = m_smtContext->getSatCore()->mk_implies(retS3, retSDash3);
 
     SMT::BoolExp *secondAnd = m_smtContext->getSatCore()->mk_and(ret2, ret3);
