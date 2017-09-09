@@ -46,14 +46,25 @@ public:
 
     SMT::BVExp *doOr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
+    SMT::BVExp *doAnd(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
     SMT::BVExp *mul(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BVExp *ashr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BVExp *lshr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
+    SMT::BVExp *shl(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BVExp *srem(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BVExp *urem(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BVExp *sub(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
 private:
     std::map<std::string, SMT::BVExp*> m_bvSet;
+
 
 };
 

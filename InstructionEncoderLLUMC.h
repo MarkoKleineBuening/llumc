@@ -22,6 +22,8 @@ public:
 
     InstructionEncoderLLUMC(llbmc::SMTContext *context);
 
+    void visitNonIntrinsicCall(llvm::CallInst &I);
+
     void visitSpecification(llvm::CallInst &I);
 
     void visitICmpInst(llvm::ICmpInst &I);
@@ -30,11 +32,15 @@ public:
 
     void visitAdd(llvm::BinaryOperator &I);
 
+    void visitSub(llvm::BinaryOperator &I);
+
     void visitZExtInst(llvm::ZExtInst &I);
 
     void visitPHINode(llvm::PHINode &I);
 
     void visitOr(llvm::BinaryOperator &I);
+
+    void visitAnd(llvm::BinaryOperator &I);
 
     void visitMul(llvm::BinaryOperator &I);
 
@@ -42,11 +48,17 @@ public:
 
     void visitLShr(llvm::BinaryOperator &I);
 
+    void visitShl(llvm::BinaryOperator &I);
+
     void visitReturnInst(llvm::ReturnInst &I);
 
     void visitUnreachableInst(llvm::UnreachableInst &I);
 
     void visitTruncInst(llvm::TruncInst &I);
+
+    void visitSRem(llvm::BinaryOperator &I);
+
+    void visitURem(llvm::BinaryOperator &I);
 
     void visitReturn(llvm::TerminatorInst &I);
 
@@ -81,6 +93,10 @@ public:
 
     llvm::SmallPtrSet<SMT::BoolExp *, 1> getNegAssumeCond();
 
+    void visitError(llvm::CallInst &I);
+
+    void visitVerifierAssume(llvm::CallInst &I);
+
 private:
     SMTTranslator m_SMTTranslator;
     llbmc::SMTContext *m_smtContext;
@@ -98,6 +114,9 @@ private:
     SMT::BoolExp *m_assumeBoeDash;
 
     bool isNameBefore(llvm::BasicBlock &bb, llvm::Value *op, llvm::StringRef currentName);
+
+
+    bool isVerifierCall(llvm::Instruction *pInstruction);
 
 
 };

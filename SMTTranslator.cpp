@@ -189,6 +189,10 @@ SMT::BVExp *SMTTranslator::doOr(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvor(pExp, pBVExp);
 }
 
+SMT::BVExp *SMTTranslator::doAnd(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvand(pExp, pBVExp);
+}
+
 SMT::BVExp *SMTTranslator::mul(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvmul(pExp, pBVExp);
 }
@@ -201,9 +205,22 @@ SMT::BVExp *SMTTranslator::lshr(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvlshr(pExp,pBVExp);
 }
 
-/*SMT::BVExp *SMTTranslator::trunc(SMT::BVExp *pExp, int width) {
-    return bv().bv
-}*/
+SMT::BVExp *SMTTranslator::shl(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvshl(pExp,pBVExp);
+}
+
+SMT::BVExp *SMTTranslator::srem(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvsrem(pExp,pBVExp);
+}
+
+SMT::BVExp *SMTTranslator::urem(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvurem(pExp,pBVExp);
+}
+
+SMT::BVExp *SMTTranslator::sub(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvsub(pExp,pBVExp);
+}
+
 
 
 

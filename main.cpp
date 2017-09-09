@@ -153,7 +153,9 @@ int main(int argc, char *argv[]) {
     //return 0;
     summarizeOutputFiles();
 
+    llvm::outs() << "start rename...";
     renameVariables(dashMap);
+    llvm::outs() << "end rename\n";
 
     bool outputMapBool = true;
     if(outputMapBool){
