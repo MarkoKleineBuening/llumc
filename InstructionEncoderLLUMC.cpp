@@ -3,18 +3,17 @@
 //
 
 #include "InstructionEncoderLLUMC.h"
-#include "Formula.h"
 
 InstructionEncoderLLUMC::InstructionEncoderLLUMC(llbmc::SMTContext *context)
         : m_SMTTranslator(*context), m_variableSet(), m_formulaSet(), m_formulaSetICMP(), m_formulaNegAssumeCond(),
           m_lastExp(), m_alreadyVisited(), m_notUsedVar(), m_smtContext(context), m_formulaSetSave(),
-          m_formulaSetBV(), m_bbmap(), m_assumeBoe(), m_assumeBoeDash() {}
+          m_formulaSetBV(), m_bbmap(), m_assumeBoe(), m_assumeBoeDash(), m_overFlowCheck(){}
 
-void InstructionEncoderLLUMC::visitNonIntrinsicCall(llvm::CallInst &I){
+void InstructionEncoderLLUMC::visitNonIntrinsicCall(llvm::CallInst &I) {
     llvm::outs() << "--Visit NonIntrinsicCall" << "\n";
     llvm::StringRef name = llbmc::FunctionMatcher::getCalledFunction(I)->getName();
     llvm::StringRef cmd;
-    llvm::outs() << name <<"\n";
+    llvm::outs() << name << "\n";
     if (name.startswith("__VERIFIER_")) {       // c commands
         cmd = name.substr(11);
     } else if (name.startswith("llbmc.")) {
@@ -73,7 +72,7 @@ void InstructionEncoderLLUMC::visitSpecification(llvm::CallInst &I) {
 
     if (cmd.startswith("nondef")) {
         // a variable is "created" with nondef just save it as x, does not be repeated here
-        llvm::outs() << "m_formulaSetBV was filled with BV "<<I.getName() << "\n";
+        llvm::outs() << "m_formulaSetBV was filled with BV " << I.getName() << "\n";
         m_formulaSetBV = m_SMTTranslator.createBV(I.getName(), I.getType()->getIntegerBitWidth());
     } else if (cmd.startswith("assume")) {
         llvm::outs() << name.str() << ": ";
@@ -249,10 +248,20 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
+                if(constant.isNegative()){
+                    llvm::outs() << "Value is negative\n";
+                    dConstant = constant.roundToDouble(true);
+                }else{
+                    dConstant = constant.roundToDouble();
+                }
+                if(CI->getValue().getBitWidth()>32&&false){
+                    llvm::outs() << "bidwidth is over 32 ";
+                    dConstant = -3;
+                }
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
                 llvm::outs() << width << "width,";
-                dConstant = constant.roundToDouble();
+
                 int iConstant = (int) dConstant;
                 llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
@@ -320,7 +329,7 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
 
         SMT::BVExp *one = m_SMTTranslator.createConst(1, 1);
         SMT::BVExp *zero = m_SMTTranslator.createConst(0, 1);
-        SMT::BVExp *bvExpCond = m_SMTTranslator.cond(boolExp,one,zero);
+        SMT::BVExp *bvExpCond = m_SMTTranslator.cond(boolExp, one, zero);
 
         m_formulaSetBV = bvExpCond;
         m_formulaSet.insert(boolExp);
@@ -366,7 +375,23 @@ void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
                     this->visit(Inst);
                     bvSmall = m_formulaSetBV;
                     llvm::outs() << "aus Liste:";
+                }else{
+                    llvm::outs() << "Not used in Basic Block\n";
                 }
+            }else if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
+                llvm::outs() << "VALUE: " << CI->getValue() << " , ";
+                llvm::APInt constant = CI->getValue();
+                llvm::IntegerType *it = CI->getType();
+                width = it->getIntegerBitWidth();
+                llvm::outs() << width << "width,";
+                //llvm::outs()<<"bidwidth: " << CI->getValue().getBitWidth()<< ", ";
+                dConstant = constant.roundToDouble();
+                int iConstant = (int) dConstant;
+                llvm::outs() << iConstant << "iConstant,";
+                //Create BVExpr with Constant
+                bvSmall = m_SMTTranslator.createConst(iConstant, width);
+            }else{
+                llvm::outs() << "Nothing triggered\n";
             }
         }
         llvm::outs() << I.getDestTy()->getIntegerBitWidth();
@@ -374,6 +399,7 @@ void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
         const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
         if (is_in) {
             std::string name = I.getName();
+            width=I.getDestTy()->getIntegerBitWidth();
             SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
             SMT::BoolExp *save = m_SMTTranslator.compare(bv1, bvExp, llvm::CmpInst::ICMP_EQ);
             m_formulaSetSave.insert(save);
@@ -381,7 +407,73 @@ void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
         }
         m_formulaSetBV = (bv1);
     }
+}
 
+void InstructionEncoderLLUMC::visitSExtInst(llvm::SExtInst &I) {
+    const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
+    if (alreadyVisited) {
+        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+    } else {
+        m_alreadyVisited.insert(I.getName());
+        llvm::outs() << "--Visit SExt" << "\n";
+        unsigned int args = I.getNumOperands();
+        llvm::outs() << args << ":";
+        int width = 32; //default width
+        double dConstant;
+        SMT::BVExp *bv1 = nullptr;
+        SMT::BVExp *bvSmall = nullptr;
+        for (unsigned int i = 0; i < args; i++) {
+            bool alreadyVisited = false;
+            std::string name = I.getOperand(i)->getName();
+            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            llvm::outs() << *I.getSrcTy() << "->";
+            llvm::outs() << *I.getDestTy();
+
+            const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
+            if (is_in) {
+                //TODO Check if && !I.isUsedInBasicBlock(I.getParent()) is needed
+                bvSmall = m_SMTTranslator.createBV(I.getOperand(i)->getName(), I.getSrcTy()->getIntegerBitWidth());
+                llvm::outs() << "is_in:" << I.getSrcTy()->getIntegerBitWidth();
+                if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    llvm::outs() << "!alreadyVisited but earlier";
+                    this->visit(Inst);
+                }
+            } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                if (Inst->isUsedInBasicBlock(I.getParent())) {
+                    llvm::outs() << "Same Block Instruction(SEXT): " << Inst->getName();
+                    this->visit(Inst);
+                    bvSmall = m_formulaSetBV;
+                    llvm::outs() << "aus Liste:";
+                }
+            }else if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
+
+                llvm::outs() << "VALUE: " << CI->getValue() << " , ";
+                llvm::APInt constant = CI->getValue();
+                llvm::IntegerType *it = CI->getType();
+                width = it->getIntegerBitWidth();
+                llvm::outs() << " "<<width << "width,";
+                dConstant = constant.roundToDouble(true);
+                int iConstant = (int) dConstant;
+                llvm::outs() << iConstant << "iConstant,";
+                //Create BVExpr with Constant
+                bvSmall = m_SMTTranslator.createConst(iConstant, width);
+            }else{
+                llvm::outs() << "Nothing triggered\n";
+            }
+        }
+        llvm::outs() << I.getDestTy()->getIntegerBitWidth();
+        bv1 = m_SMTTranslator.sext(bvSmall, I.getDestTy()->getIntegerBitWidth());
+        const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
+        if (is_in) {
+            std::string name = I.getName();
+            width=I.getDestTy()->getIntegerBitWidth();
+            SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
+            SMT::BoolExp *save = m_SMTTranslator.compare(bv1, bvExp, llvm::CmpInst::ICMP_EQ);
+            m_formulaSetSave.insert(save);
+            m_notUsedVar.erase(I.getName());
+        }
+        m_formulaSetBV = (bv1);
+    }
 }
 
 void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
@@ -473,7 +565,6 @@ void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
         m_formulaSetBV = (bvExpCond);
         llvm::outs() << "--END PHI\n";
     }
-
 }
 
 void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
@@ -541,8 +632,9 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
             }
         }
 
-        //SMT::SatCore *satCore = m_smtContext->getSatCore();
         SMT::BVExp *bvAdd = m_SMTTranslator.add(bv1, bv2);
+        //TODO Overflow checks for all operations
+        checkForOverflow(I,bv1,bv2,"add");
 
         const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
         if (is_in) {
@@ -627,7 +719,7 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
 
         //SMT::SatCore *satCore = m_smtContext->getSatCore();
         SMT::BVExp *bvSub = m_SMTTranslator.sub(bv1, bv2);
-
+        checkForOverflow(I,bv1,bv2,"sub");
         const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
         if (is_in) {
             std::string name = I.getName();
@@ -869,7 +961,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
                             } else {
                                 bv2 = m_formulaSetBV;
                             }
-                        }else{
+                        } else {
                             if (i == 0) {
                                 bv1 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
                             } else {
@@ -892,7 +984,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
 
         //SMT::SatCore *satCore = m_smtContext->getSatCore();
         SMT::BVExp *bvMul = m_SMTTranslator.mul(bv1, bv2);
-
+        checkForOverflow(I,bv1,bv2,"mul");
         const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
         if (is_in) {
             //llvm::outs() << "Is In in Mul: erase: "<< I.getName().str() << "\n";
@@ -1518,6 +1610,10 @@ SMT::BoolExp *InstructionEncoderLLUMC::getAssumeBoeDash() {
     return m_assumeBoeDash;
 }
 
+llvm::SmallPtrSet<SMT::BoolExp*, 1> InstructionEncoderLLUMC::getFormulaSetOverflow(){
+    return m_overFlowCheck;
+}
+
 bool InstructionEncoderLLUMC::isVerifierCall(llvm::Instruction *I) {
     if (llvm::CallInst *C = llvm::dyn_cast<llvm::CallInst>(I)) {
         if (C->getOperand(0)->getName().str() == "__VERIFIER_nondet_int") {
@@ -1525,6 +1621,67 @@ bool InstructionEncoderLLUMC::isVerifierCall(llvm::Instruction *I) {
         }
     }
     return false;
+}
+
+void InstructionEncoderLLUMC::checkForOverflow(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation) {
+
+    bool overflowCheckActivated = false;
+    if(overflowCheckActivated) {
+        //TODO check it
+        bool needCheck = true;
+        SMT::BoolExp *overflowCheck;
+        if (llvm::OverflowingBinaryOperator *op = llvm::dyn_cast<llvm::OverflowingBinaryOperator>(&I)) {
+            if (op->hasNoUnsignedWrap()) {
+                llvm::outs() << "  has nuw\n";
+                if (operation == "add") {
+                    overflowCheck = m_SMTTranslator.uaddo(bv1, bv2);
+                } else if (operation == "mul") {
+                    overflowCheck = m_SMTTranslator.umulo(bv1, bv2);
+                } else if (operation == "sub") {
+                    overflowCheck = m_SMTTranslator.usubo(bv1, bv2);
+                } else {
+                    llvm::outs() << "NOT IMPLEMENTED OPERATION";
+                }
+            } else if (op->hasNoSignedWrap()) {
+                llvm::outs() << "  has nsw\n";
+                if (operation == "add") {
+                    overflowCheck = m_SMTTranslator.saddo(bv1, bv2);
+                } else if (operation == "mul") {
+                    overflowCheck = m_SMTTranslator.smulo(bv1, bv2);
+                } else if (operation == "div") {
+                    overflowCheck = m_SMTTranslator.sdivo(bv1, bv2);
+                } else if (operation == "sub") {
+                    overflowCheck = m_SMTTranslator.ssubo(bv1, bv2);
+                } else {
+                    llvm::outs() << "NOT IMPLEMENTED OPERATION";
+                }
+            } else {
+                needCheck = false;
+            }
+        }
+        if (needCheck) {
+            llvm::outs() << " +Add Check+ ";
+            int numBB = I.getParent()->getParent()->size();
+            int widthBB = ceil(log(numBB + 2) / log(2.0));
+            SMT::SatCore *satCore = m_smtContext->getSatCore();
+
+            SMT::BVExp *bve = m_SMTTranslator.createBV("s", widthBB);  // s
+            SMT::BVExp *bveDash = m_SMTTranslator.createBV("sDash", widthBB);  // sDash
+            SMT::BoolExp *boe = m_SMTTranslator.bvAssignValue(bve, m_bbmap.at(I.getParent()->getName()));  // s = entry
+            SMT::BoolExp *boeDash = m_SMTTranslator.bvAssignValue(bveDash, m_bbmap.at("error"));  // sDash = ok
+            //s=entry && !overflowCheck --> s'= error
+            SMT::BoolExp *negAssume = satCore->mk_not(overflowCheck);
+            if (false) {
+                m_formulaNegAssumeCond.insert(negAssume);
+                boe = satCore->mk_and(boe, overflowCheck);
+            } else {
+                m_formulaNegAssumeCond.insert(overflowCheck);
+                boe = satCore->mk_and(boe, negAssume);
+            }
+            SMT::BoolExp *formula = satCore->mk_implies(boe, boeDash);
+            m_overFlowCheck.insert(formula);
+        }
+    }
 }
 
 

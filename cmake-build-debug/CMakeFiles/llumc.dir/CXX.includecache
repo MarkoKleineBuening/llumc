@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/marko/CLionProjects/llumc/ASubject.cpp
-ASubject.h
-/home/marko/CLionProjects/llumc/ASubject.h
-algorithm
--
-
-/home/marko/CLionProjects/llumc/ASubject.h
-vector
--
-list
--
-Encoder.h
-/home/marko/CLionProjects/llumc/Encoder.h
-
 /home/marko/CLionProjects/llumc/Encoder.cpp
 Encoder.h
 /home/marko/CLionProjects/llumc/Encoder.h
@@ -49,30 +35,10 @@ llbmc/Solver/SMTContext.h
 -
 InstructionEncoderLLUMC.h
 /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.h
-IObserver.h
-/home/marko/CLionProjects/llumc/IObserver.h
-
-/home/marko/CLionProjects/llumc/Formula.cpp
-Formula.h
-/home/marko/CLionProjects/llumc/Formula.h
-
-/home/marko/CLionProjects/llumc/Formula.h
-ASubject.h
-/home/marko/CLionProjects/llumc/ASubject.h
-
-/home/marko/CLionProjects/llumc/IObserver.cpp
-IObserver.h
-/home/marko/CLionProjects/llumc/IObserver.h
-
-/home/marko/CLionProjects/llumc/IObserver.h
-llbmc/Solver/DefaultSMTTranslator.h
--
 
 /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp
 InstructionEncoderLLUMC.h
 /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.h
-Formula.h
-/home/marko/CLionProjects/llumc/Formula.h
 
 /home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.h
 iostream
@@ -95,6 +61,10 @@ llbmc/Solver/DefaultSMTTranslator.h
 -
 llvm/ADT/SmallPtrSet.h
 -
+llvm/IR/Operator.h
+/home/marko/CLionProjects/llumc/llvm/IR/Operator.h
+llbmc/Solver/SMTContext.h
+-
 
 /home/marko/CLionProjects/llumc/SMTTranslator.cpp
 iostream
@@ -108,30 +78,6 @@ SMTTranslator.h
 llbmc/Solver/DefaultSMTTranslator.h
 -
 llvm/IR/InstrTypes.h
--
-
-/home/marko/CLionProjects/llumc/Solver.cpp
-Solver.h
-/home/marko/CLionProjects/llumc/Solver.h
-
-/home/marko/CLionProjects/llumc/Solver.h
-SMTTranslator.h
-/home/marko/CLionProjects/llumc/SMTTranslator.h
-iostream
--
-llbmc/SMT/SMTLIB.h
--
-llbmc/SMT/Solver.h
--
-llbmc/Solver/SMTContext.h
--
-llbmc/Output/Common.h
--
-llbmc/SMT/STP.h
--
-llvm/Support/FormattedStream.h
--
-llvm/Support/FileSystem.h
 -
 
 /home/marko/CLionProjects/llumc/main.cpp
@@ -1183,6 +1129,18 @@ system_error
 /home/marko/workspace/install/reldeb-gcc/include/llvm/IR/OperandTraits.h
 llvm/IR/User.h
 /home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/User.h
+
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/Operator.h
+llvm/IR/Constants.h
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/Constants.h
+llvm/IR/DataLayout.h
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/DataLayout.h
+llvm/IR/DerivedTypes.h
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/DerivedTypes.h
+llvm/IR/Instruction.h
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/Instruction.h
+llvm/IR/Type.h
+/home/marko/workspace/install/reldeb-gcc/include/llvm/IR/llvm/IR/Type.h
 
 /home/marko/workspace/install/reldeb-gcc/include/llvm/IR/SymbolTableListTraits.h
 llvm/ADT/ilist.h

@@ -20,18 +20,16 @@
 #include <llbmc/Solver/SMTContext.h>
 
 #include "InstructionEncoderLLUMC.h"
-#include "IObserver.h"
 
 
-class Encoder : public IObserver {
+
+class Encoder  {
 public:
     Encoder(llvm::Module &module, llbmc::SMTContext *context);
 
     SMT::BoolExp * encodeFormula(llvm::StringRef string);
 
     void calculateState(llvm::StringRef string);
-
-    void Update(SMT::BoolExp *expr);
 
     SMT::BoolExp *getInitialExp();
 
@@ -71,7 +69,6 @@ private:
     bool isUsedInBasicBlock(llvm::StringRef string, llvm::BasicBlock *currentBB, llvm::Value *user);
 
     SMT::BoolExp *same();
-
 
     SMT::BoolExp *encodeSingleBlock(int width, std::string name);
 

@@ -182,7 +182,10 @@ SMT::BoolExp *SMTTranslator::visitSimpleBranchCorrect() {
 
 SMT::BVExp *SMTTranslator::zext(SMT::BVExp *exp, unsigned int width) {
    return bv().uext(exp, width);
+}
 
+SMT::BVExp *SMTTranslator::sext(SMT::BVExp *exp, unsigned int width) {
+    return bv().sext(exp, width);
 }
 
 SMT::BVExp *SMTTranslator::doOr(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
@@ -221,6 +224,33 @@ SMT::BVExp *SMTTranslator::sub(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvsub(pExp,pBVExp);
 }
 
+SMT::BoolExp *SMTTranslator::smulo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvsmulo(pExp,pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::umulo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvumulo(pExp,pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::saddo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvsaddo(pExp, pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::uaddo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvuaddo(pExp, pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::ssubo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvssubo(pExp,pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::usubo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvusubo(pExp,pBVExp);
+}
+
+SMT::BoolExp *SMTTranslator::sdivo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvsdivo(pExp,pBVExp);
+}
 
 
 

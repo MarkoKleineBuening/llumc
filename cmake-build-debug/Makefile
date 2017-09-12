@@ -123,33 +123,6 @@ llumc/fast:
 	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/build
 .PHONY : llumc/fast
 
-ASubject.o: ASubject.cpp.o
-
-.PHONY : ASubject.o
-
-# target to build an object file
-ASubject.cpp.o:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/ASubject.cpp.o
-.PHONY : ASubject.cpp.o
-
-ASubject.i: ASubject.cpp.i
-
-.PHONY : ASubject.i
-
-# target to preprocess a source file
-ASubject.cpp.i:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/ASubject.cpp.i
-.PHONY : ASubject.cpp.i
-
-ASubject.s: ASubject.cpp.s
-
-.PHONY : ASubject.s
-
-# target to generate assembly for a file
-ASubject.cpp.s:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/ASubject.cpp.s
-.PHONY : ASubject.cpp.s
-
 Encoder.o: Encoder.cpp.o
 
 .PHONY : Encoder.o
@@ -176,60 +149,6 @@ Encoder.s: Encoder.cpp.s
 Encoder.cpp.s:
 	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Encoder.cpp.s
 .PHONY : Encoder.cpp.s
-
-Formula.o: Formula.cpp.o
-
-.PHONY : Formula.o
-
-# target to build an object file
-Formula.cpp.o:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Formula.cpp.o
-.PHONY : Formula.cpp.o
-
-Formula.i: Formula.cpp.i
-
-.PHONY : Formula.i
-
-# target to preprocess a source file
-Formula.cpp.i:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Formula.cpp.i
-.PHONY : Formula.cpp.i
-
-Formula.s: Formula.cpp.s
-
-.PHONY : Formula.s
-
-# target to generate assembly for a file
-Formula.cpp.s:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Formula.cpp.s
-.PHONY : Formula.cpp.s
-
-IObserver.o: IObserver.cpp.o
-
-.PHONY : IObserver.o
-
-# target to build an object file
-IObserver.cpp.o:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/IObserver.cpp.o
-.PHONY : IObserver.cpp.o
-
-IObserver.i: IObserver.cpp.i
-
-.PHONY : IObserver.i
-
-# target to preprocess a source file
-IObserver.cpp.i:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/IObserver.cpp.i
-.PHONY : IObserver.cpp.i
-
-IObserver.s: IObserver.cpp.s
-
-.PHONY : IObserver.s
-
-# target to generate assembly for a file
-IObserver.cpp.s:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/IObserver.cpp.s
-.PHONY : IObserver.cpp.s
 
 InstructionEncoderLLUMC.o: InstructionEncoderLLUMC.cpp.o
 
@@ -285,33 +204,6 @@ SMTTranslator.cpp.s:
 	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/SMTTranslator.cpp.s
 .PHONY : SMTTranslator.cpp.s
 
-Solver.o: Solver.cpp.o
-
-.PHONY : Solver.o
-
-# target to build an object file
-Solver.cpp.o:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Solver.cpp.o
-.PHONY : Solver.cpp.o
-
-Solver.i: Solver.cpp.i
-
-.PHONY : Solver.i
-
-# target to preprocess a source file
-Solver.cpp.i:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Solver.cpp.i
-.PHONY : Solver.cpp.i
-
-Solver.s: Solver.cpp.s
-
-.PHONY : Solver.s
-
-# target to generate assembly for a file
-Solver.cpp.s:
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Solver.cpp.s
-.PHONY : Solver.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -348,27 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... llumc"
-	@echo "... ASubject.o"
-	@echo "... ASubject.i"
-	@echo "... ASubject.s"
 	@echo "... Encoder.o"
 	@echo "... Encoder.i"
 	@echo "... Encoder.s"
-	@echo "... Formula.o"
-	@echo "... Formula.i"
-	@echo "... Formula.s"
-	@echo "... IObserver.o"
-	@echo "... IObserver.i"
-	@echo "... IObserver.s"
 	@echo "... InstructionEncoderLLUMC.o"
 	@echo "... InstructionEncoderLLUMC.i"
 	@echo "... InstructionEncoderLLUMC.s"
 	@echo "... SMTTranslator.o"
 	@echo "... SMTTranslator.i"
 	@echo "... SMTTranslator.s"
-	@echo "... Solver.o"
-	@echo "... Solver.i"
-	@echo "... Solver.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

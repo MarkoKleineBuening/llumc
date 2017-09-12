@@ -4,13 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/marko/CLionProjects/llumc/ASubject.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/ASubject.cpp.o"
   "/home/marko/CLionProjects/llumc/Encoder.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/Encoder.cpp.o"
-  "/home/marko/CLionProjects/llumc/Formula.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/Formula.cpp.o"
-  "/home/marko/CLionProjects/llumc/IObserver.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/IObserver.cpp.o"
   "/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o"
   "/home/marko/CLionProjects/llumc/SMTTranslator.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/SMTTranslator.cpp.o"
-  "/home/marko/CLionProjects/llumc/Solver.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/Solver.cpp.o"
   "/home/marko/CLionProjects/llumc/main.cpp" "/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

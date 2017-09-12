@@ -56,8 +56,12 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
     SMT::BVExp *bvePred = m_SMTTranslator.createBV("pred", width);  // pred
     SMT::BVExp *bvePredDash = m_SMTTranslator.createBV("predDash", width);  // pred
     SMT::BoolExp *boeFirst = m_SMTTranslator.bvAssignValue(bve, m_bbmap.at(name));  // s = entry
-    //SMT::BoolExp *boeFirstPred = m_SMTTranslator.bvAssignValue(bvePred, m_bbmap.at(name));  // pred = entry
-    //boeFirst = satCore->mk_and(boeFirst, boeFirstPred);
+    if (name == "entry") {
+        llvm::outs() << "Pred added for first Block\n";
+        SMT::BoolExp *boeFirstPred = m_SMTTranslator.bvAssignValue(bvePred, m_bbmap.at(name));  // pred = entry
+        boeFirst = satCore->mk_and(boeFirst, boeFirstPred);
+    }
+
     SMT::BoolExp *boePredDash = m_SMTTranslator.bvAssignValue(bvePredDash, m_bbmap.at(name)); //pred = entry
 
     SMT::BoolExp *boeTmp = boeFirst;
@@ -99,20 +103,6 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
                 termInst->getOperand(2)->getName()));//sDash=bb2
         boeDash = satCore->mk_and(boeDash, boePredDash);
 
-        //TODO Marko delete it, just for testing:
-        /* if (name.str() == "entry") {
-             SMT::BVExp *bveTest = m_SMTTranslator.createBV("tmp17Dash", 32);  // tmp13
-             SMT::BoolExp *boeDashTest = m_SMTTranslator.bvAssignValue(bveTest, 5);//tmp13=5
-             boeDashFirst = satCore->mk_and(boeDashFirst, boeDashTest);
-             boeDash = satCore->mk_and(boeDash, boeDashTest);
-
-            *//* SMT::BVExp *bveTest2 = m_SMTTranslator.createBV("tmpDash", 32);  // tmp
-            SMT::BoolExp *boeDashTest2 = m_SMTTranslator.bvAssignValue(bveTest2, 4097);//tmp=5
-            boeDashFirst = satCore->mk_and(boeDashFirst, boeDashTest2);
-            boeDash = satCore->mk_and(boeDash, boeDashTest2);*//*
-        }*/
-
-
         SMT::BoolExp *saveVarAssume = satCore->mk_true();
         //check instructions before branch jump
         SMT::BoolExp *saveVar;
@@ -146,10 +136,10 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
                                                                           same());
                         saveVarAssume = satCore->mk_implies(saveVarAssume, saveVarAssumeDash);
                     }
-                }else{
+                } else {
                     //different assume or assert
                     //m_instructionEncoder.visit(*C);
-                    if(!(C->getNumOperands()==1 && C->getOperand(0)->getName().startswith("__VERIFIER_nondet"))){
+                    if (!(C->getNumOperands() == 1 && C->getOperand(0)->getName().startswith("__VERIFIER_nondet"))) {
                         llvm::outs() << " VERIFIER ASSUME\n";
                         m_instructionEncoder.visitVerifierAssume(*C);
                         llvm::outs() << "Formula Size VERIFIER Assume/Call:" << " NA" << "\n";
@@ -163,6 +153,16 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
                 }
             }
         }
+
+        //TODO add overFlowChecks
+        llvm::outs() << "CheckForOverflow" << "\n";
+        SMT::BoolExp *saveVarOverflow = satCore->mk_true();
+        for (SMT::BoolExp *formula :m_instructionEncoder.getFormulaSetOverflow()) {
+            // s=entry && overflow --> s'=error
+            llvm::outs() << " Added Check ";
+            saveVarOverflow = satCore->mk_and(saveVarOverflow, formula);
+        }
+
         SMT::BoolExp *addAssume = m_smtContext->getSatCore()->mk_true();
         llvm::SmallPtrSet<SMT::BoolExp *, 1> formulaAssumeCond = m_instructionEncoder.getNegAssumeCond();
         for (SMT::BoolExp *formula : formulaAssumeCond) {
@@ -176,6 +176,7 @@ SMT::BoolExp *Encoder::encodeBasicBlockOverTerminator(llvm::BasicBlock &bb, int 
         SMT::BoolExp *firstOperand = satCore->mk_implies(boeFirst, boeDashFirst);
         SMT::BoolExp *secondOperand = satCore->mk_implies(boeSecond, boeDash);
         secondOperand = satCore->mk_and(secondOperand, saveVarAssume);
+        secondOperand = satCore->mk_and(secondOperand, saveVarOverflow);
 
         SMT::BoolExp *formula = satCore->mk_and(firstOperand, secondOperand);
         llvm::outs() << "\n-------------------------------\n";
@@ -429,10 +430,6 @@ void Encoder::handleCallNode(llvm::CallInst *C) {
     }
 }
 
-void Encoder::Update(SMT::BoolExp *expr) {
-    m_currentFormula = expr;
-}
-
 SMT::BoolExp *Encoder::getInitialExp() {
     llvm::outs() << "entry:" << m_bbmap.at("entry") << "\n";
     llvm::outs() << "ok:" << m_bbmap.at("ok") << "\n";
@@ -459,7 +456,7 @@ SMT::BoolExp *Encoder::getGoalExp() {
     int numBB = m_bbmap.size();
     int width = ceil(log(numBB) / log(2.0));
     SMT::BVExp *sBv = m_SMTTranslator.createBV("s", width);
-    SMT::BoolExp *ret = m_SMTTranslator.bvAssignValue(sBv, m_bbmap.at("ok"));
+    SMT::BoolExp *ret = m_SMTTranslator.bvAssignValue(sBv, m_bbmap.at("error"));
 
     /* SMT::BVExp *sBvTest = m_SMTTranslator.createBV("pred", width);
      SMT::BoolExp *retTest = m_SMTTranslator.bvAssignValue(sBvTest, m_bbmap.at("bb4"));

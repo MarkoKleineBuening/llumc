@@ -15,6 +15,8 @@
 #include "SMTTranslator.h"
 #include <llbmc/Solver/DefaultSMTTranslator.h>
 #include <llvm/ADT/SmallPtrSet.h>
+#include "llvm/IR/Operator.h"
+#include <llbmc/Solver/SMTContext.h>
 
 
 class InstructionEncoderLLUMC : public llvm::LLBMCVisitor<InstructionEncoderLLUMC> {
@@ -35,6 +37,8 @@ public:
     void visitSub(llvm::BinaryOperator &I);
 
     void visitZExtInst(llvm::ZExtInst &I);
+
+    void visitSExtInst(llvm::SExtInst &I);
 
     void visitPHINode(llvm::PHINode &I);
 
@@ -78,9 +82,16 @@ public:
 
     llvm::SmallPtrSet<SMT::BoolExp*, 1> getFormulaSetSave();
 
+    llvm::SmallPtrSet<SMT::BoolExp*, 1> getFormulaSetOverflow();
+
     SMT::BoolExp* getAssumeBoe();
 
     SMT::BoolExp* getAssumeBoeDash();
+
+    SMT::BoolExp* getOverflowCheckBoe();
+
+    SMT::BoolExp* getOverflowCheckBoeDash();
+
 
     std::set<llvm::StringRef> getNotUsedVar();
 
@@ -106,6 +117,7 @@ private:
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaSetICMP;
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaSetSave;
     llvm::SmallPtrSet<SMT::BoolExp*, 1> m_formulaNegAssumeCond;
+    llvm::SmallPtrSet<SMT::BoolExp*, 1> m_overFlowCheck;
     SMT::BVExp*m_formulaSetBV;
     std::map<llvm::StringRef, int> m_bbmap;
     SMT::BVExp *m_lastExp;
@@ -118,7 +130,7 @@ private:
 
     bool isVerifierCall(llvm::Instruction *pInstruction);
 
-
+    void checkForOverflow(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation);
 };
 
 

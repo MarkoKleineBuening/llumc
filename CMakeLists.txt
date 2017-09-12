@@ -71,7 +71,7 @@ endif (LLBMC_ENABLE_STP)
 message("STP_FOUND: " ${STP_FOUND})
 
 set(SOURCE_FILES main.cpp
-        Encoder.cpp Encoder.h InstructionEncoderLLUMC.cpp InstructionEncoderLLUMC.h SMTTranslator.cpp SMTTranslator.h Formula.cpp Formula.h ASubject.cpp ASubject.h IObserver.cpp IObserver.h Solver.cpp Solver.h)
+        Encoder.cpp Encoder.h InstructionEncoderLLUMC.cpp InstructionEncoderLLUMC.h SMTTranslator.cpp SMTTranslator.h)
 
 add_executable(llumc ${SOURCE_FILES})
 

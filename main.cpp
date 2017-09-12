@@ -96,12 +96,6 @@ int main(int argc, char *argv[]) {
         llvm::outs() << "Universal: ";
         universalExp = enc->getUniversalExp();
         llvm::outs() << "...finished " << "\n";
-        /*llvm::outs() << "Test: ";
-        testExp = enc->getCompleteTest();
-        llvm::outs() << "...finished " << "\n";
-        llvm::outs() << "TestIni: ";*/
-
-
     }
     llvm::outs() << "\n";
     solver->assertConstraint(transitionExp);
@@ -116,10 +110,6 @@ int main(int argc, char *argv[]) {
     solver->assertConstraint(universalExp);
     solver->solve();
 
-
-    /*solver->assertConstraint(testExp);
-    solver->solve();*/
-
     std::map<std::string, std::vector<unsigned int>> dashMap = solver->getDashMap();
     //std::cout << "Size of Vector: " << dashMap.size() << "\n";
     /*for (auto &entry : dashMap) {
@@ -132,23 +122,6 @@ int main(int argc, char *argv[]) {
     llvm::outs() << "\n";*/
 
     std::cout << "Desc:" << solver->getDescription() << "\n";
-    /*switch (solver->getResult()) {
-        case SMT::Solver::Result::Satisfiable: {
-            std::cout << "Result:" << "Satisfiable" << "\n";
-            break;
-        }
-        case SMT::Solver::Result::Unsatisfiable: {
-            std::cout << "Result:" << "Unsatisfiable" << "\n";
-            break;
-        }
-        case SMT::Solver::Result::Unknown: {
-            std::cout << "Result:" << "Unknown" << "\n";
-            break;
-        }
-        default:
-            std::cout << "Result:" << "ERROR DEFAULT" << "\n";
-
-    }*/
 
     //return 0;
     summarizeOutputFiles();

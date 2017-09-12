@@ -153,112 +153,12 @@ CMakeFiles/llumc.dir/SMTTranslator.cpp.o.provides: CMakeFiles/llumc.dir/SMTTrans
 CMakeFiles/llumc.dir/SMTTranslator.cpp.o.provides.build: CMakeFiles/llumc.dir/SMTTranslator.cpp.o
 
 
-CMakeFiles/llumc.dir/Formula.cpp.o: CMakeFiles/llumc.dir/flags.make
-CMakeFiles/llumc.dir/Formula.cpp.o: ../Formula.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/llumc.dir/Formula.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/Formula.cpp.o -c /home/marko/CLionProjects/llumc/Formula.cpp
-
-CMakeFiles/llumc.dir/Formula.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/Formula.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/Formula.cpp > CMakeFiles/llumc.dir/Formula.cpp.i
-
-CMakeFiles/llumc.dir/Formula.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/Formula.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/Formula.cpp -o CMakeFiles/llumc.dir/Formula.cpp.s
-
-CMakeFiles/llumc.dir/Formula.cpp.o.requires:
-
-.PHONY : CMakeFiles/llumc.dir/Formula.cpp.o.requires
-
-CMakeFiles/llumc.dir/Formula.cpp.o.provides: CMakeFiles/llumc.dir/Formula.cpp.o.requires
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Formula.cpp.o.provides.build
-.PHONY : CMakeFiles/llumc.dir/Formula.cpp.o.provides
-
-CMakeFiles/llumc.dir/Formula.cpp.o.provides.build: CMakeFiles/llumc.dir/Formula.cpp.o
-
-
-CMakeFiles/llumc.dir/ASubject.cpp.o: CMakeFiles/llumc.dir/flags.make
-CMakeFiles/llumc.dir/ASubject.cpp.o: ../ASubject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/llumc.dir/ASubject.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/ASubject.cpp.o -c /home/marko/CLionProjects/llumc/ASubject.cpp
-
-CMakeFiles/llumc.dir/ASubject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/ASubject.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/ASubject.cpp > CMakeFiles/llumc.dir/ASubject.cpp.i
-
-CMakeFiles/llumc.dir/ASubject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/ASubject.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/ASubject.cpp -o CMakeFiles/llumc.dir/ASubject.cpp.s
-
-CMakeFiles/llumc.dir/ASubject.cpp.o.requires:
-
-.PHONY : CMakeFiles/llumc.dir/ASubject.cpp.o.requires
-
-CMakeFiles/llumc.dir/ASubject.cpp.o.provides: CMakeFiles/llumc.dir/ASubject.cpp.o.requires
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/ASubject.cpp.o.provides.build
-.PHONY : CMakeFiles/llumc.dir/ASubject.cpp.o.provides
-
-CMakeFiles/llumc.dir/ASubject.cpp.o.provides.build: CMakeFiles/llumc.dir/ASubject.cpp.o
-
-
-CMakeFiles/llumc.dir/IObserver.cpp.o: CMakeFiles/llumc.dir/flags.make
-CMakeFiles/llumc.dir/IObserver.cpp.o: ../IObserver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/llumc.dir/IObserver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/IObserver.cpp.o -c /home/marko/CLionProjects/llumc/IObserver.cpp
-
-CMakeFiles/llumc.dir/IObserver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/IObserver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/IObserver.cpp > CMakeFiles/llumc.dir/IObserver.cpp.i
-
-CMakeFiles/llumc.dir/IObserver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/IObserver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/IObserver.cpp -o CMakeFiles/llumc.dir/IObserver.cpp.s
-
-CMakeFiles/llumc.dir/IObserver.cpp.o.requires:
-
-.PHONY : CMakeFiles/llumc.dir/IObserver.cpp.o.requires
-
-CMakeFiles/llumc.dir/IObserver.cpp.o.provides: CMakeFiles/llumc.dir/IObserver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/IObserver.cpp.o.provides.build
-.PHONY : CMakeFiles/llumc.dir/IObserver.cpp.o.provides
-
-CMakeFiles/llumc.dir/IObserver.cpp.o.provides.build: CMakeFiles/llumc.dir/IObserver.cpp.o
-
-
-CMakeFiles/llumc.dir/Solver.cpp.o: CMakeFiles/llumc.dir/flags.make
-CMakeFiles/llumc.dir/Solver.cpp.o: ../Solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/llumc.dir/Solver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/llumc.dir/Solver.cpp.o -c /home/marko/CLionProjects/llumc/Solver.cpp
-
-CMakeFiles/llumc.dir/Solver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/llumc.dir/Solver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marko/CLionProjects/llumc/Solver.cpp > CMakeFiles/llumc.dir/Solver.cpp.i
-
-CMakeFiles/llumc.dir/Solver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/llumc.dir/Solver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marko/CLionProjects/llumc/Solver.cpp -o CMakeFiles/llumc.dir/Solver.cpp.s
-
-CMakeFiles/llumc.dir/Solver.cpp.o.requires:
-
-.PHONY : CMakeFiles/llumc.dir/Solver.cpp.o.requires
-
-CMakeFiles/llumc.dir/Solver.cpp.o.provides: CMakeFiles/llumc.dir/Solver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/llumc.dir/build.make CMakeFiles/llumc.dir/Solver.cpp.o.provides.build
-.PHONY : CMakeFiles/llumc.dir/Solver.cpp.o.provides
-
-CMakeFiles/llumc.dir/Solver.cpp.o.provides.build: CMakeFiles/llumc.dir/Solver.cpp.o
-
-
 # Object files for target llumc
 llumc_OBJECTS = \
 "CMakeFiles/llumc.dir/main.cpp.o" \
 "CMakeFiles/llumc.dir/Encoder.cpp.o" \
 "CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o" \
-"CMakeFiles/llumc.dir/SMTTranslator.cpp.o" \
-"CMakeFiles/llumc.dir/Formula.cpp.o" \
-"CMakeFiles/llumc.dir/ASubject.cpp.o" \
-"CMakeFiles/llumc.dir/IObserver.cpp.o" \
-"CMakeFiles/llumc.dir/Solver.cpp.o"
+"CMakeFiles/llumc.dir/SMTTranslator.cpp.o"
 
 # External object files for target llumc
 llumc_EXTERNAL_OBJECTS =
@@ -267,10 +167,6 @@ llumc: CMakeFiles/llumc.dir/main.cpp.o
 llumc: CMakeFiles/llumc.dir/Encoder.cpp.o
 llumc: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o
 llumc: CMakeFiles/llumc.dir/SMTTranslator.cpp.o
-llumc: CMakeFiles/llumc.dir/Formula.cpp.o
-llumc: CMakeFiles/llumc.dir/ASubject.cpp.o
-llumc: CMakeFiles/llumc.dir/IObserver.cpp.o
-llumc: CMakeFiles/llumc.dir/Solver.cpp.o
 llumc: CMakeFiles/llumc.dir/build.make
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLBMCCommandLine.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLBMCTools.a
@@ -362,7 +258,7 @@ llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libstp.so
 llumc: CMakeFiles/llumc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable llumc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable llumc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/llumc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -374,10 +270,6 @@ CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/main.cpp.o.requires
 CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/Encoder.cpp.o.requires
 CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/InstructionEncoderLLUMC.cpp.o.requires
 CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/SMTTranslator.cpp.o.requires
-CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/Formula.cpp.o.requires
-CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/ASubject.cpp.o.requires
-CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/IObserver.cpp.o.requires
-CMakeFiles/llumc.dir/requires: CMakeFiles/llumc.dir/Solver.cpp.o.requires
 
 .PHONY : CMakeFiles/llumc.dir/requires
 

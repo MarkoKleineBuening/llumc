@@ -86,28 +86,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/marko/CLionProjects/llumc/ASubject.cpp">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/ASubject.h">
-			<Option target="llumc"/>
-		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/Encoder.cpp">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/Encoder.h">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/Formula.cpp">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/Formula.h">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/IObserver.cpp">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/IObserver.h">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/InstructionEncoderLLUMC.cpp">
@@ -120,12 +102,6 @@
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/SMTTranslator.h">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/Solver.cpp">
-			<Option target="llumc"/>
-		</Unit>
-		<Unit filename="/home/marko/CLionProjects/llumc/Solver.h">
 			<Option target="llumc"/>
 		</Unit>
 		<Unit filename="/home/marko/CLionProjects/llumc/main.cpp">

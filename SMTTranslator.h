@@ -42,6 +42,8 @@ public:
 
     SMT::BVExp *zext(SMT::BVExp *exp, unsigned int i);
 
+    SMT::BVExp *sext(SMT::BVExp *exp, unsigned int i);
+
     SMT::BVExp *cond(SMT::BoolExp *boe, SMT::BVExp *bv1, SMT::BVExp *bv2);
 
     SMT::BVExp *doOr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
@@ -62,8 +64,22 @@ public:
 
     SMT::BVExp *sub(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
+    SMT::BoolExp *smulo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *saddo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *uaddo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *ssubo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *usubo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *umulo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BoolExp *sdivo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 private:
     std::map<std::string, SMT::BVExp*> m_bvSet;
+
 
 
 };
