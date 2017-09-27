@@ -52,6 +52,8 @@ public:
 
     SMT::BVExp *mul(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
+    SMT::BVExp *doXor(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
     SMT::BVExp *ashr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BVExp *lshr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
@@ -77,6 +79,9 @@ public:
     SMT::BoolExp *umulo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BoolExp *sdivo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BVExp *udiv(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
 private:
     std::map<std::string, SMT::BVExp*> m_bvSet;
 

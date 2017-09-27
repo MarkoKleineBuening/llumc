@@ -73,6 +73,8 @@ private:
     SMT::BoolExp *encodeSingleBlock(int width, std::string name);
 
     bool isUsedInBasicBlockBefore(llvm::BasicBlock *BB, llvm::Value *user);
+
+    bool isVerifierAssume(llvm::CallInst I);
 };
 
 

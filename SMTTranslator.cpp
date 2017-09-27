@@ -180,6 +180,10 @@ SMT::BoolExp *SMTTranslator::visitSimpleBranchCorrect() {
     return outSat;
 }
 
+SMT::BVExp *SMTTranslator::doXor(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvxor(pExp, pBVExp);
+}
+
 SMT::BVExp *SMTTranslator::zext(SMT::BVExp *exp, unsigned int width) {
    return bv().uext(exp, width);
 }
@@ -250,6 +254,10 @@ SMT::BoolExp *SMTTranslator::usubo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
 
 SMT::BoolExp *SMTTranslator::sdivo(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvsdivo(pExp,pBVExp);
+}
+
+SMT::BVExp *SMTTranslator::udiv(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
+    return bv().bvudiv(pExp,pBVExp);
 }
 
 

@@ -48,6 +48,10 @@ public:
 
     void visitMul(llvm::BinaryOperator &I);
 
+    void visitUDiv(llvm::BinaryOperator &I);
+
+    void visitXor(llvm::BinaryOperator &I);
+
     void visitAShr(llvm::BinaryOperator &I);
 
     void visitLShr(llvm::BinaryOperator &I);
@@ -108,6 +112,8 @@ public:
 
     void visitVerifierAssume(llvm::CallInst &I);
 
+    llvm::StringRef getInstName(llvm::CallInst *I);
+
 private:
     SMTTranslator m_SMTTranslator;
     llbmc::SMTContext *m_smtContext;
@@ -131,6 +137,8 @@ private:
     bool isVerifierCall(llvm::Instruction *pInstruction);
 
     void checkForOverflow(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation);
+
+    void checkForBitshift(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation);
 };
 
 
