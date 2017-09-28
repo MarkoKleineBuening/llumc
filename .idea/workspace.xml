@@ -14,13 +14,6 @@
     <list default="true" id="4acfc583-6ade-493c-8009-c6a7fa04457d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/llumc" afterPath="$PROJECT_DIR$/cmake-build-debug/llumc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Encoder.cpp" afterPath="$PROJECT_DIR$/Encoder.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Encoder.h" afterPath="$PROJECT_DIR$/Encoder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" afterPath="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InstructionEncoderLLUMC.h" afterPath="$PROJECT_DIR$/InstructionEncoderLLUMC.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SMTTranslator.cpp" afterPath="$PROJECT_DIR$/SMTTranslator.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SMTTranslator.h" afterPath="$PROJECT_DIR$/SMTTranslator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +46,8 @@
       <file leaf-file-name="Encoder.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Encoder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="456" column="1" lean-forward="true" selection-start-line="456" selection-start-column="1" selection-end-line="456" selection-end-column="1" />
+            <state relative-caret-position="62">
+              <caret line="453" column="10" lean-forward="false" selection-start-line="453" selection-start-column="10" selection-end-line="453" selection-end-column="10" />
               <folding>
                 <marker date="1506506966391" expanded="true" signature="23928:24545" ph="{...}" />
               </folding>
@@ -65,7 +58,7 @@
       <file leaf-file-name="InstructionEncoderLLUMC.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="2040">
               <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
               <folding />
             </state>
@@ -75,7 +68,7 @@
       <file leaf-file-name="InstructionEncoderLLUMC.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="17130">
               <caret line="1142" column="27" lean-forward="false" selection-start-line="1142" selection-start-column="27" selection-end-line="1142" selection-end-column="27" />
               <folding />
             </state>
@@ -126,10 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MARK</find>
-      <find>bash</find>
-      <find>Assume Error</find>
-      <find>call</find>
       <find>Added Check</find>
       <find>A</find>
       <find>--Visit ZExt</find>
@@ -156,6 +145,10 @@
       <find>isAssu</find>
       <find>isAssume</find>
       <find>Undefined Call</find>
+      <find>NAME/Vector: s</find>
+      <find>NAME/Vector: pred</find>
+      <find>1834</find>
+      <find>1784</find>
     </findStrings>
     <dirStrings>
       <dir>/usr/local/include</dir>
@@ -523,7 +516,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="llumc" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/workspace/testing/PowerOfTwo_trueBM.bc" PASS_PARENT_ENVS_2="true" PROJECT_NAME="llumc" TARGET_NAME="llumc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="llumc" RUN_TARGET_NAME="llumc">
+    <configuration default="false" name="llumc" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/workspace/testingAr/parity_true-unreach-call_true-no-overflowBM.bc" PASS_PARENT_ENVS_2="true" PROJECT_NAME="llumc" TARGET_NAME="llumc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="llumc" RUN_TARGET_NAME="llumc">
       <envs />
       <method />
     </configuration>
@@ -646,7 +639,9 @@
       <workItem from="1506433581341" duration="10440000" />
       <workItem from="1506501966484" duration="971000" />
       <workItem from="1506503824274" duration="207000" />
-      <workItem from="1506505761557" duration="1216000" />
+      <workItem from="1506505761557" duration="2021000" />
+      <workItem from="1506591767615" duration="4189000" />
+      <workItem from="1506616928655" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="InstVisitor">
       <created>1499180910469</created>
@@ -697,35 +692,42 @@
       <option name="project" value="LOCAL" />
       <updated>1505210707779</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added stuff VERIFIER handling">
+      <created>1506507016897</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506507016897</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539530000" />
+    <option name="totallyTimeSpent" value="544532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40030912" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27357033" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27820712" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6244204" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45904174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24670571" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39876354" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45904174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -745,7 +747,8 @@
     <MESSAGE value="bug fixes, added visit, trunc is todo" />
     <MESSAGE value="added and, todo: trunc, signed mul" />
     <MESSAGE value="deleted stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted stuff" />
+    <MESSAGE value="added stuff VERIFIER handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added stuff VERIFIER handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1024,14 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/TheoryOfBitvectors.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTmisc.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -1086,7 +1081,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="2040">
           <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
           <folding />
         </state>
@@ -1094,16 +1089,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="17130">
           <caret line="1142" column="27" lean-forward="false" selection-start-line="1142" selection-start-column="27" selection-end-line="1142" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/TheoryOfBitvectors.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Encoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="456" column="1" lean-forward="true" selection-start-line="456" selection-start-column="1" selection-end-line="456" selection-end-column="1" />
+        <state relative-caret-position="62">
+          <caret line="453" column="10" lean-forward="false" selection-start-line="453" selection-start-column="10" selection-end-line="453" selection-end-column="10" />
           <folding>
             <marker date="1506506966391" expanded="true" signature="23928:24545" ph="{...}" />
           </folding>
