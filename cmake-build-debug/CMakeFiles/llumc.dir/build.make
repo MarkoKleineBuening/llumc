@@ -205,7 +205,8 @@ llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a
-llumc: /home/marko/workspace/install/reldeb-gcc/lib/libstp.so
+llumc: /home/marko/workspace/install/reldeb-gcc/lib/libstp.a
+llumc: /home/marko/workspace/install/reldeb-gcc/lib/libminisat.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLBMCILR.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLBMCSMT.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLBMCResource.a
@@ -256,7 +257,8 @@ llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a
 llumc: /home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a
-llumc: /home/marko/workspace/install/reldeb-gcc/lib/libstp.so
+llumc: /home/marko/workspace/install/reldeb-gcc/lib/libstp.a
+llumc: /home/marko/workspace/install/reldeb-gcc/lib/libminisat.a
 llumc: CMakeFiles/llumc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marko/CLionProjects/llumc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable llumc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/llumc.dir/link.txt --verbose=$(VERBOSE)

@@ -30,7 +30,7 @@ void InstructionEncoderLLUMC::visitNonIntrinsicCall(llvm::CallInst &I) {
         }
     } else {
         //throw LLBMCException("Unkown specification element encountered: " + name.str());
-        llvm::outs() << "Unkown specification element encountered(1): " << name.str() << "\n";
+        //llvm::outs() << "Unkown specification element encountered(1): " << name.str() << "\n";
     }
 
     if (cmd.startswith("nondet")) {
@@ -39,18 +39,19 @@ void InstructionEncoderLLUMC::visitNonIntrinsicCall(llvm::CallInst &I) {
         // a variable is "created" with nondet just save it as x, does not be repeated here
         llvm::outs() << "m_formulaSetBV was filled with BV" << I.getName() << ", " << I.getType()->getIntegerBitWidth() << "\n";
         m_formulaSetBV = m_SMTTranslator.createBV(I.getName(), I.getType()->getIntegerBitWidth());
+        llvm::outs() << "bitvector was created";
     } else if (cmd.startswith("assume")) {
-        llvm::outs() << name.str() << ": ";
+        //llvm::outs() << name.str() << ": ";
         visitAssume(I);
         //llvm::outs() << "\n";
     } else {
-        llvm::outs() << "Unkown specification element encountered(2): " << name.str() << "\n";
+        //llvm::outs() << "Unkown specification element encountered(2): " << name.str() << "\n";
     }
 
 }
 
 void InstructionEncoderLLUMC::visitSpecification(llvm::CallInst &I) {
-    llvm::outs() << "--Visit Specification" << "\n";
+    //llvm::outs() << "--Visit Specification" << "\n";
     llvm::StringRef name = llbmc::FunctionMatcher::getCalledFunction(I)->getName();
     llvm::StringRef cmd;
     if (name.startswith("__llbmc_")) {       // c commands
@@ -69,49 +70,49 @@ void InstructionEncoderLLUMC::visitSpecification(llvm::CallInst &I) {
         }
     } else {
         //throw LLBMCException("Unkown specification element encountered: " + name.str());
-        llvm::outs() << "Unkown specification element encountered(1): " << name.str() << "\n";
+        //llvm::outs() << "Unkown specification element encountered(1): " << name.str() << "\n";
     }
 
     if (cmd.startswith("nondef")) {
         // a variable is "created" with nondef just save it as x, does not be repeated here
-        llvm::outs() << "m_formulaSetBV was filled with BV " << I.getName() << "\n";
+        //llvm::outs() << "m_formulaSetBV was filled with BV " << I.getName() << "\n";
         m_formulaSetBV = m_SMTTranslator.createBV(I.getName(), I.getType()->getIntegerBitWidth());
     } else if (cmd.startswith("assume")) {
-        llvm::outs() << name.str() << ": ";
+        //llvm::outs() << name.str() << ": ";
         visitAssume(I);
         //llvm::outs() << "\n";
     } else {
-        llvm::outs() << "Unkown specification element encountered(2): " << name.str() << "\n";
+        //llvm::outs() << "Unkown specification element encountered(2): " << name.str() << "\n";
     }
 
 }
 
 void InstructionEncoderLLUMC::visitVerifierAssume(llvm::CallInst &I) {
-    llvm::outs() << "--visit VERIFIER Assume ";
+    //llvm::outs() << "--visit VERIFIER Assume ";
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
         //s=3 and tmp12= 0 --> s'= ok
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 bv1 = m_SMTTranslator.createConst(iConstant, width);
             } else {
@@ -124,7 +125,7 @@ void InstructionEncoderLLUMC::visitVerifierAssume(llvm::CallInst &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (Inst->isUsedInBasicBlock(I.getParent()) && !alreadyVisited) {
-                        llvm::outs() << "Same Block Instruction: " << Inst->getName();
+                        //llvm::outs() << "Same Block Instruction: " << Inst->getName();
                         this->visit(Inst);
                         bv1 = m_formulaSetBV;
                     }
@@ -133,7 +134,7 @@ void InstructionEncoderLLUMC::visitVerifierAssume(llvm::CallInst &I) {
             if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                 const bool alreadyVisited = m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                 if (!alreadyVisited) {
-                    llvm::outs() << "!alreadyVisited is used, do you need it?(VERAssume)";
+                    //llvm::outs() << "!alreadyVisited is used, do you need it?(VERAssume)";
                     this->visit(Inst);
                 }
             }
@@ -154,36 +155,36 @@ void InstructionEncoderLLUMC::visitVerifierAssume(llvm::CallInst &I) {
         SMT::BoolExp *formula = satCore->mk_implies(boe, boeDash);
         m_assumeBoe = boe;
         m_assumeBoeDash = boeDash;
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitAssume(llvm::CallInst &I) {
-    llvm::outs() << "--visit Assume";
+    //llvm::outs() << "--visit Assume";
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
         //s=3 and tmp12= 0 --> s'= ok
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 bv1 = m_SMTTranslator.createConst(iConstant, width);
             } else {
@@ -196,7 +197,7 @@ void InstructionEncoderLLUMC::visitAssume(llvm::CallInst &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (Inst->isUsedInBasicBlock(I.getParent()) && !alreadyVisited) {
-                        llvm::outs() << "Same Block Instruction: " << Inst->getName();
+                        //llvm::outs() << "Same Block Instruction: " << Inst->getName();
                         this->visit(Inst);
                         bv1 = m_formulaSetBV;
                     }
@@ -205,7 +206,7 @@ void InstructionEncoderLLUMC::visitAssume(llvm::CallInst &I) {
             if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                 const bool alreadyVisited = m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                 if (!alreadyVisited) {
-                    llvm::outs() << "!alreadyVisited is used, do you need it?(Assume)";
+                    //llvm::outs() << "!alreadyVisited is used, do you need it?(Assume)";
                     this->visit(Inst);
                 }
             }
@@ -226,7 +227,7 @@ void InstructionEncoderLLUMC::visitAssume(llvm::CallInst &I) {
         SMT::BoolExp *formula = satCore->mk_implies(boe, boeDash);
         m_assumeBoe = boe;
         m_assumeBoeDash = boeDash;
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
@@ -236,7 +237,7 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
         llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit ICmp" << "\n";
+       llvm::outs() << "--Visit ICmp" << "\n";
         unsigned int args = I.getNumOperands();
         llvm::outs() << args << ":";
         int width = 32; //default width
@@ -248,7 +249,8 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
             std::string name = I.getOperand(i)->getName();
             llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
-                //llvm::outs() << CI->getValue() << " , ";
+                llvm::outs() << "--Constant ICMP--";
+                llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 if(constant.isNegative()){
                     llvm::outs() << "Value is negative\n";
@@ -273,27 +275,52 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
                     bv2 = m_SMTTranslator.createConst(iConstant, width);
                 }
             } else {
+                llvm::outs() << "--1: Not Constant ICMP--\n";
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
+                llvm::outs() << "--2: Not Constant ICMP--\n";
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
                     //TODO check if && !I.isUsedInBasicBlock(I.getParent()) is okay in another form
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
+                    llvm::outs() << "--Create BV--";
                     if (i == 0) {
                         bv1 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
                     } else {
                         bv2 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
                     }
                 } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    llvm::outs() << "--3: Not Constant ICMP--\n";
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (Inst->isUsedInBasicBlock(I.getParent()) && !alreadyVisited) {
+                        llvm::outs() << "--Visit again ICMP--";
                         this->visit(Inst);
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
                         } else {
                             bv2 = m_formulaSetBV;
                         }
+                    }
+                } else {
+                        llvm::outs() << "else";
+                    llvm::outs() << I.getValueID() << ", " << I.getOperand(i)->getName() <<"\n";
+                    llvm::outs() << "else 2";
+                    std::string name = "";
+                    if(I.getOperand(i)->getName() ==""){
+                        std::string name = "bitcastValue";
+                    }else{
+                        std::string name = I.getOperand(i)->getName();
+                    }
+
+                    if (i == 0) {
+
+                        bv1 = m_SMTTranslator.createBV(name, width);
+                    } else {
+                        bv2 = m_SMTTranslator.createBV(name, width);
+                    }
+                    if(I.getName()=="main()"){
+                        llvm::outs() << "Name main";
                     }
                 }
                 if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
@@ -304,7 +331,7 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
                         llvm::outs() << "!alreadyVisited is used, do you need it?(ICMP)";
                         this->visit(Inst);
                         //TODO probably add to formula
-                        llvm::outs() << ";;;;ADD to FORMULA but how?;;;;";
+                        //llvm::outs() << ";;;;ADD to FORMULA but how?;;;;";
                     }
                 }
             }
@@ -337,20 +364,20 @@ void InstructionEncoderLLUMC::visitICmpInst(llvm::ICmpInst &I) {
         m_formulaSet.insert(boolExp);
         m_formulaSetICMP.insert(boolExp);
 
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         //TODO überprüfe ob sext in bv wirklich das richtige macht. kein normales ext sondern zext ist gewollt.
         m_alreadyVisited.insert(I.getName());
         llvm::outs() << "--Visit ZExt" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -360,40 +387,40 @@ void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
             std::string name = I.getOperand(i)->getName();
             llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             llvm::outs() << *I.getSrcTy() << "->";
-            llvm::outs() << *I.getDestTy();
+            llvm::outs() << *I.getDestTy()<<"\n";
 
             const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
             if (is_in) {
                 //TODO Check if && !I.isUsedInBasicBlock(I.getParent()) is needed
                 bvSmall = m_SMTTranslator.createBV(I.getOperand(i)->getName(), I.getSrcTy()->getIntegerBitWidth());
-                llvm::outs() << "is_in:" << I.getSrcTy()->getIntegerBitWidth();
+                //llvm::outs() << "is_in:" << I.getSrcTy()->getIntegerBitWidth();
                 if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
-                    llvm::outs() << "!alreadyVisited but earlier";
+                    //llvm::outs() << "!alreadyVisited but earlier";
                     this->visit(Inst);
                 }
             } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                 if (Inst->isUsedInBasicBlock(I.getParent())) {
-                    llvm::outs() << "Same Block Instruction(ZEXT): " << Inst->getName();
+                    //llvm::outs() << "Same Block Instruction(ZEXT): " << Inst->getName();
                     this->visit(Inst);
                     bvSmall = m_formulaSetBV;
-                    llvm::outs() << "aus Liste:";
+                    //llvm::outs() << "aus Liste:";
                 }else{
-                    llvm::outs() << "Not used in Basic Block\n";
+                    //llvm::outs() << "Not used in Basic Block\n";
                 }
             }else if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
-                llvm::outs() << "VALUE: " << CI->getValue() << " , ";
+                //llvm::outs() << "VALUE: " << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 //llvm::outs()<<"bidwidth: " << CI->getValue().getBitWidth()<< ", ";
                 dConstant = constant.roundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 bvSmall = m_SMTTranslator.createConst(iConstant, width);
             }else{
-                llvm::outs() << "Nothing triggered\n";
+                //llvm::outs() << "Nothing triggered\n";
             }
         }
         llvm::outs() << I.getDestTy()->getIntegerBitWidth();
@@ -414,12 +441,12 @@ void InstructionEncoderLLUMC::visitZExtInst(llvm::ZExtInst &I) {
 void InstructionEncoderLLUMC::visitSExtInst(llvm::SExtInst &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit SExt" << "\n";
+        //llvm::outs() << "--Visit SExt" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -427,43 +454,43 @@ void InstructionEncoderLLUMC::visitSExtInst(llvm::SExtInst &I) {
         for (unsigned int i = 0; i < args; i++) {
             bool alreadyVisited = false;
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
-            llvm::outs() << *I.getSrcTy() << "->";
-            llvm::outs() << *I.getDestTy();
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << *I.getSrcTy() << "->";
+            //llvm::outs() << *I.getDestTy();
 
             const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
             if (is_in) {
                 //TODO Check if && !I.isUsedInBasicBlock(I.getParent()) is needed
                 bvSmall = m_SMTTranslator.createBV(I.getOperand(i)->getName(), I.getSrcTy()->getIntegerBitWidth());
-                llvm::outs() << "is_in:" << I.getSrcTy()->getIntegerBitWidth();
+                //llvm::outs() << "is_in:" << I.getSrcTy()->getIntegerBitWidth();
                 if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
-                    llvm::outs() << "!alreadyVisited but earlier";
+                    //llvm::outs() << "!alreadyVisited but earlier";
                     this->visit(Inst);
                 }
             } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                 if (Inst->isUsedInBasicBlock(I.getParent())) {
-                    llvm::outs() << "Same Block Instruction(SEXT): " << Inst->getName();
+                    //llvm::outs() << "Same Block Instruction(SEXT): " << Inst->getName();
                     this->visit(Inst);
                     bvSmall = m_formulaSetBV;
-                    llvm::outs() << "aus Liste:";
+                    //llvm::outs() << "aus Liste:";
                 }
             }else if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
 
-                llvm::outs() << "VALUE: " << CI->getValue() << " , ";
+                //llvm::outs() << "VALUE: " << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << " "<<width << "width,";
+                //llvm::outs() << " "<<width << "width,";
                 dConstant = constant.roundToDouble(true);
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 bvSmall = m_SMTTranslator.createConst(iConstant, width);
             }else{
-                llvm::outs() << "Nothing triggered\n";
+                //llvm::outs() << "Nothing triggered\n";
             }
         }
-        llvm::outs() << I.getDestTy()->getIntegerBitWidth();
+        //llvm::outs() << I.getDestTy()->getIntegerBitWidth();
         bv1 = m_SMTTranslator.sext(bvSmall, I.getDestTy()->getIntegerBitWidth());
         const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
         if (is_in) {
@@ -478,38 +505,38 @@ void InstructionEncoderLLUMC::visitSExtInst(llvm::SExtInst &I) {
     }
 }
 
-void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
+void InstructionEncoderLLUMC::visitPHINode2(llvm::PHINode &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit PHI" << "\n";
+        //llvm::outs() << "--Visit PHI" << "\n";
         //if pred = argument --> tmp = 1
         // else tmp = 2
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32;
         int numBB = I.getParent()->getParent()->size();
         int widthBB = ceil(log(numBB + 2) / log(2.0));
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
         SMT::BVExp *bv2 = nullptr;
-        llvm::outs() << *I.getType() << ": ";
-        llvm::outs() << I.getIncomingBlock(0)->getName() << ", " << I.getIncomingBlock(1)->getName();
+        //llvm::outs() << *I.getType() << ": ";
+        //llvm::outs() << I.getIncomingBlock(0)->getName() << ", " << I.getIncomingBlock(1)->getName();
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -540,7 +567,7 @@ void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (Inst->getParent() == I.getParent() && !alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited is used, do you need it?(PHI)";
+                        //llvm::outs() << "!alreadyVisited is used, do you need it?(PHI)";
                         this->visit(Inst);
                     }
                 }
@@ -548,7 +575,7 @@ void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
         }
         SMT::BVExp *pred = m_SMTTranslator.createBV("pred", widthBB);
         std::string nameOfParam1 = I.getIncomingBlock(0)->getName();
-        std::string nameOfParam2 = I.getIncomingBlock(1)->getName();
+        //std::string nameOfParam2 = I.getIncomingBlock(1)->getName();
         SMT::BVExp *firstParam = m_SMTTranslator.createConst(m_bbmap.at(nameOfParam1), widthBB);
         SMT::BoolExp *condition = m_SMTTranslator.compare(pred, firstParam, llvm::CmpInst::ICMP_EQ);
         SMT::BVExp *bvExpCond = m_SMTTranslator.cond(condition, bv1, bv2);
@@ -557,27 +584,122 @@ void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
         if (is_in) {
             std::string name = I.getName();
             SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
-            llvm::outs() << "--------" << name << ", ";
+            //llvm::outs() << "--------" << name << ", ";
             SMT::BoolExp *save = m_SMTTranslator.compare(bvExp, bvExpCond, llvm::CmpInst::ICMP_EQ);
-            llvm::outs() << "\n------phi: " << m_formulaSetSave.size();
+            //llvm::outs() << "\n------phi: " << m_formulaSetSave.size();
             m_formulaSetSave.insert(save);
             m_notUsedVar.erase(I.getName());
         }
 
         m_formulaSetBV = (bvExpCond);
-        llvm::outs() << "--END PHI\n";
+        //llvm::outs() << "--END PHI\n";
     }
+}
+
+void InstructionEncoderLLUMC::visitPHINode(llvm::PHINode &I) {
+    const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
+    if (alreadyVisited) {
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
+    } else {
+        m_alreadyVisited.insert(I.getName());
+        //llvm::outs() << "--Visit PHI2" << "\n";
+        //if pred = argument --> tmp = 1
+        // else tmp = 2
+        unsigned int args = I.getNumOperands();
+        //llvm::outs() << args << ":";
+        int width = 32;
+        int numBB = I.getParent()->getParent()->size();
+        int widthBB = ceil(log(numBB + 2) / log(2.0));
+        double dConstant;
+        std::vector<SMT::BVExp*> bvs;
+        //llvm::outs() << *I.getType() << ": ";
+        //llvm::outs() << I.getIncomingBlock(0)->getName() << ", " << I.getIncomingBlock(1)->getName();
+
+        for (unsigned int i = 0; i < args; i++) {
+            std::string name = I.getOperand(i)->getName();
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
+                //llvm::outs() << CI->getValue() << " , ";
+                llvm::APInt constant = CI->getValue();
+                llvm::IntegerType *it = CI->getType();
+                width = it->getIntegerBitWidth();
+                //llvm::outs() << width << "width,";
+                dConstant = constant.signedRoundToDouble();
+                int iConstant = (int) dConstant;
+                //llvm::outs() << iConstant << "iConstant,";
+                //Create BVExpr with Constant
+                bvs.push_back(m_SMTTranslator.createConst(iConstant, width));
+            } else {
+                const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
+                if (is_in) {
+                    //todo check && !I.isUsedInBasicBlock(I.getParent())
+                    width = I.getType()->getIntegerBitWidth();
+                    bvs.push_back(m_SMTTranslator.createBV(I.getOperand(i)->getName(), width));
+                } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    if (Inst->isUsedInBasicBlock(I.getParent())) {
+                        this->visit(Inst);
+                        bvs.push_back(m_formulaSetBV);
+                    }
+                }
+                if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    const bool alreadyVisited =
+                            m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
+                    if (Inst->getParent() == I.getParent() && !alreadyVisited) {
+                        //llvm::outs() << "!alreadyVisited is used, do you need it?(PHI)";
+                        this->visit(Inst);
+                    }
+                }
+            }
+        }
+        //llvm::outs() << "--create Phi Formula--";
+        SMT::BVExp *bvExpCond = createPhiFormula(args, bvs, I, widthBB, 0);
+
+        const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
+        if (is_in) {
+            std::string name = I.getName();
+            SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
+            //llvm::outs() << "--------" << name << ", ";
+            SMT::BoolExp *save = m_SMTTranslator.compare(bvExp, bvExpCond, llvm::CmpInst::ICMP_EQ);
+            //llvm::outs() << "\n------phi: " << m_formulaSetSave.size();
+            m_formulaSetSave.insert(save);
+            m_notUsedVar.erase(I.getName());
+        }
+
+        m_formulaSetBV = (bvExpCond);
+        //llvm::outs() << "--END PHI\n";
+    }
+}
+
+SMT::BVExp * InstructionEncoderLLUMC::createPhiFormula(unsigned int args, std::vector<SMT::BVExp *> vector, llvm::PHINode &I, int widthBB, int index) {
+    //llvm::outs() << args;
+    SMT::BVExp *pred = m_SMTTranslator.createBV("pred", widthBB);
+    SMT::BVExp *bvExpCond;
+    std::string nameOfParam1 = I.getIncomingBlock(index)->getName();
+    SMT::BVExp *firstParam = m_SMTTranslator.createConst(m_bbmap.at(nameOfParam1), widthBB);
+    SMT::BoolExp *condition = m_SMTTranslator.compare(pred, firstParam, llvm::CmpInst::ICMP_EQ);
+    //llvm::outs() << "index: "<< index << " ";
+    //TODO MKB: (... && false)
+    if(args==2){
+        bvExpCond = m_SMTTranslator.cond(condition, vector[0], vector[1]);
+    }else if(index < args-1){
+        //llvm::outs() << "--first--";
+        return m_SMTTranslator.cond(condition, vector[index], createPhiFormula(args, vector, I, widthBB, index+1));
+    }else{
+        //llvm::outs() << "--second--";
+        return vector[index];
+    }
+    return bvExpCond;
 }
 
 void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Add" << "\n";
+        //llvm::outs() << "--Visit Add" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -585,16 +707,16 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -608,7 +730,7 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     width = I.getOperand(i)->getType()->getIntegerBitWidth();
-                    llvm::outs() << "width: "<<width<<"\n";
+                    //llvm::outs() << "width: "<<width<<"\n";
                     if (i == 0) {
                         bv1 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
                     } else {
@@ -616,7 +738,7 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
                     }
                 } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         this->visit(Inst);
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -629,7 +751,7 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(ADD)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(ADD)";
                         //this->visit(Inst);
                     }
                 }
@@ -650,20 +772,20 @@ void InstructionEncoderLLUMC::visitAdd(llvm::BinaryOperator &I) {
         }
 
         m_formulaSetBV = (bvAdd);
-        llvm::outs() << "--END Add";
-        llvm::outs() << "\n";
+        //llvm::outs() << "--END Add";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Sub" << "\n";
+        //llvm::outs() << "--Visit Sub" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -671,16 +793,16 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -691,7 +813,7 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -701,7 +823,7 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
                     }
                 } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         this->visit(Inst);
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -714,7 +836,7 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(ADD)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(ADD)";
                         this->visit(Inst);
                     }
                 }
@@ -734,20 +856,20 @@ void InstructionEncoderLLUMC::visitSub(llvm::BinaryOperator &I) {
         }
 
         m_formulaSetBV = (bvSub);
-        llvm::outs() << "--END Aub";
-        llvm::outs() << "\n";
+        //llvm::outs() << "--END Aub";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitOr(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Or" << "\n";
+        //llvm::outs() << "--Visit Or" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -756,16 +878,16 @@ void InstructionEncoderLLUMC::visitOr(llvm::BinaryOperator &I) {
         for (unsigned int i = 0; i < args; i++) {
             bool alreadyVisited = false;
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -785,7 +907,7 @@ void InstructionEncoderLLUMC::visitOr(llvm::BinaryOperator &I) {
                 } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
-                        llvm::outs() << " not in ";
+                        //llvm::outs() << " not in ";
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
                         } else {
@@ -797,7 +919,7 @@ void InstructionEncoderLLUMC::visitOr(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
                         this->visit(Inst);
                     }
                 }
@@ -812,27 +934,27 @@ void InstructionEncoderLLUMC::visitOr(llvm::BinaryOperator &I) {
             std::string name = I.getName();
             SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
             SMT::BoolExp *save = m_SMTTranslator.compare(bvOr, bvExp, llvm::CmpInst::ICMP_EQ);
-            llvm::outs() << "\n------" << m_formulaSetSave.size();
+            //llvm::outs() << "\n------" << m_formulaSetSave.size();
             m_formulaSetSave.insert(save);
             m_notUsedVar.erase(I.getName());
         } else {
-            llvm::outs() << " not in OR ";
+            //llvm::outs() << " not in OR ";
         }
 
         m_formulaSetBV = (bvOr);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitAnd(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit And" << "\n";
+        //llvm::outs() << "--Visit And" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -841,16 +963,16 @@ void InstructionEncoderLLUMC::visitAnd(llvm::BinaryOperator &I) {
         for (unsigned int i = 0; i < args; i++) {
             bool alreadyVisited = false;
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -870,7 +992,7 @@ void InstructionEncoderLLUMC::visitAnd(llvm::BinaryOperator &I) {
                 } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
-                        llvm::outs() << " not in ";
+                        //llvm::outs() << " not in ";
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
                         } else {
@@ -882,7 +1004,7 @@ void InstructionEncoderLLUMC::visitAnd(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
                         this->visit(Inst);
                     }
                 }
@@ -897,27 +1019,27 @@ void InstructionEncoderLLUMC::visitAnd(llvm::BinaryOperator &I) {
             std::string name = I.getName();
             SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", width);
             SMT::BoolExp *save = m_SMTTranslator.compare(bvAnd, bvExp, llvm::CmpInst::ICMP_EQ);
-            llvm::outs() << "\n------" << m_formulaSetSave.size();
+            //llvm::outs() << "\n------" << m_formulaSetSave.size();
             m_formulaSetSave.insert(save);
             m_notUsedVar.erase(I.getName());
         } else {
-            llvm::outs() << " not in AND ";
+            //llvm::outs() << " not in AND ";
         }
 
         m_formulaSetBV = (bvAnd);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Mul" << "\n";
+        //llvm::outs() << "--Visit Mul" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -925,16 +1047,16 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -946,7 +1068,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -959,7 +1081,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
                         if (!isVerifierCall(Inst)) {
                             this->visit(Inst);
                             //alreadyVisited = true;
-                            llvm::outs() << "secondary else block used";
+                            //llvm::outs() << "secondary else block used";
                             //TODO set m_lastExp or check if only the first element is ever used
                             if (i == 0) {
                                 bv1 = m_formulaSetBV;
@@ -980,7 +1102,7 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
                      const bool alreadyVisited =
                              m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                      if (!alreadyVisited) {
-                         llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
+                         //llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
                          this->visit(Inst);
                      }
                  }*/
@@ -1002,19 +1124,19 @@ void InstructionEncoderLLUMC::visitMul(llvm::BinaryOperator &I) {
 
         //TODO use this set when needed (currently used only in visitAdd)
         m_formulaSetBV = (bvMul);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit UDiv" << "\n";
+        //llvm::outs() << "--Visit UDiv" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1022,16 +1144,16 @@ void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1043,7 +1165,7 @@ void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -1056,7 +1178,7 @@ void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
                         if (!isVerifierCall(Inst)) {
                             this->visit(Inst);
                             //alreadyVisited = true;
-                            llvm::outs() << "secondary else block used";
+                            //llvm::outs() << "secondary else block used";
                             //TODO set m_lastExp or check if only the first element is ever used
                             if (i == 0) {
                                 bv1 = m_formulaSetBV;
@@ -1077,7 +1199,7 @@ void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
                      const bool alreadyVisited =
                              m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                      if (!alreadyVisited) {
-                         llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
+                         //llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
                          this->visit(Inst);
                      }
                  }*/
@@ -1098,19 +1220,19 @@ void InstructionEncoderLLUMC::visitUDiv(llvm::BinaryOperator &I) {
 
         //TODO use this set when needed (currently used only in visitAdd)
         m_formulaSetBV = (bvUDiv);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Xor" << "\n";
+        //llvm::outs() << "--Visit Xor" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1118,16 +1240,16 @@ void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1139,7 +1261,7 @@ void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -1152,7 +1274,7 @@ void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
                         if (!isVerifierCall(Inst)) {
                             this->visit(Inst);
                             //alreadyVisited = true;
-                            llvm::outs() << "secondary else block used";
+                            //llvm::outs() << "secondary else block used";
                             //TODO set m_lastExp or check if only the first element is ever used
                             if (i == 0) {
                                 bv1 = m_formulaSetBV;
@@ -1173,7 +1295,7 @@ void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
                      const bool alreadyVisited =
                              m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                      if (!alreadyVisited) {
-                         llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
+                         //llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
                          this->visit(Inst);
                      }
                  }*/
@@ -1194,19 +1316,19 @@ void InstructionEncoderLLUMC::visitXor(llvm::BinaryOperator &I) {
 
         //TODO use this set when needed (currently used only in visitAdd)
         m_formulaSetBV = (bvXor);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Srem" << "\n";
+        //llvm::outs() << "--Visit Srem" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1214,16 +1336,16 @@ void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1234,7 +1356,7 @@ void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -1246,7 +1368,7 @@ void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
                         //alreadyVisited = true;
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         //TODO set m_lastExp or check if only the first element is ever used
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -1260,7 +1382,7 @@ void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
                         this->visit(Inst);
                     }
                 }
@@ -1282,19 +1404,19 @@ void InstructionEncoderLLUMC::visitSRem(llvm::BinaryOperator &I) {
 
         //TODO use this set when needed (currently used only in visitAdd)
         m_formulaSetBV = (bvSRem);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit URem" << "\n";
+        //llvm::outs() << "--Visit URem" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1302,16 +1424,16 @@ void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1322,7 +1444,7 @@ void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
                 // value is a variable so we are finished here but we have to evaluate the variable
                 const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
                 if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
-                    llvm::outs() << " is in ";
+                    //llvm::outs() << " is in ";
                     //check if the bv has already been created (look in the map)
                     //if it is in the map take it from there otherwise create own bv
                     if (i == 0) {
@@ -1334,7 +1456,7 @@ void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
                         //alreadyVisited = true;
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         //TODO set m_lastExp or check if only the first element is ever used
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -1348,7 +1470,7 @@ void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(MUL)";
                         this->visit(Inst);
                     }
                 }
@@ -1370,19 +1492,19 @@ void InstructionEncoderLLUMC::visitURem(llvm::BinaryOperator &I) {
 
         //TODO use this set when needed (currently used only in visitAdd)
         m_formulaSetBV = (bvURem);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitAShr(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit AShr" << "\n";
+        //llvm::outs() << "--Visit AShr" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1390,16 +1512,16 @@ void InstructionEncoderLLUMC::visitAShr(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1421,7 +1543,7 @@ void InstructionEncoderLLUMC::visitAShr(llvm::BinaryOperator &I) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
                         //alreadyVisited = true;
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         //TODO set m_lastExp or check if only the first element is ever used
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -1434,7 +1556,7 @@ void InstructionEncoderLLUMC::visitAShr(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
                         this->visit(Inst);
                     }
                 }
@@ -1454,43 +1576,37 @@ void InstructionEncoderLLUMC::visitAShr(llvm::BinaryOperator &I) {
         }
 
         m_formulaSetBV = (bvAShr);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 
 void InstructionEncoderLLUMC::visitTruncInst(llvm::TruncInst &I) {
-    //%tmp63 = trunc i32 %tmp62 to i8
-    llvm::outs() << "\nERROR: trunc is not included in the Theory of Bitvectors\n";
-    exit(-1);
-}
-
-void InstructionEncoderLLUMC::visitLShr(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit LShr" << "\n";
+        //llvm::outs() << "--Visit Trunc!" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
-        int width = 32; //default width
+        // llvm::outs() << args << ":";
+        int width = I.getSrcTy()->getIntegerBitWidth(); //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
         SMT::BVExp *bv2 = nullptr;
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1512,7 +1628,7 @@ void InstructionEncoderLLUMC::visitLShr(llvm::BinaryOperator &I) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
                         //alreadyVisited = true;
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         //TODO set m_lastExp or check if only the first element is ever used
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -1525,7 +1641,93 @@ void InstructionEncoderLLUMC::visitLShr(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        this->visit(Inst);
+                    }
+                }
+            }
+        }
+
+        //bv1 holds the bitvector that should be truncated
+        //TODO get value
+        int upper = I.getDestTy()->getIntegerBitWidth();
+        SMT::BVExp *bvTrunc = m_SMTTranslator.trunc(bv1, upper-1, 0);
+        width = upper;
+        const bool is_in = m_variableSet.find(I.getName()) != m_variableSet.end();
+        if (is_in) {
+            std::string name = I.getName();
+            SMT::BVExp *bvExp = m_SMTTranslator.createBV(name + "Dash", upper);
+            SMT::BoolExp *save = m_SMTTranslator.compare(bvTrunc, bvExp, llvm::CmpInst::ICMP_EQ);
+            m_formulaSetSave.insert(save);
+            m_notUsedVar.erase(I.getName());
+        }
+
+        m_formulaSetBV = (bvTrunc);
+        //llvm::outs() << "\n";
+    }
+}
+
+void InstructionEncoderLLUMC::visitLShr(llvm::BinaryOperator &I) {
+    const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
+    if (alreadyVisited) {
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
+    } else {
+        m_alreadyVisited.insert(I.getName());
+        //llvm::outs() << "--Visit LShr" << "\n";
+        unsigned int args = I.getNumOperands();
+        //llvm::outs() << args << ":";
+        int width = 32; //default width
+        double dConstant;
+        SMT::BVExp *bv1 = nullptr;
+        SMT::BVExp *bv2 = nullptr;
+
+        for (unsigned int i = 0; i < args; i++) {
+            std::string name = I.getOperand(i)->getName();
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
+                //llvm::outs() << CI->getValue() << " , ";
+                llvm::APInt constant = CI->getValue();
+                llvm::IntegerType *it = CI->getType();
+                width = it->getIntegerBitWidth();
+                //llvm::outs() << width << "width,";
+                dConstant = constant.signedRoundToDouble();
+                int iConstant = (int) dConstant;
+                //llvm::outs() << iConstant << "iConstant,";
+                //Create BVExpr with Constant
+                if (i == 0) {
+                    bv1 = m_SMTTranslator.createConst(iConstant, width);
+                } else {
+                    bv2 = m_SMTTranslator.createConst(iConstant, width);
+                }
+            } else {
+                // value is a variable so we are finished here but we have to evaluate the variable
+                const bool is_in = m_variableSet.find(I.getOperand(i)->getName()) != m_variableSet.end();
+                if (is_in && !isNameBefore(*I.getParent(), I.getOperand(i), I.getName())) {
+                    //check if the bv has already been created (look in the map)
+                    //if it is in the map take it from there otherwise create own bv
+                    if (i == 0) {
+                        bv1 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
+                    } else {
+                        bv2 = m_SMTTranslator.createBV(I.getOperand(i)->getName(), width);
+                    }
+                } else if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    if (Inst->isUsedInBasicBlock(I.getParent())) {
+                        this->visit(Inst);
+                        //alreadyVisited = true;
+                        //llvm::outs() << "secondary else block used";
+                        //TODO set m_lastExp or check if only the first element is ever used
+                        if (i == 0) {
+                            bv1 = m_formulaSetBV;
+                        } else {
+                            bv2 = m_formulaSetBV;
+                        }
+                    }
+                }
+                if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(I.getOperand(i))) {
+                    const bool alreadyVisited =
+                            m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
+                    if (!alreadyVisited) {
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
                         this->visit(Inst);
                     }
                 }
@@ -1545,19 +1747,19 @@ void InstructionEncoderLLUMC::visitLShr(llvm::BinaryOperator &I) {
         }
 
         m_formulaSetBV = (bvLShr);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 void InstructionEncoderLLUMC::visitShl(llvm::BinaryOperator &I) {
     const bool alreadyVisited = m_alreadyVisited.find(I.getName()) != m_alreadyVisited.end();
     if (alreadyVisited) {
-        llvm::outs() << "ALREADY VISITED CONTINUE\n";
+        //llvm::outs() << "ALREADY VISITED CONTINUE\n";
     } else {
         m_alreadyVisited.insert(I.getName());
-        llvm::outs() << "--Visit Shl" << "\n";
+        //llvm::outs() << "--Visit Shl" << "\n";
         unsigned int args = I.getNumOperands();
-        llvm::outs() << args << ":";
+        //llvm::outs() << args << ":";
         int width = 32; //default width
         double dConstant;
         SMT::BVExp *bv1 = nullptr;
@@ -1565,16 +1767,16 @@ void InstructionEncoderLLUMC::visitShl(llvm::BinaryOperator &I) {
 
         for (unsigned int i = 0; i < args; i++) {
             std::string name = I.getOperand(i)->getName();
-            llvm::outs() << " /// " << *I.getOperand(i) << ", ";
+            //llvm::outs() << " /// " << *I.getOperand(i) << ", ";
             if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(i))) {
                 //llvm::outs() << CI->getValue() << " , ";
                 llvm::APInt constant = CI->getValue();
                 llvm::IntegerType *it = CI->getType();
                 width = it->getIntegerBitWidth();
-                llvm::outs() << width << "width,";
+                //llvm::outs() << width << "width,";
                 dConstant = constant.signedRoundToDouble();
                 int iConstant = (int) dConstant;
-                llvm::outs() << iConstant << "iConstant,";
+                //llvm::outs() << iConstant << "iConstant,";
                 //Create BVExpr with Constant
                 if (i == 0) {
                     bv1 = m_SMTTranslator.createConst(iConstant, width);
@@ -1596,7 +1798,7 @@ void InstructionEncoderLLUMC::visitShl(llvm::BinaryOperator &I) {
                     if (Inst->isUsedInBasicBlock(I.getParent())) {
                         this->visit(Inst);
                         //alreadyVisited = true;
-                        llvm::outs() << "secondary else block used";
+                        //llvm::outs() << "secondary else block used";
                         //TODO set m_lastExp or check if only the first element is ever used
                         if (i == 0) {
                             bv1 = m_formulaSetBV;
@@ -1609,7 +1811,7 @@ void InstructionEncoderLLUMC::visitShl(llvm::BinaryOperator &I) {
                     const bool alreadyVisited =
                             m_alreadyVisited.find(I.getOperand(i)->getName()) != m_alreadyVisited.end();
                     if (!alreadyVisited) {
-                        llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
+                        //llvm::outs() << "!alreadyVisited, sure you need this?(OR)";
                         this->visit(Inst);
                     }
                 }
@@ -1629,56 +1831,53 @@ void InstructionEncoderLLUMC::visitShl(llvm::BinaryOperator &I) {
         }
 
         m_formulaSetBV = (bvShl);
-        llvm::outs() << "\n";
+        //llvm::outs() << "\n";
     }
 }
 
 bool InstructionEncoderLLUMC::isNameBefore(llvm::BasicBlock &bb, llvm::Value *op, llvm::StringRef currentName) {
     if (llvm::CallInst *C = llvm::dyn_cast<llvm::CallInst>(op)) {
         if (C->getOperand(0)->getName() == "__VERIFIER_nondet_int") {
-            llvm::outs() << "isNameBefore: false(Call): " << bb.getName().str() << ", " << C->getName().str() << ", "
-                         << currentName.str() << "\n";
+            //llvm::outs() << "isNameBefore: false(Call): " << bb.getName().str() << ", " << C->getName().str() << ", " << currentName.str() << "\n";
             return false;
         }
     }
     if (llvm::Instruction *Inst = llvm::dyn_cast<llvm::Instruction>(op)) {
         for (llvm::BasicBlock::iterator I = bb.begin(); I != bb.end(); ++I) {
             if (I->getName() == currentName.str()) {
-                llvm::outs() << "isNameBefore: false: " << bb.getName().str() << ", " << Inst->getName().str() << ", "
-                             << currentName.str() << "\n";
+                //llvm::outs() << "isNameBefore: false: " << bb.getName().str() << ", " << Inst->getName().str() << ", " << currentName.str() << "\n";
                 return false;
             }
             if (I->getName() == Inst->getName()) {
-                llvm::outs() << "isNameBefore: true: " << bb.getName().str() << ", " << Inst->getName().str() << ", "
-                             << currentName.str() << "\n";
+                //llvm::outs() << "isNameBefore: true: " << bb.getName().str() << ", " << Inst->getName().str() << ", " << currentName.str() << "\n";
                 return true;
             }
         }
     }
-    llvm::outs() << "isNameBefore: false: " << bb.getName().str() << ", END , " << currentName.str() << "\n";
+    //llvm::outs() << "isNameBefore: false: " << bb.getName().str() << ", END , " << currentName.str() << "\n";
     return false;
 }
 
 
 void InstructionEncoderLLUMC::visitBranchInst(llvm::BranchInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Branch" << "\n";
+    //llvm::outs() << "--Visit Branch" << "\n";
 }
 
 void InstructionEncoderLLUMC::visitReturnInst(llvm::ReturnInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Return" << "\n";
+    //llvm::outs() << "--Visit Return" << "\n";
 }
 
 void InstructionEncoderLLUMC::visitUnreachableInst(llvm::UnreachableInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Unreachable" << "\n";
+    //llvm::outs() << "--Visit Unreachable" << "\n";
 
 }
 
 void InstructionEncoderLLUMC::visitAssertFail(llvm::CallInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Assert Fail" << "\n";
+    //llvm::outs() << "--Visit Assert Fail" << "\n";
 
     int numBB = I.getParent()->getParent()->size();
     int widthBB = ceil(log(numBB + 2) / log(2.0));
@@ -1692,13 +1891,13 @@ void InstructionEncoderLLUMC::visitAssertFail(llvm::CallInst &I) {
     //m_formulaSetSave.insert(formula);
     m_assumeBoe = boe;
     m_assumeBoeDash = boeDash;
-    llvm::outs() << "\n";
+    //llvm::outs() << "\n";
 
 }
 
 void InstructionEncoderLLUMC::visitError(llvm::CallInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Error" << "\n";
+    //llvm::outs() << "--Visit Error" << "\n";
 
     int numBB = I.getParent()->getParent()->size();
     int widthBB = ceil(log(numBB + 2) / log(2.0));
@@ -1710,29 +1909,28 @@ void InstructionEncoderLLUMC::visitError(llvm::CallInst &I) {
     SMT::BoolExp *boeDash = m_SMTTranslator.bvAssignValue(bveDash, m_bbmap.at("error"));  // sDash = ok
     SMT::BoolExp *formula = satCore->mk_implies(boe, boeDash);
     //m_formulaSetSave.insert(formula);
-    llvm::outs() << I.getParent()->getName() << ",,";
+    //llvm::outs() << I.getParent()->getName() << ",,";
     m_assumeBoe = boe;
     m_assumeBoeDash = boeDash;
-    llvm::outs() << "\n";
+    //llvm::outs() << "\n";
 }
 
 void InstructionEncoderLLUMC::visitAssert(llvm::CallInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Assert" << "\n";
+    //llvm::outs() << "--Visit Assert" << "\n";
 }
-
 
 void InstructionEncoderLLUMC::visitReturn(llvm::TerminatorInst &I) {
     m_alreadyVisited.insert(I.getName());
-    llvm::outs() << "--Visit Return" << "\n";
+    //llvm::outs() << "--Visit Return" << "\n";
     SMT::BVExp *bv;
     int val = 0;
     if (llvm::ConstantInt *CI = llvm::dyn_cast<llvm::ConstantInt>(I.getOperand(0))) {
-        llvm::outs() << CI->getValue() << " , ";
+        //llvm::outs() << CI->getValue() << " , ";
         llvm::APInt constant = CI->getValue();
         llvm::IntegerType *it = CI->getType();
         int val = (int) constant.signedRoundToDouble();
-        llvm::outs() << "val:" << val;
+        //llvm::outs() << "val:" << val;
     }
 
     int numBB = I.getParent()->getParent()->size();
@@ -1752,7 +1950,7 @@ void InstructionEncoderLLUMC::visitReturn(llvm::TerminatorInst &I) {
     m_assumeBoe = boe;
     m_assumeBoeDash = boeDash;
     //m_formulaSetSave.insert(formula);
-    llvm::outs() << "\n";
+    //llvm::outs() << "\n";
 }
 
 void InstructionEncoderLLUMC::setVariableList(std::set<llvm::StringRef> variableSet) {
@@ -1825,14 +2023,14 @@ void InstructionEncoderLLUMC::checkForBitshift(llvm::BinaryOperator &I, SMT::BVE
 
 void InstructionEncoderLLUMC::checkForOverflow(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation) {
 //TODO activate or deactive overflowChecks
-    bool overflowCheckActivated = true;
+    bool overflowCheckActivated = true; //edit Marko
     if(overflowCheckActivated) {
         //TODO check it
         bool needCheck = true;
         SMT::BoolExp *overflowCheck;
         if (llvm::OverflowingBinaryOperator *op = llvm::dyn_cast<llvm::OverflowingBinaryOperator>(&I)) {
             if (op->hasNoUnsignedWrap()) {
-                llvm::outs() << "  has nuw\n";
+                //llvm::outs() << "  has nuw\n";
                 if (operation == "add") {
                     overflowCheck = m_SMTTranslator.uaddo(bv1, bv2);
                 } else if (operation == "mul") {
@@ -1840,10 +2038,10 @@ void InstructionEncoderLLUMC::checkForOverflow(llvm::BinaryOperator &I, SMT::BVE
                 } else if (operation == "sub") {
                     overflowCheck = m_SMTTranslator.usubo(bv1, bv2);
                 } else {
-                    llvm::outs() << "NOT IMPLEMENTED OPERATION";
+                    //llvm::outs() << "NOT IMPLEMENTED OPERATION";
                 }
             } else if (op->hasNoSignedWrap()) {
-                llvm::outs() << "  has nsw\n";
+                //llvm::outs() << "  has nsw\n";
                 if (operation == "add") {
                     overflowCheck = m_SMTTranslator.saddo(bv1, bv2);
                 } else if (operation == "mul") {
@@ -1853,14 +2051,14 @@ void InstructionEncoderLLUMC::checkForOverflow(llvm::BinaryOperator &I, SMT::BVE
                 } else if (operation == "sub") {
                     overflowCheck = m_SMTTranslator.ssubo(bv1, bv2);
                 } else {
-                    llvm::outs() << "NOT IMPLEMENTED OPERATION";
+                    //llvm::outs() << "NOT IMPLEMENTED OPERATION";
                 }
             } else {
                 needCheck = false;
             }
         }
         if (needCheck) {
-            llvm::outs() << " +Add Check+ ";
+            //llvm::outs() << " +Add Check+ ";
             int numBB = I.getParent()->getParent()->size();
             int widthBB = ceil(log(numBB + 2) / log(2.0));
             SMT::SatCore *satCore = m_smtContext->getSatCore();
@@ -1879,7 +2077,7 @@ void InstructionEncoderLLUMC::checkForOverflow(llvm::BinaryOperator &I, SMT::BVE
                 boe = satCore->mk_and(boe, negAssume);
             }
             SMT::BoolExp *formula = satCore->mk_implies(boe, boeDash);
-            llvm::outs() << "Added Check in IE\n";
+            //llvm::outs() << "Added Check in IE\n";
             m_overFlowCheck.insert(formula);
         }
     }
@@ -1889,6 +2087,8 @@ llvm::StringRef InstructionEncoderLLUMC::getInstName(llvm::CallInst *I) {
     llvm::StringRef name = llbmc::FunctionMatcher::getCalledFunction(I)->getName();
     return name;
 }
+
+
 
 
 

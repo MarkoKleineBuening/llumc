@@ -21,8 +21,6 @@
 
 #include "InstructionEncoderLLUMC.h"
 
-
-
 class Encoder  {
 public:
     Encoder(llvm::Module &module, llbmc::SMTContext *context);

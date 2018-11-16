@@ -3,9 +3,12 @@ project(llumc)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
-add_definitions(-fsanitize=address)
+#add_definitions(-fsanitize=address)
 #add_definitions(-lasan)
-set(CMAKE_CXX_LINK_FLAGS ${CMAKE_CXX_LINK_FLAGS} -fsanitize=address)
+#set(CMAKE_CXX_LINK_FLAGS ${CMAKE_CXX_LINK_FLAGS} -fsanitize=address)
+
+#set(COMMON_DEFINITIONS "${COMMON_DEFINITIONS} -static")
+set (CMAKE_CXX_LINK_EXECUTABLE "${CMAKE_CXX_LINK_EXECUTABLE} -static")
 
 find_package(LLBMC
         COMPONENTS
@@ -68,10 +71,12 @@ if (LLBMC_ENABLE_STP)
         find_package(Minisat)
     endif (STP_FOUND)
 endif (LLBMC_ENABLE_STP)
-message("STP_FOUND: " ${STP_FOUND})
 
 set(SOURCE_FILES main.cpp
         Encoder.cpp Encoder.h InstructionEncoderLLUMC.cpp InstructionEncoderLLUMC.h SMTTranslator.cpp SMTTranslator.h)
+
+message(STATUS "Final COMMON_DEFINITIONS flags ${COMMON_DEFINITIONS}")
+message(STATUS "Final CMAKE_CXX_LINK_EXECUTABLE flags ${CMAKE_CXX_LINK_EXECUTABLE}")
 
 add_executable(llumc ${SOURCE_FILES})
 
@@ -80,4 +85,7 @@ target_link_libraries(llumc  ${LLBMC_LIBRARIES} pthread dl)
 target_link_libraries(llumc  ${LLVM_LIBRARIES} pthread dl)
 
 target_link_libraries(llumc ${STP_LIBRARY})
+message(STP_Libary: ${STP_LIBRARY})
+message(Minisat: ${MINISAT_LIBRARY})
+target_link_libraries(llumc ${MINISAT_LIBRARY})
 

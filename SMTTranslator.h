@@ -46,6 +46,8 @@ public:
 
     SMT::BVExp *cond(SMT::BoolExp *boe, SMT::BVExp *bv1, SMT::BVExp *bv2);
 
+    SMT::BVExp *condArray(SMT::BoolExp *boe, SMT::BVExp *bv1, SMT::BVExp *bv2);
+
     SMT::BVExp *doOr(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BVExp *doAnd(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
@@ -81,6 +83,9 @@ public:
     SMT::BoolExp *sdivo(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
 
     SMT::BVExp *udiv(SMT::BVExp *pExp, SMT::BVExp *pBVExp);
+
+    SMT::BVExp *trunc(SMT::BVExp *pExp, int end, int start);
+
 
 private:
     std::map<std::string, SMT::BVExp*> m_bvSet;

@@ -43,50 +43,51 @@ int main(int argc, char *argv[]) {
     removeOldFiles();
     std::string fileName = "/home/marko/workspace/bitcodeModule.bc";
     if (argc > 1) { fileName = argv[1]; }
-    std::cout << "Filename: " << fileName << "\n";
+    //std::cout << "Filename: " << fileName << "\n";
     llvm::LLVMContext context;
     llvm::Module *module = getModule(context, fileName);
 
     SMTSolver smtSolver = STP;
     SMT::Solver *solver;
     SMT::SatCore *satCore;
-    if (smtSolver = SMTLIB) {
+    if (smtSolver == SMTLIB) {
         SMT::SMTLIB::Common *common = new SMT::SMTLIB::Common(*ostream2());
         solver = new SMT::SMTLIB(common);
-    } else if (smtSolver = STP) {
+    } else if (smtSolver == STP) {
         solver = new SMT::STP(SMT::STP::MiniSat, false);
         satCore = solver->getSatCore();
         solver->disableSimplifications();
         solver->outputCNF();
         solver->useSimpleCNF();
-    } else if (smtSolver = Boolector) {
+    } else if (smtSolver == Boolector) {
 
     }
     llbmc::SMTContext *smtContext = new llbmc::SMTContext(solver, 4);
     Encoder *enc = new Encoder(*module, smtContext);
 
     int numFunc = module->getFunctionList().size();
-    std::cout << "Num Functions: " << numFunc << "\n";
+    //std::cout << "Num Functions: " << numFunc << "\n";
     SMT::BoolExp *transitionExp;
     SMT::BoolExp *initialExp;
     SMT::BoolExp *goalExp;
     SMT::BoolExp *universalExp;
-    SMT::BoolExp *testExp;
-    SMT::BoolExp *testGoal;
-    SMT::BoolExp *testIni;
+    //SMT::BoolExp *testExp;
+    //SMT::BoolExp *testGoal;
+    //SMT::BoolExp *testIni;
     for (auto &func: module->getFunctionList()) {
         if (func.size() < 1) { continue; }
-        llvm::outs() << "Func name: " << func.getName() << "\n";
+        //llvm::outs() << "Func name: " << func.getName() << "\n";
         if(func.getName().find("main")==-1){
-            llvm::outs() << "--Next--\n";
+            //llvm::outs() << "--Next--\n";
             continue;
         }
-        llvm::outs() << "Calculate State:";
+        //llvm::outs() << "Calculate State:";
         enc->calculateState(func.getName());
         llvm::outs() << "-------------------------------" << "\n";
         llvm::outs() << "Encoding: " << "\n";
-        llvm::outs() << "Transition: " << "\n";
+        llvm::outs() << "Transition: " << "";
         transitionExp = enc->encodeFormula(func.getName());
+        llvm::outs() << "...finished " << "\n";
         llvm::outs() << "Initial: ";
         initialExp = enc->getInitialExp();
         llvm::outs() << "...finished " << "\n";
@@ -96,8 +97,12 @@ int main(int argc, char *argv[]) {
         llvm::outs() << "Universal: ";
         universalExp = enc->getUniversalExp();
         llvm::outs() << "...finished " << "\n";
+        //testExp=enc->getCompleteTestGoal();
     }
     llvm::outs() << "\n";
+    //solver->assertConstraint(testExp);
+    //solver->solve();
+    //return 0;
     solver->assertConstraint(transitionExp);
     solver->solve();
     solver->pop();
@@ -121,7 +126,7 @@ int main(int argc, char *argv[]) {
     }
     llvm::outs() << "\n";*/
 
-    std::cout << "Desc:" << solver->getDescription() << "\n";
+    //std::cout << "Desc:" << solver->getDescription() << "\n";
 
     //return 0;
     summarizeOutputFiles();
@@ -139,7 +144,7 @@ int main(int argc, char *argv[]) {
 }
 
 void outputMap(std::string fileMap, std::map<std::string, std::vector<unsigned int>> dashMap){
-    std::cout << "Map is saved into file: " << fileMap << "\n";
+    //std::cout << "Map is saved into file: " << fileMap << "\n";
     std::ofstream outfile;
     outfile.open(fileMap);
     for (auto & entry: dashMap) {
@@ -157,8 +162,10 @@ void outputMap(std::string fileMap, std::map<std::string, std::vector<unsigned i
     outfile.close();
 }
 
+//std:unorderedmap
+//c++ stream
 void renameVariables(std::map<std::string, std::vector<unsigned int>> mapDash) {
-    std::cout << "Highest Number: " << highestVar << "\n";
+    //std::cout << "Highest Number: " << highestVar << "\n";
     std::ofstream out("DimSpecFormula.cnf", std::ofstream::app);
     std::ifstream in("DimSpecFormulaPre.cnf");
     std::string line;
@@ -261,7 +268,7 @@ void readFile(std::string file, std::string type) {
     std::ofstream output("DimSpecFormulaPre.cnf", std::ofstream::app);
     std::ifstream init(file);
     if (init.fail()) {
-        std::cout << "File does not exist\n";
+        //std::cout << "File does not exist\n";
         output << "\n" << type << " 1 1\n";
     } else {
         std::string line;
@@ -306,32 +313,32 @@ void readFile(std::string file, std::string type) {
 }
 
 void removeOldFiles() {
-    llvm::outs() << "Following files have been deleted: ";
+    //llvm::outs() << "Following files have been deleted: ";
     if (remove("AIGtoCNF.txt") == 0) {
-        llvm::outs() << "AIGtoCNF.txt, ";
+        //llvm::outs() << "AIGtoCNF.txt, ";
     }
     if (remove("NameToAIG.txt") == 0) {
-        llvm::outs() << "NameToAIG.txt, ";
+       // llvm::outs() << "NameToAIG.txt, ";
     }
     if (remove("output_0.cnf") == 0) {
-        llvm::outs() << "output_0.cnf, ";
+        //llvm::outs() << "output_0.cnf, ";
     }
     if (remove("output_1.cnf") == 0) {
-        llvm::outs() << "output_1.cnf, ";
+        //llvm::outs() << "output_1.cnf, ";
     }
     if (remove("output_2.cnf") == 0) {
-        llvm::outs() << "output_2.cnf, ";
+        //llvm::outs() << "output_2.cnf, ";
     }
     if (remove("output_3.cnf") == 0) {
-        llvm::outs() << "output_3.cnf, ";
+        //llvm::outs() << "output_3.cnf, ";
     }
     if (remove("DimSpecFormula.cnf") == 0) {
-        llvm::outs() << "DimSpecFormula.cnf, ";
+        //llvm::outs() << "DimSpecFormula.cnf, ";
     }
     if (remove("DimSpecFormulaPre.cnf") == 0) {
-        llvm::outs() << "DimSpecFormulaPre.cnf";
+        //llvm::outs() << "DimSpecFormulaPre.cnf";
     }
-    llvm::outs() << ".\n";
+    //llvm::outs() << ".\n";
 
 }
 
@@ -363,7 +370,7 @@ llvm::Module *getModule(llvm::LLVMContext &llvmContext, std::string &fileName) {
     if (module == NULL) {
         throw std::invalid_argument("Could not parse bitcode file.");
     }
-    std::cout << "Module loaded from " << fileName << std::endl;
+    //std::cout << "Module loaded from " << fileName << std::endl;
     return module;
 }
 

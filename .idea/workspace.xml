@@ -12,8 +12,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4acfc583-6ade-493c-8009-c6a7fa04457d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeDetermineCompilerABI_C.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeDetermineCompilerABI_CXX.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdC/a.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CompilerIdCXX/a.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/llumc" afterPath="$PROJECT_DIR$/cmake-build-debug/llumc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Encoder.cpp" afterPath="$PROJECT_DIR$/Encoder.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Encoder.h" afterPath="$PROJECT_DIR$/Encoder.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" afterPath="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InstructionEncoderLLUMC.h" afterPath="$PROJECT_DIR$/InstructionEncoderLLUMC.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SMTTranslator.cpp" afterPath="$PROJECT_DIR$/SMTTranslator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SMTTranslator.h" afterPath="$PROJECT_DIR$/SMTTranslator.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.0-rc4/CMakeSystem.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/llumc.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake/FindMinisat.cmake" afterPath="$PROJECT_DIR$/cmake/FindMinisat.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,90 +49,96 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5055">
-              <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-              <folding>
-                <element signature="e#4988#9072#0" expanded="false" />
-                <element signature="e#9074#9336#0" expanded="false" />
-                <element signature="e#9338#10937#0" expanded="false" />
-                <element signature="e#10939#11777#0" expanded="false" />
-                <element signature="e#11779#12905#0" expanded="false" />
-                <element signature="e#12907#13150#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Encoder.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Encoder.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="453" column="10" lean-forward="false" selection-start-line="453" selection-start-column="10" selection-end-line="453" selection-end-column="10" />
-              <folding>
-                <marker date="1506506966391" expanded="true" signature="23928:24545" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstructionEncoderLLUMC.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InstructionEncoderLLUMC.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17130">
-              <caret line="1142" column="27" lean-forward="false" selection-start-line="1142" selection-start-column="27" selection-end-line="1142" selection-end-column="27" />
+            <state relative-caret-position="4215">
+              <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Operator.h" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Operator.h">
+      <file leaf-file-name="LLBMCVisitor.h" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/CallGraph/LLBMCVisitor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="7" lean-forward="false" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
+            <state relative-caret-position="2535">
+              <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMTTranslator.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTTranslator.h">
+      <file leaf-file-name="ASTNode.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTNode.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMTTranslator.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTTranslator.cpp">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3900">
-              <caret line="260" column="1" lean-forward="false" selection-start-line="260" selection-start-column="1" selection-end-line="260" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding>
+                <element signature="e#3899#4122#0" expanded="false" />
+                <element signature="e#9303#9352#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Encoder.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Encoder.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6150">
+              <caret line="410" column="0" lean-forward="false" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
+              <folding>
+                <element signature="e#15307#15386#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InstVisitor.h" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/InstVisitor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1905">
+              <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheoryOfBitvectors.h" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/TheoryOfBitvectors.h">
+      <file leaf-file-name="Instruction.def" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Instruction.def">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="54" />
+            <state relative-caret-position="2415">
+              <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringRef.h" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/ADT/StringRef.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2235">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stl_tree.h" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/c++/5/bits/stl_tree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24405">
+              <caret line="1627" column="0" lean-forward="false" selection-start-line="1627" selection-start-column="0" selection-end-line="1627" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,37 +148,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Added Check</find>
-      <find>A</find>
-      <find>--Visit ZExt</find>
-      <find>visitZext</find>
-      <find>bvudiv</find>
-      <find>div</find>
-      <find>visitmul</find>
-      <find>visitAdd</find>
-      <find>bb7</find>
-      <find>visitMul</find>
-      <find>--Visit NonIntrinsicCall</find>
-      <find>0x5</find>
-      <find>check</find>
-      <find>op</find>
-      <find>Overflow</find>
-      <find>add</find>
-      <find>bb</find>
-      <find>&quot;bb&quot;</find>
-      <find>i</find>
-      <find>is</find>
-      <find>isA</find>
-      <find>isAs</find>
-      <find>isAss</find>
-      <find>isAssu</find>
-      <find>isAssume</find>
-      <find>Undefined Call</find>
-      <find>NAME/Vector: s</find>
-      <find>NAME/Vector: pred</find>
-      <find>1834</find>
-      <find>1784</find>
+      <find>Calcul</find>
+      <find>Calcula</find>
+      <find>Calculat</find>
+      <find>Calculate</find>
+      <find>Calculate S</find>
+      <find>Calculate St</find>
+      <find>Calculate Sta</find>
+      <find>Calculate Stat</find>
+      <find>Calculate State</find>
+      <find>calcu</find>
+      <find>ren</find>
+      <find>rena</find>
+      <find>renam</find>
+      <find>rename</find>
+      <find>l</find>
+      <find>ll</find>
+      <find>llv</find>
+      <find>llvm</find>
+      <find>llvm:</find>
+      <find>llvm::</find>
+      <find>llvm::o</find>
+      <find>llvm::ou</find>
+      <find>llvm::out</find>
+      <find>llvm::outs</find>
+      <find>///</find>
+      <find>::outs()</find>
+      <find>Output of CNF into file</find>
+      <find>call</find>
+      <find>visitI</find>
+      <find>visitZe</find>
     </findStrings>
+    <replaceStrings>
+      <replace>//llvm::outs()</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>/usr/local/include</dir>
     </dirStrings>
@@ -190,14 +222,15 @@
         <option value="$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/TheoryOfBitvectors.h" />
         <option value="$PROJECT_DIR$/cmake-build-debug/output_0.cnf" />
         <option value="$PROJECT_DIR$/cmake-build-debug/NameToAIG.txt" />
-        <option value="$PROJECT_DIR$/Encoder.h" />
+        <option value="$PROJECT_DIR$/cmake/FindMinisat.cmake" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/SMTTranslator.cpp" />
-        <option value="$PROJECT_DIR$/SMTTranslator.h" />
         <option value="$PROJECT_DIR$/InstructionEncoderLLUMC.h" />
-        <option value="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" />
+        <option value="$PROJECT_DIR$/Encoder.h" />
+        <option value="$PROJECT_DIR$/SMTTranslator.h" />
+        <option value="$PROJECT_DIR$/SMTTranslator.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Encoder.cpp" />
+        <option value="$PROJECT_DIR$/InstructionEncoderLLUMC.cpp" />
       </list>
     </option>
   </component>
@@ -211,8 +244,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="25" />
-    <option name="width" value="1368" />
-    <option name="height" value="744" />
+    <option name="width" value="1922" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -248,16 +281,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="llumc" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="llumc" />
@@ -306,15 +329,15 @@
     <property name="last_opened_file_path" value="$USER_HOME$/workspace/src/qpr" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cmake-build-debug" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/cmake" />
       <recent name="$USER_HOME$/workspace/install/reldeb-gcc" />
       <recent name="$PROJECT_DIR$/Util" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -516,7 +539,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="llumc" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/workspace/testingAr/parity_true-unreach-call_true-no-overflowBM.bc" PASS_PARENT_ENVS_2="true" PROJECT_NAME="llumc" TARGET_NAME="llumc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="llumc" RUN_TARGET_NAME="llumc">
+    <configuration default="false" name="llumc" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/01_NewWorkspace/AllBenchmarks/workbench/bist_cell_true-unreach-call_false-termination.cilBM.bc" PASS_PARENT_ENVS_2="true" PROJECT_NAME="llumc" TARGET_NAME="llumc" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="llumc" RUN_TARGET_NAME="llumc">
       <envs />
       <method />
     </configuration>
@@ -641,7 +664,45 @@
       <workItem from="1506503824274" duration="207000" />
       <workItem from="1506505761557" duration="2021000" />
       <workItem from="1506591767615" duration="4189000" />
-      <workItem from="1506616928655" duration="8000" />
+      <workItem from="1506616928655" duration="531000" />
+      <workItem from="1506703729418" duration="1454000" />
+      <workItem from="1507296038215" duration="2598000" />
+      <workItem from="1507727730598" duration="7730000" />
+      <workItem from="1508233717973" duration="170000" />
+      <workItem from="1508246013295" duration="564000" />
+      <workItem from="1508250688343" duration="791000" />
+      <workItem from="1508262064208" duration="92000" />
+      <workItem from="1508321012056" duration="2796000" />
+      <workItem from="1508426624677" duration="5585000" />
+      <workItem from="1508513886124" duration="7378000" />
+      <workItem from="1508600124620" duration="2975000" />
+      <workItem from="1508766345820" duration="2188000" />
+      <workItem from="1508782325710" duration="499000" />
+      <workItem from="1509183606216" duration="5284000" />
+      <workItem from="1509191375108" duration="627000" />
+      <workItem from="1509192370804" duration="697000" />
+      <workItem from="1509560657241" duration="1579000" />
+      <workItem from="1509707875288" duration="3083000" />
+      <workItem from="1509812046048" duration="5080000" />
+      <workItem from="1509879385569" duration="1848000" />
+      <workItem from="1509881404323" duration="9435000" />
+      <workItem from="1509958392158" duration="603000" />
+      <workItem from="1509980617452" duration="2799000" />
+      <workItem from="1510163450604" duration="918000" />
+      <workItem from="1510686323296" duration="604000" />
+      <workItem from="1540200481382" duration="13738000" />
+      <workItem from="1540373231466" duration="8519000" />
+      <workItem from="1540388865506" duration="2086000" />
+      <workItem from="1540454184186" duration="6489000" />
+      <workItem from="1540468380602" duration="597000" />
+      <workItem from="1540571813697" duration="2930000" />
+      <workItem from="1540636434263" duration="698000" />
+      <workItem from="1540821343712" duration="3289000" />
+      <workItem from="1540896713990" duration="2675000" />
+      <workItem from="1540903549963" duration="5299000" />
+      <workItem from="1541152221623" duration="172000" />
+      <workItem from="1541498278263" duration="5106000" />
+      <workItem from="1542115234581" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="InstVisitor">
       <created>1499180910469</created>
@@ -699,40 +760,74 @@
       <option name="project" value="LOCAL" />
       <updated>1506507016897</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="save">
+      <created>1506616946213</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1506616946213</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="544532000" />
+    <option name="totallyTimeSpent" value="664202000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
+    <frame x="-1" y="25" width="1922" height="1176" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28637627" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27357033" sideWeight="0.50292826" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6244204" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56719184" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24670571" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23169601" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39876354" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41056535" sideWeight="0.49707174" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45904174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3429101" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -748,164 +843,66 @@
     <MESSAGE value="added and, todo: trunc, signed mul" />
     <MESSAGE value="deleted stuff" />
     <MESSAGE value="added stuff VERIFIER handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="added stuff VERIFIER handling" />
+    <MESSAGE value="save" />
+    <option name="LAST_COMMIT_MESSAGE" value="save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
-          <line>216</line>
-          <option name="timeStamp" value="186" />
+          <url>file://$PROJECT_DIR$/Encoder.cpp</url>
+          <line>49</line>
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Encoder.cpp</url>
+          <line>64</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Encoder.cpp</url>
+          <line>72</line>
+          <option name="timeStamp" value="287" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Encoder.cpp</url>
+          <line>410</line>
+          <option name="timeStamp" value="289" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
-          <line>90</line>
-          <option name="timeStamp" value="225" />
+          <line>234</line>
+          <option name="timeStamp" value="291" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
-          <line>349</line>
-          <option name="timeStamp" value="232" />
+          <line>281</line>
+          <option name="timeStamp" value="292" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
-          <line>640</line>
-          <option name="timeStamp" value="239" />
+          <line>280</line>
+          <option name="timeStamp" value="293" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
-          <line>638</line>
-          <option name="timeStamp" value="244" />
+          <line>285</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp</url>
+          <line>41</line>
+          <option name="timeStamp" value="295" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="245" />
+      <option name="time" value="296" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_3.cnf" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/DimSpecFormulaPre.cnf" />
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/stp/c_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7155">
-          <caret line="477" column="0" lean-forward="false" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/Solver.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="135" column="24" lean-forward="true" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/predefined_ops.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2895">
-          <caret line="193" column="19" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/NodeFactory/SimplifyingNodeFactory.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/ADT/SmallPtrSet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/DimSpecFormula.cnf" />
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/Solver/SMTTranslatorBase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="29" lean-forward="false" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_map.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="522" column="0" lean-forward="false" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/Support/Casting.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/CallSite.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/src/llbmc/lib/Util/Bitvector.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ASubject.h" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/AIGtoCNF.txt" />
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/include/stp/AST/ASTInternal.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_0.cnf" />
-    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="794" column="0" lean-forward="false" selection-start-line="794" selection-start-column="0" selection-end-line="794" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/NameToAIG.txt" />
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/Interface/c_interface.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="512" column="0" lean-forward="false" selection-start-line="512" selection-start-column="0" selection-end-line="512" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/map.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/Util/Bitvector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/STPManager/STP.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="574" column="0" lean-forward="false" selection-start-line="574" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AbsRefineCounterExample/CounterExample.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -927,39 +924,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/STP_QF_ABV.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3885">
-          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Formula.h" />
     <entry file="file://$PROJECT_DIR$/Solver.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Solver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Encoder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="75" column="2" lean-forward="false" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="73" column="117" lean-forward="false" selection-start-line="73" selection-start-column="117" selection-end-line="73" selection-end-column="117" />
         </state>
       </provider>
     </entry>
@@ -991,69 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTNode.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5055">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-          <folding>
-            <element signature="e#4988#9072#0" expanded="false" />
-            <element signature="e#9074#9336#0" expanded="false" />
-            <element signature="e#9338#10937#0" expanded="false" />
-            <element signature="e#10939#11777#0" expanded="false" />
-            <element signature="e#11779#12905#0" expanded="false" />
-            <element signature="e#12907#13150#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Instruction.def">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Instructions.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20325">
           <caret line="1355" column="2" lean-forward="false" selection-start-line="1355" selection-start-column="2" selection-end-line="1355" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTmisc.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMTTranslator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMTTranslator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3900">
-          <caret line="260" column="1" lean-forward="false" selection-start-line="260" selection-start-column="1" selection-end-line="260" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/CallGraph/LLBMCVisitor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1064,34 +974,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/InstVisitor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Operator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1425">
           <caret line="95" column="7" lean-forward="false" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="136" column="9" lean-forward="false" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17130">
-          <caret line="1142" column="27" lean-forward="false" selection-start-line="1142" selection-start-column="27" selection-end-line="1142" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,17 +985,244 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
           <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/llbmc/lib/Solver/SMTTranslatorBase.cpp" />
+    <entry file="file://$PROJECT_DIR$/cmake/FindComponents.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindLLBMC.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindLLVM.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/Sat/MinisatCore.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/minisat/core/Solver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5790">
+          <caret line="386" column="0" lean-forward="false" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindSTP.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake/FindMinisat.cmake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/Sat/SimplifyingMinisat.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTTranslator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="86" column="58" lean-forward="false" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/STPManager/STPManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/NodeFactory/NodeFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/include/stp/STPManager/STPManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="340" column="0" lean-forward="false" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/Interface/c_interface.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="1421" column="0" lean-forward="false" selection-start-line="1421" selection-start-column="0" selection-end-line="1421" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/SMT/STP_QF_ABV.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTTranslator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3945">
+          <caret line="263" column="5" lean-forward="false" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTmisc.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_map.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7500">
+          <caret line="500" column="0" lean-forward="false" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="140" column="9" lean-forward="false" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Solver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Encoder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_0.cnf" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_1.cnf" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_2.cnf" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/output_3.cnf" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/AIGtoCNF.txt" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/NameToAIG.txt" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/map.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#3899#4122#0" expanded="false" />
+            <element signature="e#9303#9352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/ADT/StringRef.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2235">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_tree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24405">
+          <caret line="1627" column="0" lean-forward="false" selection-start-line="1627" selection-start-column="0" selection-end-line="1627" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/Instruction.def">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llbmc/CallGraph/LLBMCVisitor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/install/reldeb-gcc/include/llvm/IR/InstVisitor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Encoder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="453" column="10" lean-forward="false" selection-start-line="453" selection-start-column="10" selection-end-line="453" selection-end-column="10" />
+        <state relative-caret-position="6150">
+          <caret line="410" column="0" lean-forward="false" selection-start-line="410" selection-start-column="0" selection-end-line="410" selection-end-column="0" />
           <folding>
-            <marker date="1506506966391" expanded="true" signature="23928:24545" ph="{...}" />
+            <element signature="e#15307#15386#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InstructionEncoderLLUMC.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4215">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/src/stp-master/lib/AST/ASTNode.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

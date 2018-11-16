@@ -260,6 +260,10 @@ SMT::BVExp *SMTTranslator::udiv(SMT::BVExp *pExp, SMT::BVExp *pBVExp) {
     return bv().bvudiv(pExp,pBVExp);
 }
 
+SMT::BVExp *SMTTranslator::trunc(SMT::BVExp *pExp, int hi, int low) {
+   // llvm::outs() << "TRUNC: "<<start << ", " << end << "\n";
+   return bv().extract(hi, low, pExp);
+}
 
 
 

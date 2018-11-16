@@ -42,6 +42,8 @@ public:
 
     void visitPHINode(llvm::PHINode &I);
 
+    void visitPHINode2(llvm::PHINode &I);
+
     void visitOr(llvm::BinaryOperator &I);
 
     void visitAnd(llvm::BinaryOperator &I);
@@ -139,6 +141,11 @@ private:
     void checkForOverflow(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation);
 
     void checkForBitshift(llvm::BinaryOperator &I, SMT::BVExp *bv1, SMT::BVExp *bv2, std::string operation);
+
+    SMT::BVExp *createPhiFormula(unsigned int args, std::vector<SMT::BVExp *> vector, llvm::PHINode &I, int widthBB);
+
+    SMT::BVExp *
+    createPhiFormula(unsigned int args, std::vector<SMT::BVExp *> vector, llvm::PHINode &I, int widthBB, int index);
 };
 
 

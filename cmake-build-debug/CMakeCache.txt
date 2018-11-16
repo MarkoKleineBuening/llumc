@@ -347,6 +347,9 @@ LLVM_VERSION_PATCHLEVEL:STRING=1
 //Path to Minisat's include directory
 MINISAT_INCLUDE_DIR:PATH=/home/marko/workspace/install/reldeb-gcc/include
 
+//Path to Minisat's library
+MINISAT_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libminisat.a
+
 //Path to a program.
 ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 
@@ -357,7 +360,7 @@ ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 STP_INCLUDE_DIR:PATH=/home/marko/workspace/install/reldeb-gcc/include
 
 //Path to STP's library
-STP_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libstp.so
+STP_LIBRARY:FILEPATH=/home/marko/workspace/install/reldeb-gcc/lib/libstp.a
 
 //Value Computed by CMake
 llumc_BINARY_DIR:STATIC=/home/marko/CLionProjects/llumc/cmake-build-debug
@@ -509,8 +512,10 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_LLBMC:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/include][v()]
 //Details about finding LLVM
 FIND_PACKAGE_MESSAGE_DETAILS_LLVM:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/include][3.7][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObject.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObjCARCOpts.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMCParser.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMC.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstrumentation.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCodeGen.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipo.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMVectorize.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstCombine.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMScalarOpts.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTransformUtils.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipa.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAnalysis.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTarget.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMLinker.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMIRReader.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAsmParser.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitReader.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitWriter.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a;/home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a][-I/home/marko/workspace/install/reldeb-gcc/include  -fPIC -fvisibility-inlines-hidden -Wall -W -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wno-missing-field-initializers -pedantic -Wno-long-long -Wno-maybe-uninitialized -Wnon-virtual-dtor -Wno-comment -std=c++11 -ffunction-sections -fdata-sections -O3 -DNDEBUG -fno-exceptions  -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS][/home/marko/workspace/install/reldeb-gcc/bin/llvm-as][/home/marko/workspace/install/reldeb-gcc/bin/llvm-dis][/home/marko/workspace/install/reldeb-gcc/bin/llvm-link][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObject.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMObjCARCOpts.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMCParser.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMMC.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstrumentation.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCodeGen.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipo.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMVectorize.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMInstCombine.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMScalarOpts.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTransformUtils.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMipa.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAnalysis.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMTarget.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMLinker.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMIRReader.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMAsmParser.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitReader.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMBitWriter.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMProfileData.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMCore.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMOption.a][/home/marko/workspace/install/reldeb-gcc/lib/libLLVMSupport.a][v()]
+//Details about finding MINISAT
+FIND_PACKAGE_MESSAGE_DETAILS_MINISAT:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/lib/libminisat.a][/home/marko/workspace/install/reldeb-gcc/include][v()]
 //Details about finding STP
-FIND_PACKAGE_MESSAGE_DETAILS_STP:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/lib/libstp.so][/home/marko/workspace/install/reldeb-gcc/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_STP:INTERNAL=[/home/marko/workspace/install/reldeb-gcc/lib/libstp.a][/home/marko/workspace/install/reldeb-gcc/include][v()]
 //ADVANCED property for variable: LLBMC_INCLUDE_DIR
 LLBMC_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: LLVM_ANALYSIS_LIBRARY
@@ -581,6 +586,8 @@ LLVM_VERSION_MINOR-ADVANCED:INTERNAL=1
 LLVM_VERSION_PATCHLEVEL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MINISAT_INCLUDE_DIR
 MINISAT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MINISAT_LIBRARY
+MINISAT_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_getconf
 ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
